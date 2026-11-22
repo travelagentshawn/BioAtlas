@@ -3,7 +3,6 @@
   "id": "authority-powo",
   "kind": "database",
   "title": "Plants of the World Online (POWO)",
-  "year": 2026,
   "url": "https://powo.science.kew.org/",
   "citation": "Royal Botanic Gardens, Kew. Plants of the World Online. Accessed 2026-11-22. https://powo.science.kew.org/",
   "authority_role": "specialist-checklist",
@@ -12,5 +11,6 @@
     "plant accepted names and distribution"
   ],
   "identifier_scheme": "POWO taxon record URL",
-  "update_policy": "Continuously updated; retain access date"
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
 }
