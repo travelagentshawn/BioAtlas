@@ -53,7 +53,7 @@ function header() {
     h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
     h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l]) => h("a", { href: `#/${k}`, "data-k": k }, l))),
     h("div", { class: "tools" },
-      h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(getLang() === "zh" ? "en" : "zh"); boot(); } }, getLang() === "zh" ? "EN" : "中"),
+      h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(({zh:"en",en:"ja",ja:"zh"})[getLang()] || "zh"); boot(); } }, ({zh:"EN",en:"日本語",ja:"中"})[getLang()] || "EN"),
       h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
         const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
