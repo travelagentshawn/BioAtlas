@@ -6,9 +6,9 @@ This page documents module scope, data boundaries and review requirements.
 `#/map` plots the coordinates of travel-scene records on an equirectangular locator grid and filters by country and month. It is not a continuous species-range map and does not show coastlines or protected-area boundaries. Each point links to the full scene record and monthly species data.
 
 ## Conservation and field ethics
-`#/conservation` aggregates recorded conservation assessments, assessment dates, sources and existing field-etiquette notes. A missing IUCN value does not mean Least Concern. An assessment is not a substitute for current local law. Local regulations, protected-area access and drone rules must be checked with the competent authority.
+`#/conservation` separates IUCN Red List assessments from legal and treaty protections. Each `conservation.protections[]` entry records its instrument, jurisdiction, status, scope, source and access date; it is not an IUCN category. Missing IUCN data does not mean Least Concern, and missing legal-protection records do not imply unrestricted handling or collection. Local regulations, protected-area access and drone rules must be checked with the competent authority.
 
-## Nature sounds
+## Marine taxa and coral protections\n\nThe starter coral branch adds Cnidaria, Anthozoa, Hexacorallia, Scleractinia, Acroporidae and Acropora, plus staghorn and elkhorn coral records. NOAA legal-protection records and ITIS taxonomic records are cited independently; no unverified IUCN category or divergence date has been added.\n\n## Nature sounds
 `#/sounds` reads the optional `sounds` array on species records. Each recording must provide an HTTPS audio URL, original source, license and attribution. Recordings with unclear redistribution rights are excluded. If none qualify, the page shows contribution guidance rather than fabricated placeholder audio.
 
 ## Evolution learning
