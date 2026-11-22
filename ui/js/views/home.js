@@ -29,6 +29,7 @@ export async function home(root) {
           "BioAtlas puts molecular-phylogenetic evidence and classical taxonomy on one map, so you can recognise ginkgo, egrets, sika deer, mushrooms and mosses on a trip — and know where they sit on the tree of life.")),
         h("div", { class: "cta" },
           h("a", { class: "btn primary", href: "#/explore" }, tr("开始探索", "Start exploring")),
+          h("a", { class: "btn", href: "#/tree" }, tr("打开进化树", "Open evolution tree")),
           h("a", { class: "btn", href: "#/planner" }, tr("规划行程清单", "Plan a trip checklist")),
           h("a", { class: "btn ghost", href: "#/docs" }, tr("开发说明书", "Developer docs"))),
         h("div", { class: "stats" },
