@@ -136,6 +136,10 @@ test("authority registry and taxonomic assertions preserve independent sources",
   assert.ok(authorities.some(s => s.id === "authority-ipni" && s.authority_role === "nomenclatural-index"));
   assert.ok(authorities.some(s => s.id === "authority-apg" && s.authority_role === "classification-framework"));
   assert.ok(authorities.some(s => s.id === "authority-gbif-backbone-legacy" && s.legacy === true));
+  assert.equal(authorities.find(s => s.id === "authority-catalogue-of-life-xr")?.current_version, "2026-10-16 XR");
+  const ginkgo = data.species.find(s => s.id === "ginkgo-biloba");
+  assert.equal(ginkgo.taxonomic_assertions.find(a => a.authority === "authority-powo")?.name_status, "accepted");
+  assert.equal(ginkgo.taxonomic_assertions.find(a => a.authority === "authority-ipni")?.name_status, "unassessed");
   const flyAgaric = data.species.find(s => s.id === "amanita-muscaria");
   assert.equal(flyAgaric.taxonomic_assertions.length, 2);
   assert.ok(flyAgaric.taxonomic_assertions.every(a => a.name_status === "unassessed"));
@@ -155,7 +159,9 @@ test("API publishes authority registry and taxonomic assertions", () => {
     const authorities = read("taxonomic-authorities.json");
     const flyAgaric = read("species/amanita-muscaria.json");
     assert.equal(authorities.length, manifest.counts.authorities);
-    assert.ok(authorities.some(a => a.id === "authority-catalogue-of-life-xr"));
+    assert.ok(authorities.some(a => a.id === "authority-catalogue-of-life-xr" && a.current_version === "2026-10-16 XR"));
+    const sourceIndex = read("sources.json");
+    assert.ok(sourceIndex.some(source => source.id === "authority-catalogue-of-life-xr" && source.accessed_at === "2026-11-22" && source.year === null));
     assert.equal(flyAgaric.taxonomic_assertions.length, 2);
     assert.ok(flyAgaric.sources_resolved.some(s => s.id === "authority-index-fungorum"));
     assert.ok(manifest.languages.includes("ja"));
