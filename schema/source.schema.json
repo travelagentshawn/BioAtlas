@@ -5,18 +5,87 @@
   "description": "One file per reference in data/sources/. Every non-trivial scientific claim should point at one.",
   "type": "object",
   "properties": {
-    "$schema": { "type": "string" },
-    "type": { "const": "source" },
-    "id": { "$ref": "common.schema.json#/$defs/slug" },
-    "kind": { "type": "string", "enum": ["paper", "database", "book", "website"] },
-    "title": { "type": "string", "minLength": 1 },
-    "authors": { "type": "string" },
-    "year": { "type": "integer", "minimum": 1700, "maximum": 2100 },
-    "venue": { "type": "string" },
-    "doi": { "type": "string", "pattern": "^10\\.[0-9]{4,9}/\\S+$" },
-    "url": { "type": "string", "pattern": "^https://" },
-    "citation": { "type": "string", "minLength": 1, "description": "Full human-readable citation line." }
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "const": "source"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "paper",
+        "database",
+        "book",
+        "website"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authors": {
+      "type": "string"
+    },
+    "year": {
+      "type": "integer",
+      "minimum": 1700,
+      "maximum": 2100
+    },
+    "venue": {
+      "type": "string"
+    },
+    "doi": {
+      "type": "string",
+      "pattern": "^10\\.[0-9]{4,9}/\\S+$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "citation": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Full human-readable citation line."
+    },
+    "authority_role": {
+      "type": "string",
+      "enum": [
+        "global-backbone",
+        "nomenclatural-index",
+        "specialist-checklist",
+        "classification-framework",
+        "conservation-assessment"
+      ]
+    },
+    "taxonomic_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "identifier_scheme": {
+      "type": "string"
+    },
+    "update_policy": {
+      "type": "string"
+    },
+    "legacy": {
+      "type": "boolean",
+      "description": "True when retained for historical crosswalks but no longer maintained as a current backbone."
+    }
   },
-  "required": ["type", "id", "kind", "title", "year", "citation"],
+  "required": [
+    "type",
+    "id",
+    "kind",
+    "title",
+    "year",
+    "citation"
+  ],
   "additionalProperties": false
 }
