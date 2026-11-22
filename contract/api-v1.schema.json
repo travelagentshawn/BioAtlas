@@ -351,6 +351,12 @@
             "string",
             "null"
           ]
+        },
+        "current_version": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
@@ -364,7 +370,8 @@
         "identifier_scheme",
         "update_policy",
         "legacy",
-        "accessed_at"
+        "accessed_at",
+        "current_version"
       ]
     },
     "Species": {
@@ -966,6 +973,12 @@
             "string",
             "null"
           ]
+        },
+        "current_version": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
@@ -976,7 +989,8 @@
         "identifier_scheme",
         "update_policy",
         "legacy",
-        "url"
+        "url",
+        "current_version"
       ]
     },
     "TaxonomicAuthorities": {
