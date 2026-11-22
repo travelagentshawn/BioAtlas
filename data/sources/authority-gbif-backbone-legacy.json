@@ -3,7 +3,7 @@
   "id": "authority-gbif-backbone-legacy",
   "kind": "database",
   "title": "GBIF Backbone Taxonomy (legacy)",
-  "year": 2026,
+  "year": 2023,
   "url": "https://doi.org/10.15468/39omei",
   "citation": "GBIF Secretariat. GBIF Backbone Taxonomy. doi:10.15468/39omei. Retained for identifier crosswalk; no longer updated as GBIF's primary taxonomy.",
   "authority_role": "global-backbone",
@@ -12,5 +12,6 @@
   ],
   "identifier_scheme": "GBIF taxonKey",
   "update_policy": "Discontinued; preserve for backwards compatibility only",
-  "legacy": true
+  "legacy": true,
+  "accessed_at": "2026-11-22"
 }
