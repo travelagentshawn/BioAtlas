@@ -16,7 +16,7 @@ BioAtlas は**分類群ごとに権威ある情報源を使い分ける階層型
 
 構造化レジストリは `/api/v1/taxonomic-authorities.json`、各情報源の記録は `data/sources/authority-*.json` にあります。
 
-- **Catalogue of Life XR**：世界規模の名称発見とID照合。インポート時はリリースを固定します。
+- **Catalogue of Life Base / XR**：Base は精査済みの世界規模ソースを優先し、XR は追加統合によって網羅性を高めます。GBIF の現在の主要分類は XR を使用します。インポート時は Base と XR を区別して版を固定します。
 - **IPNI**：植物名の命名索引。受容種チェックリストとは区別します。
 - **POWO**：維管束植物の受容名と分布。アクセス日を記録します。
 - **APG IV**：被子植物の目・科の高次分類。使用版を明記します。
