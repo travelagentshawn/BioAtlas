@@ -1,0 +1,17 @@
+{
+  "type": "source",
+  "id": "authority-catalogue-of-life-base",
+  "kind": "database",
+  "title": "Catalogue of Life Base Release",
+  "year": 2026,
+  "accessed_at": "2026-11-22",
+  "url": "https://www.catalogueoflife.org/data/download",
+  "citation": "Catalogue of Life. Base Release 2026-10-14 (COL26.10), issued 2026-10-14. The Base Release prioritises accuracy and includes scrutinised global sources, excluding XR-only integrations. Accessed 2026-11-22. https://www.catalogueoflife.org/data/download",
+  "authority_role": "global-backbone",
+  "taxonomic_scope": [
+    "all major kingdoms"
+  ],
+  "identifier_scheme": "Catalogue of Life taxon identifier",
+  "current_version": "2026-10-14 Base",
+  "update_policy": "Monthly releases; use as the more conservative curated baseline and pin the exact release."
+}
