@@ -1,5 +1,7 @@
 # BioAtlas · 旅途生物图鉴
 
+> **在线初稿 / Live draft:** [打开 BioAtlas 网页](https://bioatlas-draft-git-feat-field-modules-v1-7rk82my46w-2808.vercel.app) · 当前发布自 `feat/field-modules-v1`，内容仍处于 seed 初稿审核阶段。
+
 An open **field atlas of the plants, animals and fungi travellers actually see**, joining molecular phylogeny with classical taxonomy. 把分子系统发育与传统分类学放进同一套公开数据，认识旅途中遇到的植物、动物与真菌。
 
 - 🌳 **Tree of life** built on molecular phylogeny — divergence times as ranges with sources, paraphyletic groups flagged
