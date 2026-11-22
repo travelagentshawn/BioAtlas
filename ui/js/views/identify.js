@@ -15,7 +15,7 @@ export async function identifyView(root) {
   const results=h("div",{class:"grid"});
   const count=h("p",{class:"muted"});
   const options=(key,values,title)=>h("select",{"aria-label":title,onchange:e=>{state[key]=e.target.value;draw();}},h("option",{value:""},title),values.map(v=>h("option",{value:v},key==="month"?monthName(+v):key==="habitat"||key==="country"?label(key,v):v)));
-  fields.append(options("kingdom",["plantae","animalia"],tr("全部类群","All kingdoms")),
+  fields.append(options("kingdom",["plantae","animalia","fungi"],tr("全部类群","All kingdoms")),
     options("habitat",[...new Set(species.flatMap(s=>s.habitats))].sort(),tr("任意栖息地","Any habitat")),
     options("country",[...new Set(species.flatMap(s=>s.countries))].sort(),tr("任意国家","Any country")),
     options("month",Array.from({length:12},(_,i)=>String(i+1)),tr("任意月份","Any month")),
