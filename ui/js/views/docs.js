@@ -16,7 +16,7 @@ export async function docsView(root, { params, query }) {
   const page = pages.find((p) => p.slug === slug) || pages[0];
 
   const groups = [...new Set(pages.map((p) => p.group))];
-  const side = h("nav", { class: "doc-nav", "aria-label": "Documentation" },
+  const side = h("nav", { class: "doc-nav", "aria-label": tr("开发说明书", "Documentation") },
     groups.map((g) => h("div", { class: "doc-group" }, h("h4", null, g),
       pages.filter((p) => p.group === g).map((p) => h("a", { href: `#/docs/${p.slug}`, class: p.slug === page.slug ? "on" : "" }, p.title)))));
 
