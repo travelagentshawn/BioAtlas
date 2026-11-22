@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "hexacorallia",
+  "rank": "clade",
+  "scientific_name": "Hexacorallia",
+  "parent": "anthozoa",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "六放珊瑚类群",
+    "en": "Hexacorallia"
+  },
+  "summary": {
+    "zh": "珊瑚纲中的一个主要演化支，包含石珊瑚等类群。",
+    "en": "A major anthozoan clade that includes the stony corals."
+  },
+  "pruned": true,
+  "sources": [
+    "itis-acropora-cervicornis",
+    "itis-acropora-palmata"
+  ],
+  "review_status": "seed"
+}
