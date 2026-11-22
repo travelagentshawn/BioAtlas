@@ -125,3 +125,38 @@ test("Japanese documentation navigation resolves every page", () => {
     }
   }
 });
+
+
+test("authority registry and taxonomic assertions preserve independent sources", () => {
+  const { data } = loadAll();
+  const authorities = data.sources.filter(s => s.authority_role);
+  assert.ok(authorities.length >= 15);
+  assert.ok(authorities.some(s => s.id === "authority-catalogue-of-life-xr" && s.authority_role === "global-backbone"));
+  assert.ok(authorities.some(s => s.id === "authority-ipni" && s.authority_role === "nomenclatural-index"));
+  assert.ok(authorities.some(s => s.id === "authority-apg" && s.authority_role === "classification-framework"));
+  assert.ok(authorities.some(s => s.id === "authority-gbif-backbone-legacy" && s.legacy === true));
+  const flyAgaric = data.species.find(s => s.id === "amanita-muscaria");
+  assert.equal(flyAgaric.taxonomic_assertions.length, 2);
+  assert.ok(flyAgaric.taxonomic_assertions.every(a => a.name_status === "unassessed"));
+  const record = structuredClone(flyAgaric);
+  record.taxonomic_assertions[0].authority = "missing-authority";
+  const errors = [];
+  checkIntegrity({ ...data, species: [record] }, errors, []);
+  assert.ok(errors.some(e => e.includes('unknown authority "missing-authority"')));
+});
+
+test("API publishes authority registry and taxonomic assertions", () => {
+  const out = mkdtempSync(join(tmpdir(), "bioatlas-authorities-"));
+  try {
+    buildApi(out);
+    const read = (p) => JSON.parse(readFileSync(join(out, "api/v1", p), "utf8"));
+    const manifest = read("manifest.json");
+    const authorities = read("taxonomic-authorities.json");
+    const flyAgaric = read("species/amanita-muscaria.json");
+    assert.equal(authorities.length, manifest.counts.authorities);
+    assert.ok(authorities.some(a => a.id === "authority-catalogue-of-life-xr"));
+    assert.equal(flyAgaric.taxonomic_assertions.length, 2);
+    assert.ok(flyAgaric.sources_resolved.some(s => s.id === "authority-index-fungorum"));
+    assert.ok(manifest.languages.includes("ja"));
+  } finally { rmSync(out, { recursive: true, force: true }); }
+});
