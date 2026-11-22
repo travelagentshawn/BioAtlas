@@ -57,7 +57,9 @@ export async function treeView(root, { query }) {
   ];
   function sync() {
     modeBtns[0].classList.toggle("on", mode === "tree"); modeBtns[1].classList.toggle("on", mode === "outline");
-    status.textContent = mode === "tree" ? tr("点击空心圆折叠/展开；点击名称进入详情。虚线表示省略了中间类群；名称后的灰色数字为冠群年龄（百万年前）。", "Click a node circle to fold/unfold; click a name for details. Dashed branches omit intermediate clades; the grey number after a name is its crown age (Mya).") : "";
+    modeBtns[0].setAttribute("aria-pressed", String(mode === "tree"));
+    modeBtns[1].setAttribute("aria-pressed", String(mode === "outline"));
+    status.textContent = mode === "tree" ? tr("点击节点圆点，或聚焦后按 Enter/空格，折叠或展开分支；点击名称进入详情。虚线表示省略了中间类群；名称后的灰色数字为冠群年龄（百万年前）。", "Click a node circle, or focus it and press Enter/Space, to fold or unfold a branch. Click a name for details. Dashed branches omit intermediate clades; the grey number after a name is its crown age (Mya).") : "";
     draw();
   }
 
