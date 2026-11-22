@@ -18,7 +18,7 @@ BioAtlas 采用**分层、按类群选择权威来源**的模式。任何单一�
 
 | 类群 / 用途 | 优先来源 | 治理说明 |
 | --- | --- | --- |
-| 全球名称发现与交叉映射 | Catalogue of Life eXtended Release（COL XR） | GBIF 当前主要分类骨架已转向 COL XR；每次导入必须固定版本。 |
+| 全球名称发现与交叉映射 | Catalogue of Life Base + eXtended Release（COL XR） | Base 优先采用经过审查的全球来源；XR 通过额外整合提高覆盖度。GBIF 当前主要分类骨架使用 XR。每次导入必须区分 Base/XR 并固定版本。 |
 | 植物名称发表记录 | International Plant Names Index（IPNI） | 命名索引，不等同于接受物种名录。 |
 | 植物接受名与分布 | Plants of the World Online（POWO） | 记录访问日期和具体条目；有争议时回到专业文献。 |
 | 被子植物高阶分类 | APG IV（及后续正式发表的 APG 更新） | 仅用于被子植物目、科层级，必须注明版本。 |
