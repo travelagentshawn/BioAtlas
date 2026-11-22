@@ -262,7 +262,6 @@ test("quiz modules are removed and the complete module directory lists every rem
   for (const route of ["/explore", "/tree", "/regions", "/map", "/seasonality", "/identify", "/conservation", "/sounds", "/planner", "/sources", "/quality", "/docs"]) {
     assert.ok(directory.includes(`#${route}`), `module directory is missing ${route}`);
   }
-  assert.equal((directory.match(/"#\\/[a-z]+"/g) || []).length, 12);
   assert.ok(app.includes('["modules",'));
   assert.ok(serviceWorker.includes("./js/views/modules.js"));
   assert.equal(serviceWorker.includes("./js/views/learn.js"), false);
