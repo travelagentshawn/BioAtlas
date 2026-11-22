@@ -2,7 +2,7 @@ import { h } from "../dom.js";
 import { api } from "../api.js";
 import { tr, loc } from "../i18n.js";
 import { label, formatAge } from "../labels.js";
-import { crumbs, nameBlock, reviewBadge, badge, editOnGitHub, speciesCard, sectionTitle, link } from "../components.js";
+import { crumbs, nameBlock, reviewBadge, badge, editOnGitHub, speciesCard, sectionTitle, link, taxonomicAssertions } from "../components.js";
 
 export async function taxonView(root, { params }) {
   const t = await api.taxon(params.id);
@@ -28,6 +28,7 @@ export async function taxonView(root, { params }) {
           h("ul", null, p.synapomorphies.map((x) => h("li", null, loc(x))))) : null,
         p.debate ? h("section", { class: "panel debate" },
           sectionTitle(tr("分类学争议与修订", "Debate and revisions")), h("p", null, loc(p.debate))) : null,
+        taxonomicAssertions(t.taxonomic_assertions || [], t.sources_resolved),
         t.children.length ? h("section", { class: "panel" },
           sectionTitle(tr("下一级类群", "Child groups")),
           h("ul", { class: "plain" }, t.children.map((c) => h("li", null, h("a", { href: `#/taxon/${c.id}` }, loc(c.names)), " ",
