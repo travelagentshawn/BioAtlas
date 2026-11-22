@@ -59,3 +59,21 @@
 - `sources` 只能引用仓库中已存在的来源 ID。现场观察可作为核对方法，但不能伪装成已发表文献。
 - `review` 是审核过程记录，不是自动认证；有审核元数据不等于结论必然正确。
 - 旧记录保持原样；本次不会批量把任何 `seed` 改成已审核。
+
+
+## 地区出现记录的证据要求
+
+新增或修订 `data/regions/*.json` 中的物种月份关联时，优先为每条关联填写 `evidence`。例如：
+
+```json
+{
+  "species": "acer-palmatum",
+  "months": [10, 11],
+  "likelihood": "common",
+  "evidence": [
+    { "type": "regional-checklist", "source": "existing-regional-flora-source" }
+  ]
+}
+```
+
+来源必须确实支持该地区的出现记录及相应月份。若来源只支持“分布于该国家”，不能据此推导某个景区或某个月份。暂时找不到来源时，保留原始关联并让界面显示“月份待核实”，不要补造证据。
