@@ -6,125 +6,379 @@
   "$defs": {
     "i18n": {
       "type": "object",
-      "properties": { "zh": { "type": "string" }, "en": { "type": "string" } },
-      "required": ["zh", "en"]
+      "properties": {
+        "zh": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "zh",
+        "en"
+      ]
     },
     "TaxonLite": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "rank": { "type": "string" },
-        "scientific_name": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "kingdom": { "type": "string" },
-        "parent": { "type": ["string", "null"] },
-        "age_mya": { "type": ["object", "null"] },
-        "species_count": { "type": "integer", "minimum": 0 }
+        "id": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "kingdom": {
+          "type": "string"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "age_mya": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "species_count": {
+          "type": "integer",
+          "minimum": 0
+        }
       },
-      "required": ["id", "rank", "scientific_name", "names", "kingdom", "parent", "species_count"]
+      "required": [
+        "id",
+        "rank",
+        "scientific_name",
+        "names",
+        "kingdom",
+        "parent",
+        "species_count"
+      ]
     },
     "Taxon": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "rank": { "type": "string" },
-        "scientific_name": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "summary": { "$ref": "#/$defs/i18n" },
-        "kingdom": { "type": "string" },
-        "parent": { "type": ["string", "null"] },
-        "phylo": { "type": "object" },
-        "lineage": { "type": "array", "items": { "$ref": "#/$defs/TaxonLite" } },
-        "children": { "type": "array", "items": { "$ref": "#/$defs/TaxonLite" } },
-        "species": { "type": "array", "items": { "$ref": "#/$defs/SpeciesLite" } },
-        "sources_resolved": { "type": "array", "items": { "$ref": "#/$defs/Source" } },
-        "review_status": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "summary": {
+          "$ref": "#/$defs/i18n"
+        },
+        "kingdom": {
+          "type": "string"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phylo": {
+          "type": "object"
+        },
+        "lineage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaxonLite"
+          }
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaxonLite"
+          }
+        },
+        "species": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SpeciesLite"
+          }
+        },
+        "sources_resolved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          }
+        },
+        "review_status": {
+          "type": "string"
+        }
       },
-      "required": ["id", "rank", "scientific_name", "names", "summary", "kingdom", "parent", "phylo", "lineage", "children", "species", "sources_resolved", "review_status"]
+      "required": [
+        "id",
+        "rank",
+        "scientific_name",
+        "names",
+        "summary",
+        "kingdom",
+        "parent",
+        "phylo",
+        "lineage",
+        "children",
+        "species",
+        "sources_resolved",
+        "review_status"
+      ]
     },
     "TreeNode": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "rank": { "type": "string" },
-        "scientific_name": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "kingdom": { "type": "string" },
-        "age_mya": { "type": ["object", "null"] },
-        "monophyly": { "type": "string" },
-        "pruned": { "type": "boolean" },
-        "species_count": { "type": "integer" },
-        "children": { "type": "array", "items": { "$ref": "#/$defs/TreeNode" } },
+        "id": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "kingdom": {
+          "type": "string"
+        },
+        "age_mya": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "monophyly": {
+          "type": "string"
+        },
+        "pruned": {
+          "type": "boolean"
+        },
+        "species_count": {
+          "type": "integer"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TreeNode"
+          }
+        },
         "species": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "id": { "type": "string" },
-              "scientific_name": { "type": "string" },
-              "names": { "$ref": "#/$defs/i18n" }
+              "id": {
+                "type": "string"
+              },
+              "scientific_name": {
+                "type": "string"
+              },
+              "names": {
+                "$ref": "#/$defs/i18n"
+              }
             },
-            "required": ["id", "scientific_name", "names"]
+            "required": [
+              "id",
+              "scientific_name",
+              "names"
+            ]
           }
         }
       },
-      "required": ["id", "rank", "scientific_name", "names", "kingdom", "species_count", "children", "species"]
+      "required": [
+        "id",
+        "rank",
+        "scientific_name",
+        "names",
+        "kingdom",
+        "species_count",
+        "children",
+        "species"
+      ]
     },
     "SpeciesLite": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "scientific_name": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "summary": { "$ref": "#/$defs/i18n" },
-        "kingdom": { "type": "string" },
-        "taxon": { "type": "string" },
-        "lineage": { "type": "array", "items": { "type": "string" }, "description": "Taxon ids from root to the species' taxon." },
-        "best_months": { "type": "array", "items": { "type": "integer" } },
-        "habitats": { "type": "array", "items": { "type": "string" } },
-        "countries": { "type": "array", "items": { "type": "string" } },
-        "iucn": { "type": ["string", "null"] },
-        "review_status": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "summary": {
+          "$ref": "#/$defs/i18n"
+        },
+        "kingdom": {
+          "type": "string"
+        },
+        "taxon": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Taxon ids from root to the species' taxon."
+        },
+        "best_months": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "habitats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "iucn": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "review_status": {
+          "type": "string"
+        }
       },
-      "required": ["id", "scientific_name", "names", "summary", "kingdom", "taxon", "lineage", "best_months", "habitats", "countries", "iucn", "review_status"]
+      "required": [
+        "id",
+        "scientific_name",
+        "names",
+        "summary",
+        "kingdom",
+        "taxon",
+        "lineage",
+        "best_months",
+        "habitats",
+        "countries",
+        "iucn",
+        "review_status"
+      ]
     },
     "Source": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "kind": { "type": "string" },
-        "title": { "type": "string" },
-        "year": { "type": "integer" },
-        "citation": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "year": {
+          "type": "integer"
+        },
+        "citation": {
+          "type": "string"
+        }
       },
-      "required": ["id", "kind", "title", "year", "citation"]
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "year",
+        "citation"
+      ]
     },
     "Species": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "scientific_name": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "summary": { "$ref": "#/$defs/i18n" },
-        "kingdom": { "type": "string" },
-        "taxon": { "type": "string" },
-        "identification": { "type": "object" },
-        "evolution": { "type": "object" },
-        "travel": { "type": "object" },
-        "review_status": { "type": "string" },
-        "lineage": { "type": "array", "items": { "$ref": "#/$defs/TaxonLite" } },
+        "id": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "summary": {
+          "$ref": "#/$defs/i18n"
+        },
+        "kingdom": {
+          "type": "string"
+        },
+        "taxon": {
+          "type": "string"
+        },
+        "identification": {
+          "type": "object"
+        },
+        "evolution": {
+          "type": "object"
+        },
+        "travel": {
+          "type": "object"
+        },
+        "review_status": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaxonLite"
+          }
+        },
         "regions": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "id": { "type": "string" },
-              "kind": { "type": "string" },
-              "names": { "$ref": "#/$defs/i18n" },
-              "months": { "type": "array", "items": { "type": "integer" } },
-              "likelihood": { "type": "string" }
+              "id": {
+                "type": "string"
+              },
+              "kind": {
+                "type": "string"
+              },
+              "names": {
+                "$ref": "#/$defs/i18n"
+              },
+              "months": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "likelihood": {
+                "type": "string"
+              }
             },
-            "required": ["id", "kind", "names", "months", "likelihood"]
+            "required": [
+              "id",
+              "kind",
+              "names",
+              "months",
+              "likelihood"
+            ]
           }
         },
         "relatives": {
@@ -133,103 +387,350 @@
           "items": {
             "type": "object",
             "properties": {
-              "species": { "$ref": "#/$defs/SpeciesLite" },
-              "mrca": { "$ref": "#/$defs/TaxonLite" }
+              "species": {
+                "$ref": "#/$defs/SpeciesLite"
+              },
+              "mrca": {
+                "$ref": "#/$defs/TaxonLite"
+              }
             },
-            "required": ["species", "mrca"]
+            "required": [
+              "species",
+              "mrca"
+            ]
           }
         },
-        "sources_resolved": { "type": "array", "items": { "$ref": "#/$defs/Source" } }
+        "sources_resolved": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Source"
+          }
+        },
+        "sounds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string"
+              },
+              "source_url": {
+                "type": "string"
+              },
+              "license": {
+                "type": "string"
+              },
+              "attribution": {
+                "type": "string"
+              },
+              "mime_type": {
+                "type": "string"
+              },
+              "caption": {
+                "$ref": "#/$defs/i18n"
+              }
+            },
+            "required": [
+              "url",
+              "source_url",
+              "license",
+              "attribution"
+            ]
+          }
+        }
       },
-      "required": ["id", "scientific_name", "names", "summary", "kingdom", "taxon", "identification", "evolution", "travel", "review_status", "lineage", "regions", "relatives", "sources_resolved"]
+      "required": [
+        "id",
+        "scientific_name",
+        "names",
+        "summary",
+        "kingdom",
+        "taxon",
+        "identification",
+        "evolution",
+        "travel",
+        "review_status",
+        "lineage",
+        "regions",
+        "relatives",
+        "sources_resolved"
+      ]
     },
     "RegionLite": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "kind": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "description": { "$ref": "#/$defs/i18n" },
-        "countries": { "type": "array", "items": { "type": "string" } },
-        "center": { "type": ["object", "null"] },
-        "habitats": { "type": "array", "items": { "type": "string" } },
-        "species_count": { "type": "integer" },
-        "review_status": { "type": "string" }
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "description": {
+          "$ref": "#/$defs/i18n"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "center": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "habitats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "species_count": {
+          "type": "integer"
+        },
+        "review_status": {
+          "type": "string"
+        }
       },
-      "required": ["id", "kind", "names", "description", "countries", "center", "habitats", "species_count", "review_status"]
+      "required": [
+        "id",
+        "kind",
+        "names",
+        "description",
+        "countries",
+        "center",
+        "habitats",
+        "species_count",
+        "review_status"
+      ]
     },
     "Region": {
       "type": "object",
       "properties": {
-        "id": { "type": "string" },
-        "kind": { "type": "string" },
-        "names": { "$ref": "#/$defs/i18n" },
-        "description": { "$ref": "#/$defs/i18n" },
-        "countries": { "type": "array", "items": { "type": "string" } },
-        "center": { "type": ["object", "null"] },
-        "radius_km": { "type": ["number", "null"] },
-        "habitats": { "type": "array", "items": { "type": "string" } },
-        "review_status": { "type": "string" },
+        "id": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "names": {
+          "$ref": "#/$defs/i18n"
+        },
+        "description": {
+          "$ref": "#/$defs/i18n"
+        },
+        "countries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "center": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "radius_km": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "habitats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_status": {
+          "type": "string"
+        },
         "species": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "species": { "$ref": "#/$defs/SpeciesLite" },
-              "months": { "type": "array", "items": { "type": "integer" } },
-              "likelihood": { "type": "string" },
-              "note": { "type": ["object", "null"] }
+              "species": {
+                "$ref": "#/$defs/SpeciesLite"
+              },
+              "months": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              },
+              "likelihood": {
+                "type": "string"
+              },
+              "note": {
+                "type": [
+                  "object",
+                  "null"
+                ]
+              }
             },
-            "required": ["species", "months", "likelihood"]
+            "required": [
+              "species",
+              "months",
+              "likelihood"
+            ]
           }
         },
-        "month_counts": { "type": "array", "items": { "type": "integer" }, "description": "12 integers: number of species expected in each month (index 0 = January)." }
+        "month_counts": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "12 integers: number of species expected in each month (index 0 = January)."
+        }
       },
-      "required": ["id", "kind", "names", "description", "countries", "center", "habitats", "review_status", "species", "month_counts"]
+      "required": [
+        "id",
+        "kind",
+        "names",
+        "description",
+        "countries",
+        "center",
+        "habitats",
+        "review_status",
+        "species",
+        "month_counts"
+      ]
     },
     "Calendar": {
       "type": "object",
       "description": "Keys \"1\"…\"12\". Each value lists species ids whose best_months include that month.",
-      "additionalProperties": { "type": "array", "items": { "type": "string" } }
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
     },
     "SearchIndex": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "kind": { "type": "string" },
-          "id": { "type": "string" },
-          "names": { "$ref": "#/$defs/i18n" },
-          "scientific_name": { "type": ["string", "null"] },
-          "text": { "type": "string", "description": "Lowercased haystack for substring search." }
+          "kind": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "names": {
+            "$ref": "#/$defs/i18n"
+          },
+          "scientific_name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "description": "Lowercased haystack for substring search."
+          }
         },
-        "required": ["kind", "id", "names", "scientific_name", "text"]
+        "required": [
+          "kind",
+          "id",
+          "names",
+          "scientific_name",
+          "text"
+        ]
       }
     },
     "Manifest": {
       "type": "object",
       "properties": {
-        "api_version": { "type": "string" },
-        "data_hash": { "type": "string" },
-        "generated_at": { "type": "string" },
-        "languages": { "type": "array", "items": { "type": "string" } },
+        "api_version": {
+          "type": "string"
+        },
+        "data_hash": {
+          "type": "string"
+        },
+        "generated_at": {
+          "type": "string"
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "counts": {
           "type": "object",
           "properties": {
-            "taxa": { "type": "integer" }, "species": { "type": "integer" },
-            "regions": { "type": "integer" }, "sources": { "type": "integer" }
+            "taxa": {
+              "type": "integer"
+            },
+            "species": {
+              "type": "integer"
+            },
+            "regions": {
+              "type": "integer"
+            },
+            "sources": {
+              "type": "integer"
+            }
           },
-          "required": ["taxa", "species", "regions", "sources"]
+          "required": [
+            "taxa",
+            "species",
+            "regions",
+            "sources"
+          ]
         },
-        "endpoints": { "type": "object" },
-        "repository": { "type": "string" },
-        "licenses": { "type": "object" }
+        "endpoints": {
+          "type": "object"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "licenses": {
+          "type": "object"
+        }
       },
-      "required": ["api_version", "data_hash", "generated_at", "languages", "counts", "endpoints", "repository", "licenses"]
+      "required": [
+        "api_version",
+        "data_hash",
+        "generated_at",
+        "languages",
+        "counts",
+        "endpoints",
+        "repository",
+        "licenses"
+      ]
     },
-    "TaxonList": { "type": "array", "items": { "$ref": "#/$defs/TaxonLite" } },
-    "SpeciesList": { "type": "array", "items": { "$ref": "#/$defs/SpeciesLite" } },
-    "RegionList": { "type": "array", "items": { "$ref": "#/$defs/RegionLite" } },
-    "SourceList": { "type": "array", "items": { "$ref": "#/$defs/Source" } }
+    "TaxonList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TaxonLite"
+      }
+    },
+    "SpeciesList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/SpeciesLite"
+      }
+    },
+    "RegionList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/RegionLite"
+      }
+    },
+    "SourceList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Source"
+      }
+    }
   }
 }
