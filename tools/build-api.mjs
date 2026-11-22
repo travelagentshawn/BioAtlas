@@ -59,7 +59,7 @@ export function buildApi(outRoot) {
     best_months: s.travel.best_months, habitats: s.travel.habitats, countries: s.travel.countries,
     iucn: s.conservation?.iucn ?? null, review_status: s.review_status,
   });
-  const resolveSources = (ids = []) => [...new Set(ids)].filter((i) => sources.has(i)).map((i) => ({ ...sources.get(i), authority_role: sources.get(i).authority_role ?? null, taxonomic_scope: sources.get(i).taxonomic_scope ?? [], identifier_scheme: sources.get(i).identifier_scheme ?? null, update_policy: sources.get(i).update_policy ?? null, legacy: sources.get(i).legacy ?? false }));
+  const resolveSources = (ids = []) => [...new Set(ids)].filter((i) => sources.has(i)).map((i) => ({ ...sources.get(i), year: sources.get(i).year ?? null, accessed_at: sources.get(i).accessed_at ?? null, authority_role: sources.get(i).authority_role ?? null, taxonomic_scope: sources.get(i).taxonomic_scope ?? [], identifier_scheme: sources.get(i).identifier_scheme ?? null, update_policy: sources.get(i).update_policy ?? null, legacy: sources.get(i).legacy ?? false }));
   const regionsOfSpecies = (sid) =>
     data.regions.flatMap((r) => r.species.filter((e) => e.species === sid).map((e) => ({
       id: r.id, kind: r.kind, names: r.names, months: e.months, likelihood: e.likelihood,
@@ -166,7 +166,7 @@ export function buildApi(outRoot) {
     identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,
   })));
   put("sources.json", data.sources.map((s) => ({
-    id: s.id, kind: s.kind, title: s.title, year: s.year, citation: s.citation,
+    id: s.id, kind: s.kind, title: s.title, year: s.year ?? null, accessed_at: s.accessed_at ?? null, citation: s.citation,
     authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),
     authority_role: s.authority_role ?? null, taxonomic_scope: s.taxonomic_scope ?? [], identifier_scheme: s.identifier_scheme ?? null,
     update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
