@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "acropora",
+  "rank": "genus",
+  "scientific_name": "Acropora",
+  "parent": "acroporidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹿角珊瑚属",
+    "en": "Acropora"
+  },
+  "summary": {
+    "zh": "广泛分布于热带珊瑚礁的造礁石珊瑚属，常形成枝状或板状群体。",
+    "en": "A widespread tropical reef-building stony-coral genus, often forming branching or plate-like colonies."
+  },
+  "pruned": false,
+  "sources": [
+    "itis-acropora-cervicornis",
+    "itis-acropora-palmata"
+  ],
+  "review_status": "seed"
+}
