@@ -56,7 +56,7 @@
 - `reviewed_at` 使用实际审阅日期，不得回填或猜测。
 - `reviewed_by` 应能在贡献记录中对应到真实审阅者；不要写 AI 模型名冒充人类审阅者。
 - `reviewer_role: specialist` 且 `method: expert-assessment` 才能支持 `expert-reviewed`。
-- `sources` 只能引用仓库中已存在的来源 ID。现场观察可作为核对方法，但不能伪装成已发表文献。
+- `sources` 必须至少包含一个仓库中已存在的来源 ID。现场观察也应建立可追溯的观察记录来源，不能伪装成已发表文献。
 - `review` 是审核过程记录，不是自动认证；有审核元数据不等于结论必然正确。
 - 旧记录保持原样；本次不会批量把任何 `seed` 改成已审核。
 
