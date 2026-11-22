@@ -3,7 +3,6 @@
   "id": "authority-ipni",
   "kind": "database",
   "title": "International Plant Names Index (IPNI)",
-  "year": 2026,
   "url": "https://www.ipni.org/",
   "citation": "International Plant Names Index. Plant name nomenclatural records. Accessed 2026-11-22. https://www.ipni.org/",
   "authority_role": "nomenclatural-index",
@@ -12,5 +11,6 @@
     "plant nomenclature"
   ],
   "identifier_scheme": "IPNI LSID / name ID",
-  "update_policy": "Continuously updated; retain access date"
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
 }
