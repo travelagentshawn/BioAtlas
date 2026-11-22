@@ -6,7 +6,7 @@ import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { loadSchemas, validate } from "./lib/schema.mjs";
-import { loadAll, ROOT } from "./lib/data.mjs";
+import { loadAll, checkIntegrity, ROOT } from "./lib/data.mjs";
 import { buildApi } from "./build-api.mjs";
 
 const schemas = loadSchemas(join(ROOT, "schema"));
@@ -46,4 +46,43 @@ test("API build satisfies the contract and computes MRCA correctly", () => {
     assert.equal(read("tree.json").id, "eukaryota");
     assert.equal(read("species.json").length, m.counts.species);
   } finally { rmSync(out, { recursive: true, force: true }); }
+});
+
+
+test("review audit metadata is schema-validated", () => {
+  const base = JSON.parse(readFileSync(join(ROOT, "data/species/ginkgo-biloba.json"), "utf8"));
+  const good = structuredClone(base);
+  good.review = {
+    reviewed_at: "2026-11-22",
+    reviewed_by: "test-reviewer",
+    reviewer_role: "contributor",
+    method: "literature-check",
+    scope: ["taxonomy", "identification"]
+  };
+  assert.deepEqual(validate(good, schemas["species.schema.json"], schemas, "species.schema.json"), []);
+  const bad = structuredClone(good);
+  delete bad.review.reviewed_by;
+  assert.ok(validate(bad, schemas["species.schema.json"], schemas, "species.schema.json").length > 0);
+});
+
+test("review status cannot be promoted without an audit or false expert sign-off", () => {
+  const { data } = loadAll();
+  const record = structuredClone(data.species[0]);
+  const testData = { ...data, species: [record], taxa: [...data.taxa], regions: [...data.regions], sources: [...data.sources] };
+  record.review_status = "reviewed";
+  let errors = [];
+  checkIntegrity(testData, errors, []);
+  assert.ok(errors.some(e => e.includes("requires an auditable review object")));
+
+  record.review = {
+    reviewed_at: "2026-11-22",
+    reviewed_by: "test-reviewer",
+    reviewer_role: "contributor",
+    method: "literature-check",
+    scope: ["taxonomy"]
+  };
+  record.review_status = "expert-reviewed";
+  errors = [];
+  checkIntegrity(testData, errors, []);
+  assert.ok(errors.some(e => e.includes("requires a specialist expert-assessment review")));
 });
