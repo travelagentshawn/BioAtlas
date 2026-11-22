@@ -97,3 +97,18 @@ test("region species evidence requires a valid existing source", () => {
   checkIntegrity(testData, errors, []);
   assert.ok(errors.some(e => e.includes("unknown source \"source-that-does-not-exist\"")));
 });
+
+
+test("fungi and moss branches have source-backed starter records", () => {
+  const { data } = loadAll();
+  const taxa = new Map(data.taxa.map(t => [t.id, t]));
+  const flyAgaric = data.species.find(s => s.id === "amanita-muscaria");
+  const haircap = data.species.find(s => s.id === "polytrichum-commune");
+  assert.equal(flyAgaric?.kingdom, "fungi");
+  assert.equal(taxa.get("amanita")?.kingdom, "fungi");
+  assert.equal(haircap?.kingdom, "plantae");
+  assert.equal(taxa.get("polytrichum")?.parent, "polytrichaceae");
+  const newScenes = data.regions.filter(r => ["eastern-us-temperate-forests", "british-irish-bogs-wet-heaths"].includes(r.id));
+  assert.equal(newScenes.length, 2);
+  assert.ok(newScenes.every(r => r.species.every(e => (e.evidence || []).length > 0)));
+});
