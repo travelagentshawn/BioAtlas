@@ -33,3 +33,29 @@ Every species, taxon and region page has a "Suggest an edit on GitHub" link poin
 - A taxon needs at least one source, otherwise `validate` warns.
 - Species without a suitable taxon: add the family (and a clade if needed) first.
 - Only fill `external_ids` (GBIF, NCBI, Wikidata…) with values you have **verified**.
+
+
+## Auditable review metadata (the optional `review` field)
+
+When promoting a record from `seed` to `reviewed` or `expert-reviewed`, add a `review` object to that same record. A PR description alone is not a durable record-level audit trail.
+
+```json
+{
+  "review": {
+    "reviewed_at": "YYYY-MM-DD",
+    "reviewed_by": "GitHub handle or verifiable reviewer identifier",
+    "reviewer_role": "contributor",
+    "method": "literature-check",
+    "sources": ["existing-source-id"],
+    "scope": ["taxonomy", "identification", "distribution", "phenology"],
+    "notes": { "zh": "核对范围与仍存疑点", "en": "What was checked and what remains uncertain" }
+  }
+}
+```
+
+- Use the actual review date; never backdate or guess it.
+- Identify a real reviewer. Do not present an AI model as a human reviewer.
+- `expert-reviewed` requires both `reviewer_role: specialist` and `method: expert-assessment`.
+- `sources` may only reference source IDs that exist in this repository. Field observation is a valid review method, but must not be misrepresented as published literature.
+- Review metadata documents a process; it is not automatic certification and does not guarantee a claim is correct.
+- Existing records remain unchanged. This change does not promote any `seed` record.
