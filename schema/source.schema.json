@@ -77,6 +77,10 @@
     "legacy": {
       "type": "boolean",
       "description": "True when retained for historical crosswalks but no longer maintained as a current backbone."
+    },
+    "accessed_at": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
     }
   },
   "required": [
@@ -84,7 +88,6 @@
     "id",
     "kind",
     "title",
-    "year",
     "citation"
   ],
   "additionalProperties": false
