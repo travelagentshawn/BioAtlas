@@ -21,6 +21,7 @@ export async function sourcesView(root) {
    list.append(h("article",{class:"card"},h("div",{class:"card-body"},
     h("div",{class:"kicker"},s.authority_role?roleLabels[s.authority_role]:`${s.kind} · ${s.year}`),h("h3",null,s.title),
     s.authority_role?h("p",{class:"muted small"},(s.taxonomic_scope||[]).join(" · ")):null,
+    s.accessed_at?h("p",{class:"small muted"},tr("访问日期：","Accessed: ")+s.accessed_at):null,
     s.authority_role&&s.identifier_scheme?h("p",{class:"small"},tr("标识符：","Identifier: ")+s.identifier_scheme):null,
     s.authority_role&&s.update_policy?h("p",{class:"small muted"},s.update_policy):null,
     s.legacy?h("p",{class:"small muted"},tr("历史兼容用途；不用于新分类判断。","Legacy compatibility only; not used for new taxonomic decisions.")):null,
