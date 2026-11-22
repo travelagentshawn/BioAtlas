@@ -49,3 +49,7 @@ Promoting a status requires saying in the PR what was checked.
 - ids are unique and equal the file name; species ids are the lowercase hyphenated scientific name (hybrid `×` becomes `x`).
 - `parent`, `taxon`, species and source references must exist; one root, no cycles; species and taxon share a `kingdom`.
 - Every species should appear in at least one region (warning otherwise).
+
+## Review audit metadata (optional `review`)
+
+`review_status` expresses the current review level; `review` stores the actual review event: date, reviewer, method, scope and sources. They are not interchangeable. Non-`seed` records must carry a review object. `expert-reviewed` additionally requires a specialist using the `expert-assessment` method. Audit metadata does not automatically validate scientific conclusions.
