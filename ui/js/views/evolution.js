@@ -6,7 +6,7 @@ import { sectionTitle, empty } from "../components.js";
 
 export async function evolutionView(root) {
  const taxa=await api.taxa();
- const eligible=taxa.filter(t=>t.parent&&t.species_count>0);
+ const eligible=taxa.filter(t=>t.parent&&t.species_count>0&&taxa.some(o=>o.parent===t.parent&&o.id!==t.id));
  const stage=h("section",{class:"panel"});
  let index=0,score=0;
  function question(){
