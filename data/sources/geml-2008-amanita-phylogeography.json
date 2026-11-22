@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "path": "data/sources/geml-2008-amanita-phylogeography.json",
+  "id": "geml-2008-amanita-phylogeography",
+  "kind": "paper",
+  "title": "Evidence for strong inter- and intracontinental phylogeographic structure in Amanita muscaria, a wind-dispersed ectomycorrhizal basidiomycete",
+  "authors": "József Geml, Rodham E. Tulloss, Gary A. Laursen, Nina A. Sazanova and D. L. Taylor",
+  "year": 2008,
+  "venue": "Molecular Phylogenetics and Evolution 48(2): 694–701",
+  "doi": "10.1016/j.ympev.2008.04.029",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/18547823/",
+  "citation": "Geml J, Tulloss RE, Laursen GA, Sazanova NA, Taylor DL. Evidence for strong inter- and intracontinental phylogeographic structure in Amanita muscaria, a wind-dispersed ectomycorrhizal basidiomycete. Mol Phylogenet Evol. 2008;48(2):694–701. doi:10.1016/j.ympev.2008.04.029."
+}
