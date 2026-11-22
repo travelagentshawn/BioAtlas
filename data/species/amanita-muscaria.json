@@ -103,5 +103,31 @@
     "geml-2008-amanita-phylogeography",
     "uamh-amanita-muscaria-5637"
   ],
-  "review_status": "seed"
+  "review_status": "seed",
+  "taxonomic_assertions": [
+    {
+      "authority": "authority-index-fungorum",
+      "record_id": "161267",
+      "scientific_name": "Amanita muscaria (L.) Lam.",
+      "name_status": "unassessed",
+      "accessed_at": "2026-11-22",
+      "source": "index-fungorum-amanita-muscaria",
+      "notes": {
+        "zh": "记录编号来自仓库现有的 Index Fungorum 引用；本次仅登记来源映射，尚未独立核验其当前接受名状态。",
+        "en": "Record ID is taken from the existing Index Fungorum citation. This registers provenance only; current accepted-name status has not been independently checked."
+      }
+    },
+    {
+      "authority": "authority-ncbi-taxonomy",
+      "record_id": "41956",
+      "scientific_name": "Amanita muscaria",
+      "name_status": "unassessed",
+      "accessed_at": "2026-11-22",
+      "source": "ncbi-taxonomy-2020",
+      "notes": {
+        "zh": "NCBI Taxonomy ID 来自现有来源记录；该数据库记录不自动决定 BioAtlas 的分类接受状态。",
+        "en": "NCBI Taxonomy ID is taken from the existing source record; this database record does not automatically determine BioAtlas acceptance."
+      }
+    }
+  ]
 }
