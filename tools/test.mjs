@@ -163,7 +163,7 @@ test("API publishes authority registry and taxonomic assertions", () => {
     assert.ok(authorities.some(a => a.id === "authority-catalogue-of-life-xr" && a.current_version === "2026-10-16 XR"));
     assert.ok(authorities.some(a => a.id === "authority-catalogue-of-life-base" && a.current_version === "2026-10-14 Base"));
     const sourceIndex = read("sources.json");
-    assert.ok(sourceIndex.some(source => source.id === "authority-catalogue-of-life-xr" && source.accessed_at === "2026-11-22" && source.year === null));
+    assert.ok(sourceIndex.some(source => source.id === "authority-catalogue-of-life-xr" && source.accessed_at === "2026-11-22" && source.year === 2026 && source.current_version === "2026-10-16 XR"));
     assert.equal(flyAgaric.taxonomic_assertions.length, 2);
     assert.ok(flyAgaric.sources_resolved.some(s => s.id === "authority-index-fungorum"));
     assert.ok(manifest.languages.includes("ja"));
