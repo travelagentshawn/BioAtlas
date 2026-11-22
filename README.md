@@ -1,6 +1,6 @@
 # BioAtlas · 旅途生物图鉴
 
-An open **field atlas of the plants and animals travellers actually see**, joining molecular phylogeny with classical taxonomy. 把分子系统发育与传统分类学放进同一套公开数据，认识旅途中遇到的动植物。
+An open **field atlas of the plants, animals and fungi travellers actually see**, joining molecular phylogeny with classical taxonomy. 把分子系统发育与传统分类学放进同一套公开数据，认识旅途中遇到的动植物。
 
 - 🌳 **Tree of life** built on molecular phylogeny — divergence times as ranges with sources, paraphyletic groups flagged
 - 🧭 **Travel scenes & trip workbench** — what you may meet, where and in which month; export a checklist and a phylogeny of your trip
