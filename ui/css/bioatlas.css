@@ -3,7 +3,7 @@
 :root {
   --bg: #f5f0e4; --surface: #fffdf7; --surface-2: #f0e9d9;
   --ink: #1d2a22; --ink-2: #46544b; --muted: #7a857d; --line: #e0d7c3; --line-2: #cfc4aa;
-  --plant: #2c6a4d; --plant-soft: #dcebe0; --animal: #b2532b; --animal-soft: #f5e0d3; --root: #5a6670;
+  --plant: #2c6a4d; --plant-soft: #dcebe0; --animal: #b2532b; --animal-soft: #f5e0d3; --fungi: #7652a5; --fungi-soft: #ece4f6; --root: #5a6670;
   --accent: var(--plant); --accent-ink: #fff;
   --warn: #9a6b00; --warn-soft: #fbefcf; --danger: #a63a2b;
   --shadow: 0 1px 2px rgba(40,30,10,.06), 0 6px 20px rgba(40,30,10,.06);
@@ -14,7 +14,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) { --bg:#141a16; --surface:#1b231e; --surface-2:#222c26; --ink:#e8efe9; --ink-2:#b6c3ba; --muted:#8a978f; --line:#2c3831; --line-2:#3a4a41;
-    --plant:#73c29a; --plant-soft:#1e3328; --animal:#e8a07a; --animal-soft:#3a271d; --root:#9aa8b3; --accent-ink:#0f1a14; --warn:#e6bd5c; --warn-soft:#352c12; --danger:#e58a7b;
+    --plant:#73c29a; --plant-soft:#1e3328; --animal:#e8a07a; --animal-soft:#3a271d; --fungi:#b99ae8; --fungi-soft:#302640; --root:#9aa8b3; --accent-ink:#0f1a14; --warn:#e6bd5c; --warn-soft:#352c12; --danger:#e58a7b;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25); }
 }
 :root[data-theme="dark"] { --bg:#141a16; --surface:#1b231e; --surface-2:#222c26; --ink:#e8efe9; --ink-2:#b6c3ba; --muted:#8a978f; --line:#2c3831; --line-2:#3a4a41;
@@ -63,7 +63,7 @@ button, input, select { font: inherit; color: inherit; }
 .chip { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); cursor: pointer; font-size: .9rem; }
 .chip.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .chip.plantae.on { background: var(--plant); border-color: var(--plant); color: var(--accent-ink); }
-.chip.animalia.on { background: var(--animal); border-color: var(--animal); color: #fff; }
+.chip.animalia.on { background: var(--animal); border-color: var(--animal); color: #fff; } .chip.fungi.on { background: var(--fungi); border-color: var(--fungi); color: #fff; }
 .badge { display: inline-block; padding: 1px 10px; border-radius: 999px; font-size: .78rem; line-height: 1.7; background: var(--surface-2); color: var(--ink-2); border: 1px solid var(--line); text-decoration: none; white-space: nowrap; }
 .badge.muted { background: transparent; color: var(--muted); }
 .badge.review.seed { background: var(--warn-soft); color: var(--warn); border-color: transparent; }
@@ -102,7 +102,7 @@ h2.sub { font-size: 1.15rem; margin: 28px 0 12px; }
 .grid.small { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
 .card { display: flex; gap: 14px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; color: inherit; box-shadow: var(--shadow); transition: transform .15s, border-color .15s; }
 .card:hover { transform: translateY(-2px); border-color: var(--line-2); }
-.species-card.plantae { border-left: 4px solid var(--plant); } .species-card.animalia { border-left: 4px solid var(--animal); }
+.species-card.plantae { border-left: 4px solid var(--plant); } .species-card.animalia { border-left: 4px solid var(--animal); } .species-card.fungi { border-left: 4px solid var(--fungi); }
 .card-plate { line-height: 0; flex: none; } .card-body { min-width: 0; flex: 1; }
 .card h3 { font-size: 1.08rem; margin: 0 0 2px; } .card .sci { font-size: .85rem; } .card .fam { font-size: .78rem; color: var(--muted); margin-top: 2px; }
 .card-foot { display: flex; align-items: center; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
@@ -130,7 +130,7 @@ select, input[type=text], input[type=number] { padding: 8px 12px; border-radius:
 /* detail pages */
 .crumbs { font-size: .85rem; color: var(--muted); margin-bottom: 14px; } .crumbs .sep { margin: 0 .5em; }
 .species-head { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; padding: 26px; border-radius: 20px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); margin-bottom: 24px; }
-.species-head.plantae { border-top: 5px solid var(--plant); } .species-head.animalia { border-top: 5px solid var(--animal); }
+.species-head.plantae { border-top: 5px solid var(--plant); } .species-head.animalia { border-top: 5px solid var(--animal); } .species-head.fungi { border-top: 5px solid var(--fungi); }
 .taxon-head { grid-template-columns: 1fr; }
 .plate { text-align: center; line-height: 0; } .plate small { display: block; line-height: 1.4; margin-top: 8px; max-width: 160px; font-size: .7rem; }
 .plate img { max-width: 220px; border-radius: 12px; }
@@ -147,7 +147,7 @@ select, input[type=text], input[type=number] { padding: 8px 12px; border-radius:
 .kv { display: flex; flex-direction: column; gap: 8px; } .kv-row { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; } .kv .k { width: 5em; color: var(--muted); font-size: .85rem; flex: none; } .kv .v { display: flex; gap: 6px; flex-wrap: wrap; }
 .plain { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
 .wheel-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; } .wheel-cap { font-weight: 600; text-align: center; }
-.wheel-on.plantae, .bar.plantae { fill: var(--plant); } .wheel-on.animalia, .bar.animalia { fill: var(--animal); } .wheel-on.root { fill: var(--root); }
+.wheel-on.plantae, .bar.plantae { fill: var(--plant); } .wheel-on.animalia, .bar.animalia { fill: var(--animal); } .wheel-on.fungi, .bar.fungi { fill: var(--fungi); } .wheel-on.root { fill: var(--root); }
 .wheel-off { fill: var(--surface-2); } .wheel-t { font-size: 9px; fill: var(--muted); } .wheel-t.on { fill: #fff; font-weight: 700; } .wheel-now { fill: var(--ink); }
 .strip .wheel-off { fill: var(--line); } .bar.hi { stroke: var(--ink); stroke-width: 1.5; } .bar-l { font-size: 9px; fill: var(--muted); } .bar-n { font-size: 9px; fill: var(--ink-2); } .bars { width: 100%; }
 .lineage { list-style: none; margin: 0 0 14px; padding: 0; position: relative; }
@@ -157,7 +157,7 @@ select, input[type=text], input[type=number] { padding: 8px 12px; border-radius:
 .lineage a { text-decoration: none; color: var(--ink); } .lineage a:hover b { text-decoration: underline; }
 .age-big { font: 700 2.2rem var(--serif); color: var(--plant); } .age-big small { font: 500 .9rem var(--sans); color: var(--muted); }
 .range { position: relative; height: 8px; background: var(--surface-2); border-radius: 4px; margin: 10px 0; } .range-bar { position: absolute; top: 0; bottom: 0; border-radius: 4px; min-width: 4px; }
-.range-bar.plantae { background: var(--plant); } .range-bar.animalia { background: var(--animal); } .range-bar.root { background: var(--root); }
+.range-bar.plantae { background: var(--plant); } .range-bar.animalia { background: var(--animal); } .range-bar.fungi { background: var(--fungi); } .range-bar.root { background: var(--root); }
 .sources ol { margin: 0; padding-left: 1.4em; font-size: .88rem; color: var(--ink-2); } .sources li { margin-bottom: .5em; }
 .sources li:target { background: var(--warn-soft); border-radius: 6px; }
 .foot-actions { margin-top: 22px; font-size: .85rem; color: var(--muted); }
