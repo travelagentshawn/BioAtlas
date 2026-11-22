@@ -15,6 +15,8 @@ export async function qualityView(root) {
  const missingAudit=allRecords.filter(r=>r.review_status!=="seed"&&!r.review).length;
  const regionLinks=regionDetails.flatMap(r=>r.species||[]);
  const evidencedLinks=regionLinks.filter(e=>(e.evidence||[]).length>0).length;
+ const unverifiedLinks=regionLinks.length-evidencedLinks;
+ const regionsWithUnverifiedEvidence=regionDetails.filter(r=>(r.species||[]).some(e=>!(e.evidence||[]).length)).length;
  const count=(fn)=>details.filter(fn).length;
  const status=["seed","reviewed","expert-reviewed"].map(k=>({key:k,n:details.filter(s=>s.review_status===k).length}));
  const metrics=[
@@ -30,7 +32,9 @@ export async function qualityView(root) {
   [tr("具有体型数据","With size data"),count(s=>!!s.identification?.size_cm)],
   [tr("具有审核记录","With review audit metadata"),audited],
   [tr("非初稿但缺少审核记录","Non-seed records missing audit"),missingAudit],
-  [tr("有来源的地区—物种关联","Region–species links with evidence"),`${evidencedLinks} / ${regionLinks.length}`]
+  [tr("有来源的地区—物种关联","Region–species links with evidence"),`${evidencedLinks} / ${regionLinks.length}`],
+  [tr("缺少关联证据的地区—物种记录","Region–species links missing evidence"),unverifiedLinks],
+  [tr("存在未核实关联的场景","Scenes with unverified associations"),regionsWithUnverifiedEvidence]
  ];
  const table=h("div",{class:"quality-grid"});
  metrics.forEach(([label,value])=>table.append(h("div",{class:"panel stat-card"},h("span",{class:"muted"},label),h("b",null,value))));
