@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "path": "data/sources/ncbi-taxonomy-2020.json",
+  "id": "ncbi-taxonomy-2020",
+  "kind": "paper",
+  "title": "NCBI Taxonomy: a comprehensive update",
+  "authors": "Schoch CL et al.",
+  "year": 2020,
+  "venue": "Database (Oxford)",
+  "doi": "10.1093/database/baaa062",
+  "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=41956&mode=Info",
+  "citation": "Schoch CL, et al. NCBI Taxonomy: a comprehensive update. Database (Oxford). 2020;2020:baaa062. doi:10.1093/database/baaa062."
+}
