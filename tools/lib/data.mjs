@@ -41,7 +41,7 @@ export function loadAll(root = ROOT) {
   return { data, errors, warnings, schemas };
 }
 
-function checkIntegrity(data, errors, warnings) {
+export function checkIntegrity(data, errors, warnings) {
   const idx = (arr) => new Map(arr.map((r) => [r.id, r]));
   const taxa = idx(data.taxa), species = idx(data.species), sources = idx(data.sources);
 
