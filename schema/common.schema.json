@@ -54,7 +54,8 @@
       "enum": [
         "root",
         "plantae",
-        "animalia"
+        "animalia",
+        "fungi"
       ],
       "description": "Top-level grouping used for colour and filtering. 'root' is only for nodes above the plant/animal split."
     },
@@ -114,6 +115,12 @@
           "type": "string"
         },
         "iucn": {
+          "type": "string"
+        },
+        "index_fungorum": {
+          "type": "string"
+        },
+        "mycobank": {
           "type": "string"
         }
       },
