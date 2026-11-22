@@ -20,8 +20,9 @@ export async function identifyView(root) {
     options("country",[...new Set(species.flatMap(s=>s.countries))].sort(),tr("任意国家","Any country")),
     options("month",Array.from({length:12},(_,i)=>String(i+1)),tr("任意月份","Any month")),
     options("color",[...new Set(details.flatMap(s=>s.identification?.color_tags||[]))].sort(),tr("任意颜色","Any colour")),
-    options("size",["small","medium","large"],tr("任意体型","Any size")));
-  function sizeBand(v){if(!v)return "";const n=(v.min+v.max)/2;return n<10?"small":n<100?"medium":"large";}\n  function draw(){
+    options("size",[...new Set(details.map(s=>sizeBand(s.identification?.size_cm)).filter(Boolean))],tr("任意体型","Any size")));
+  function sizeBand(v){if(!v)return "";const n=(v.min+v.max)/2;return n<10?"small":n<100?"medium":"large";}
+  function draw(){
     const q=state.q.trim().toLowerCase();
     const list=species.filter(s=>(!q||[loc(s.names),s.scientific_name].join(" ").toLowerCase().includes(q))&&(!state.kingdom||s.kingdom===state.kingdom)&&(!state.habitat||s.habitats.includes(state.habitat))&&(!state.country||s.countries.includes(state.country))&&(!state.month||s.best_months.includes(+state.month))&&(!state.color||(detailById.get(s.id)?.identification?.color_tags||[]).includes(state.color))&&(!state.size||sizeBand(detailById.get(s.id)?.identification?.size_cm)===state.size));
     count.textContent=tr(`找到 ${list.length} / ${species.length} 种`,`${list.length} of ${species.length} species`);
