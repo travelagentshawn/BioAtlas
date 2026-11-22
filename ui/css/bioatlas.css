@@ -249,3 +249,8 @@ audio { width:100%; margin:10px 0; }
 .quality-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
 .stat-card { display:flex; flex-direction:column; gap:6px; }
 .stat-card b { font:700 1.8rem var(--serif); color:var(--plant); }
+
+.taxon-assertion { padding:12px 0; border-bottom:1px solid var(--line); }
+.taxon-assertion:last-child { border-bottom:0; }
+.taxon-assertion .sci { margin:6px 0; }
+.taxon-assertion .note { margin:8px 0 0; }
