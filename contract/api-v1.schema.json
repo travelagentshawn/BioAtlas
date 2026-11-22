@@ -773,13 +773,17 @@
             },
             "sources": {
               "type": "integer"
+            },
+            "authorities": {
+              "type": "integer"
             }
           },
           "required": [
             "taxa",
             "species",
             "regions",
-            "sources"
+            "sources",
+            "authorities"
           ]
         },
         "endpoints": {
