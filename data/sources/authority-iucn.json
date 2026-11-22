@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-iucn",
+  "kind": "database",
+  "title": "IUCN Red List",
+  "url": "https://www.iucnredlist.org/",
+  "citation": "International Union for Conservation of Nature. The IUCN Red List of Threatened Species. Accessed 2026-11-22. https://www.iucnredlist.org/",
+  "authority_role": "conservation-assessment",
+  "taxonomic_scope": [
+    "global conservation assessments"
+  ],
+  "identifier_scheme": "IUCN assessment ID",
+  "update_policy": "Assessment-specific; retain assessment year and ID",
+  "accessed_at": "2026-11-22"
+}

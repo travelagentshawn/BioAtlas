@@ -6,7 +6,9 @@
   "type": "module",
   "license": "MIT",
   "repository": "github:travelagentshawn/BioAtlas",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "validate": "node tools/validate.mjs",
     "build": "node tools/build.mjs",
@@ -15,6 +17,7 @@
     "build:docs": "node tools/build.mjs --only docs",
     "serve": "node tools/serve.mjs",
     "dev": "node tools/build.mjs && node tools/serve.mjs",
-    "check": "node tools/validate.mjs && node tools/check-boundaries.mjs && node tools/build.mjs --out .tmp-check && node tools/test.mjs"
+    "check": "node tools/validate.mjs && node tools/audit-taxonomy.mjs && node tools/check-boundaries.mjs && node tools/build.mjs --out .tmp-check && node tools/test.mjs",
+    "audit:taxonomy": "node tools/audit-taxonomy.mjs"
   }
 }

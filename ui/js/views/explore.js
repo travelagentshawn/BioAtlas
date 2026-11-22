@@ -19,7 +19,7 @@ export async function explore(root, { query }) {
   }, h("option", { value: "" }, anyLabel),
   options.map(([v, l]) => h("option", { value: v, selected: String(state[key]) === String(v) }, l)));
 
-  const kChips = h("div", { class: "chips", role: "group" }, [["", tr("全部", "All")], ["plantae", tr("植物", "Plants")], ["animalia", tr("动物", "Animals")]]
+  const kChips = h("div", { class: "chips", role: "group" }, [["", tr("全部", "All")], ["plantae", tr("植物", "Plants")], ["animalia", tr("动物", "Animals")], ["fungi", tr("真菌", "Fungi")]]
     .map(([v, l]) => h("button", { class: `chip ${v}${state.kingdom === v ? " on" : ""}`, "data-v": v, onclick: () => { state.kingdom = v; update(); } }, l)));
 
   const input = h("input", { type: "search", class: "search", placeholder: tr("搜索中文名、英文名或学名…", "Search by name or scientific name…"),

@@ -6,6 +6,7 @@ import { loading, failure } from "./components.js";
 
 const routes = [
   ["", () => import("./views/home.js").then((m) => m.home)],
+  ["modules", () => import("./views/modules.js").then((m) => m.modulesView)],
   ["explore", () => import("./views/explore.js").then((m) => m.explore)],
   ["species/:id", () => import("./views/species.js").then((m) => m.speciesView)],
   ["taxon/:id", () => import("./views/taxon.js").then((m) => m.taxonView)],
@@ -13,6 +14,13 @@ const routes = [
   ["regions", () => import("./views/regions.js").then((m) => m.regionsView)],
   ["region/:id", () => import("./views/regions.js").then((m) => m.regionView)],
   ["planner", () => import("./views/planner.js").then((m) => m.plannerView)],
+  ["seasonality", () => import("./views/seasonality.js").then((m) => m.seasonalityView)],
+  ["identify", () => import("./views/identify.js").then((m) => m.identifyView)],
+  ["map", () => import("./views/map.js").then((m) => m.mapView)],
+  ["conservation", () => import("./views/conservation.js").then((m) => m.conservationView)],
+  ["sounds", () => import("./views/sounds.js").then((m) => m.soundsView)],
+  ["sources", () => import("./views/sources.js").then((m) => m.sourcesView)],
+  ["quality", () => import("./views/quality.js").then((m) => m.qualityView)],
   ["docs", () => import("./views/docs.js").then((m) => m.docsView)],
   ["docs/:slug", () => import("./views/docs.js").then((m) => m.docsView)],
 ];
@@ -32,30 +40,37 @@ function parse() {
   return { loader: () => Promise.resolve((r) => r.append(h("div", { class: "state" }, tr("页面不存在。", "Page not found.")))), params: {}, query: new URLSearchParams(), name: "404" };
 }
 
-const main = h("main", { id: "view", tabindex: "-1" });
+// The two primary experiences are deliberately peers: the curated usable atlas
+// and the phylogeny tree. All other tools remain available as secondary modules.
 const navLinks = [
-  ["explore", tr("探索", "Explore")], ["tree", tr("生命之树", "Tree of life")], ["regions", tr("旅行场景", "Scenes")],
-  ["planner", tr("行程工作台", "Workbench")], ["docs", "Documentation"],
+  ["home", tr("自然图鉴", "Field atlas"), "primary-mode"],
+  ["tree", tr("进化树", "Evolution tree"), "primary-mode"],
+  ["modules", tr("全部模块", "All modules")],
 ];
 
 function header() {
   const theme = document.documentElement.dataset.theme;
-  return h("header", { class: "site-header" }, h("div", { class: "wrap bar" },
-    h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
-    h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l]) => h("a", { href: `#/${k}`, "data-k": k }, l))),
-    h("div", { class: "tools" },
-      h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(getLang() === "zh" ? "en" : "zh"); boot(); } }, getLang() === "zh" ? "EN" : "中"),
-      h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
-        const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
-        document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
-      } }, theme === "dark" ? "☀" : "☾"),
-      h("a", { class: "icon-btn gh", href: REPO.url, target: "_blank", rel: "noopener noreferrer", title: "GitHub" }, "GitHub"))));
+  return h("header", { class: "site-header" },
+    h("div", { class: "wrap bar" },
+      h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
+      h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l, cls = ""]) => h("a", { href: k === "home" ? "#/" : `#/${k}`, "data-k": k, class: cls }, l))),
+      h("div", { class: "tools" },
+        h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(({zh:"en",en:"ja",ja:"zh"})[getLang()] || "zh"); boot(); } }, ({zh:"EN",en:"日本語",ja:"中"})[getLang()] || "EN"),
+        h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
+          const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
+          document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
+        } }, theme === "dark" ? "☀" : "☾"),
+        h("a", { class: "icon-btn gh", href: REPO.url, target: "_blank", rel: "noopener noreferrer", title: "GitHub" }, "GitHub"))),
+    h("div", { class: "site-notice" },
+      h("div", { class: "wrap site-notice-inner" },
+        h("span", null, tr("公开初稿 · 数据记录尚待逐条核验", "Public draft · records still require source-by-source review")),
+        h("a", { href: "#/quality" }, tr("查看数据质量", "Review data quality"), " →"))));
 }
 
 async function footer() {
   let m = null; try { m = await api.manifest(); } catch { /* shown by views */ }
   return h("footer", { class: "site-footer" }, h("div", { class: "wrap" },
-    h("div", null, h("b", null, "BioAtlas"), " · ", tr("开源的旅途动植物图鉴：代码 MIT，数据 CC BY 4.0。", "Open travel field atlas — code MIT, data CC BY 4.0.")),
+    h("div", null, h("b", null, "BioAtlas"), " · ", tr("开源的旅途生物图鉴：代码 MIT，数据 CC BY 4.0。", "Open travel biodiversity atlas — code MIT, data CC BY 4.0.")),
     h("div", { class: "muted" },
       m ? `API v${m.api_version} · data ${m.data_hash} · ${m.counts.species} ${tr("物种", "species")}` : "",
       " · ", h("a", { href: `${API_BASE}/manifest.json`, target: "_blank", rel: "noopener" }, "manifest.json"),
@@ -63,6 +78,7 @@ async function footer() {
       " · ", h("a", { href: `${REPO.url}/issues`, target: "_blank", rel: "noopener noreferrer" }, tr("反馈与贡献", "Issues & contributions")))));
 }
 
+const main = h("main", { id: "view", tabindex: "-1" });
 let token = 0;
 async function route() {
   const my = ++token;
@@ -72,11 +88,12 @@ async function route() {
   try {
     const view = await r.loader();
     if (my !== token) return;
-    const holder = h("div", { class: "wrap view" });
+    const holder = h("div", { class: r.name === "home" ? "home-view" : "wrap view" });
     await view(holder, r);
     if (my !== token) return;
     clear(main).append(holder);
     window.scrollTo(0, r.query.get("a") ? window.scrollY : 0);
+    document.body.classList.toggle("is-home", r.name === "home");
     document.title = (holder.querySelector("h1")?.textContent || "BioAtlas") + " · BioAtlas";
   } catch (e) {
     if (my === token) { console.error(e); clear(main).append(h("div", { class: "wrap view" }, failure(e))); }

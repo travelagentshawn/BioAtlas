@@ -1,6 +1,6 @@
 # BioAtlas
 
-> Open field atlas that joins molecular phylogeny and taxonomy for the plants and animals travellers actually see. Structured data in JSON, a static JSON API, a zero-dependency web UI and full docs. Model-neutral: any AI or person may read, modify and extend it.
+> Open field atlas that joins molecular phylogeny and taxonomy for the plants, animals and fungi travellers actually see. Structured data in JSON, a static JSON API, a zero-dependency web UI and full docs. Model-neutral: any AI or person may read, modify and extend it.
 
 Status: every record is `review_status: "seed"` (drafted, not yet verified against primary literature). Do not present seed claims as established fact.
 
@@ -9,7 +9,7 @@ Status: every record is `review_status: "seed"` (drafted, not yet verified again
 - [Species records](https://github.com/travelagentshawn/BioAtlas/tree/main/data/species): one JSON file per species (id = file name)
 - [Taxa records](https://github.com/travelagentshawn/BioAtlas/tree/main/data/taxa): tree nodes with `parent`, `phylo.monophyly`, `phylo.age_mya` (ranges)
 - [Region records](https://github.com/travelagentshawn/BioAtlas/tree/main/data/regions): destinations and scenes with species by month
-- [Source records](https://github.com/travelagentshawn/BioAtlas/tree/main/data/sources): citations
+- [Source records](https://github.com/travelagentshawn/BioAtlas/tree/main/data/sources): citations and taxonomy authority register\n- [Taxonomy governance](https://github.com/travelagentshawn/BioAtlas/blob/main/docs/en/taxonomy-authorities.md): layered authorities, name assertions, versioning and conflict policy
 - [JSON Schemas](https://github.com/travelagentshawn/BioAtlas/tree/main/schema): the format of every record
 
 ## Read the compiled API (after `npm run build`, served under /api/v1/)
@@ -17,14 +17,14 @@ Status: every record is `review_status: "seed"` (drafted, not yet verified again
 - manifest.json: entry point listing every endpoint and counts
 - tree.json: whole phylogeny, nested
 - species.json, species/{id}.json: species list and full records (lineage, regions, closest relatives, sources)
-- taxa.json, taxa/{id}.json; regions.json, regions/{id}.json; calendar.json; sources.json; search.json
+- taxa.json, taxa/{id}.json; regions.json, regions/{id}.json; calendar.json; sources.json; taxonomic-authorities.json; search.json\n- Full species and taxon records may include `taxonomic_assertions[]`; conflicting provider claims are preserved, and unverified IDs must remain `unassessed`.
 - Contract: [contract/api-v1.schema.json](https://github.com/travelagentshawn/BioAtlas/blob/main/contract/api-v1.schema.json) and [contract/endpoints.json](https://github.com/travelagentshawn/BioAtlas/blob/main/contract/endpoints.json)
 
 ## How to contribute
 
 - [AGENTS.md](https://github.com/travelagentshawn/BioAtlas/blob/main/AGENTS.md): rules, roles, commands for any AI agent
-- [Documentation (English)](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/en) / [中文](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/zh)
-- Commands: `npm run validate`, `npm run build`, `npm run check` (Node >= 20, no dependencies)
+- [Documentation (English)](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/en) / [中文](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/zh) / [日本語](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/ja)
+- Commands: `npm run validate`, `npm run audit:taxonomy` (read-only authority conflict report), `npm run build`, `npm run check` (Node >= 20, no dependencies)
 
 ## Optional
 

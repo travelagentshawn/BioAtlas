@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "acroporidae",
+  "rank": "family",
+  "scientific_name": "Acroporidae",
+  "parent": "scleractinia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹿角珊瑚科",
+    "en": "Staghorn corals"
+  },
+  "summary": {
+    "zh": "石珊瑚目中的重要珊瑚科，包含鹿角珊瑚属等造礁类群。",
+    "en": "An important stony-coral family that includes the reef-building genus Acropora."
+  },
+  "pruned": false,
+  "sources": [
+    "itis-acropora-cervicornis",
+    "itis-acropora-palmata"
+  ],
+  "review_status": "seed"
+}

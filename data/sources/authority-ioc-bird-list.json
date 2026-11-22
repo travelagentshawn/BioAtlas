@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-ioc-bird-list",
+  "kind": "database",
+  "title": "IOC World Bird List",
+  "url": "https://www.worldbirdnames.org/",
+  "citation": "International Ornithologists' Union. IOC World Bird List. Accessed 2026-11-22. https://www.worldbirdnames.org/",
+  "authority_role": "specialist-checklist",
+  "taxonomic_scope": [
+    "birds"
+  ],
+  "identifier_scheme": "IOC taxon/name entry and release",
+  "update_policy": "Versioned release; record exact version",
+  "accessed_at": "2026-11-22"
+}

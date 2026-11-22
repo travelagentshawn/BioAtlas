@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "bibs-polytrichum-commune",
+  "kind": "website",
+  "title": "Polytrichum commune — Species Finder",
+  "authors": "British and Irish Bryological Society",
+  "year": 2014,
+  "url": "https://www.bibsbryology.org/learning/species-finder/polytrichum-commune/",
+  "citation": "British and Irish Bryological Society. Polytrichum commune — Species Finder. British and Irish Bryological Society; Atlas of British and Irish Bryophytes, 2014. https://www.bibsbryology.org/learning/species-finder/polytrichum-commune/"
+}

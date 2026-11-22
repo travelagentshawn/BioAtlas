@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-ncbi-taxonomy",
+  "kind": "database",
+  "title": "NCBI Taxonomy",
+  "url": "https://www.ncbi.nlm.nih.gov/taxonomy",
+  "citation": "National Center for Biotechnology Information. NCBI Taxonomy. Accessed 2026-11-22. https://www.ncbi.nlm.nih.gov/taxonomy",
+  "authority_role": "specialist-checklist",
+  "taxonomic_scope": [
+    "organisms indexed in NCBI sequence resources"
+  ],
+  "identifier_scheme": "NCBI Taxonomy ID",
+  "update_policy": "Regular database updates; retain access date",
+  "accessed_at": "2026-11-22"
+}

@@ -2,6 +2,15 @@
 
 BioAtlas is an open **field atlas of the plants and animals travellers actually see**. It puts molecular phylogeny (who is closest kin to whom, and when lineages split) and classical taxonomy (kingdom to species) into one structured dataset, so you can recognise ginkgo, egrets or sika deer on a trip — and know where they sit on the tree of life.
 
+## Two primary interface views
+
+The main interface has two peer entry points rather than combining different kinds of information into one overloaded screen:
+
+- **Field atlas (usable workspace):** the default home for species search, seasonal discoveries, travel scenes, nature maps, seasonality, field identification, conservation notes, sounds, and trip checklists. All modules are listed in a complete multi-level directory.
+- **Evolution tree (phylogeny view):** a dedicated view of BioAtlas's own curated tree, with expand/collapse, taxonomic outline, divergence-age annotations, and links to taxon and species records.
+
+Tree branches can be expanded or collapsed by pointer, or by tabbing to a node and pressing Enter or Space; outline mode provides an alternative readable structure.\n\nBoth views use the same API and stable taxon/species IDs. The tree is the focused scientific-relationship view; the field atlas is the practical observation and discovery workspace. External taxonomic authorities remain source-level comparisons and never silently rewrite BioAtlas's own tree.
+
 ## What it is
 
 - **Public structured data**: JSON files in `data/`, validated by `schema/`; readable, editable and extensible by people and AIs.

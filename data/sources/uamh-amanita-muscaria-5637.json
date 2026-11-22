@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "uamh-amanita-muscaria-5637",
+  "kind": "database",
+  "title": "UAMH 5637 — Amanita muscaria",
+  "authors": "UAMH Centre for Fungal Biodiversity",
+  "year": 1986,
+  "url": "https://www.uamh.ca/details.php?id=5637",
+  "citation": "UAMH Centre for Fungal Biodiversity. UAMH 5637: Amanita muscaria; collected in Willowdale, Ontario, Canada, 23 September 1986. Record accessed 2026-11-22. https://www.uamh.ca/details.php?id=5637"
+}

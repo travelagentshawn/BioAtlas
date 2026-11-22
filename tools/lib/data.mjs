@@ -41,7 +41,7 @@ export function loadAll(root = ROOT) {
   return { data, errors, warnings, schemas };
 }
 
-function checkIntegrity(data, errors, warnings) {
+export function checkIntegrity(data, errors, warnings) {
   const idx = (arr) => new Map(arr.map((r) => [r.id, r]));
   const taxa = idx(data.taxa), species = idx(data.species), sources = idx(data.sources);
 
@@ -56,11 +56,41 @@ function checkIntegrity(data, errors, warnings) {
     for (const s of ids) if (!sources.has(s)) errors.push(`${where}: unknown source "${s}"`);
   };
 
+  const checkReview = (kind, record) => {
+    const where = `${kind} ${record.id}`;
+    const review = record.review;
+    if (record.review_status !== "seed" && !review)
+      errors.push(`${where}: non-seed review_status requires an auditable review object`);
+    if (!review) return;
+    checkSources(where + " review", review.sources);
+    if (review.reviewed_at && Number.isNaN(Date.parse(review.reviewed_at + "T00:00:00Z")))
+      errors.push(`${where}: review.reviewed_at is not a valid calendar date`);
+    if (record.review_status === "expert-reviewed" &&
+        (review.reviewer_role !== "specialist" || review.method !== "expert-assessment"))
+      errors.push(`${where}: expert-reviewed requires a specialist expert-assessment review`);
+    if (review.reviewer_role === "specialist" && review.method !== "expert-assessment")
+      warnings.push(`${where}: specialist review should use expert-assessment method`);
+  };
+
+  const checkTaxonomicAssertions = (kind, record) => {
+    for (const assertion of record.taxonomic_assertions || []) {
+      const where = `${kind} ${record.id} taxonomic assertion`;
+      const authority = sources.get(assertion.authority);
+      if (!authority) errors.push(`${where}: unknown authority "${assertion.authority}"`);
+      else if (!authority.authority_role) errors.push(`${where}: source "${assertion.authority}" is not registered as a taxonomy authority`);
+      checkSources(where, [assertion.source]);
+      if (assertion.accessed_at && Number.isNaN(Date.parse(assertion.accessed_at + "T00:00:00Z")))
+        errors.push(`${where}: accessed_at is not a valid calendar date`);
+    }
+  };
+
   // taxa
   const roots = data.taxa.filter((t) => t.parent === null);
   if (roots.length !== 1) errors.push(`taxa: exactly one root required, found ${roots.length}`);
   for (const t of data.taxa) {
     const w = `taxon ${t.id}`;
+    checkReview("taxon", t);
+    checkTaxonomicAssertions("taxon", t);
     if (t.parent !== null && !taxa.has(t.parent)) errors.push(`${w}: unknown parent "${t.parent}"`);
     checkSources(w, t.sources);
     const age = t.phylo?.age_mya;
@@ -82,12 +112,15 @@ function checkIntegrity(data, errors, warnings) {
   // species
   for (const s of data.species) {
     const w = `species ${s.id}`;
+    checkReview("species", s);
+    checkTaxonomicAssertions("species", s);
     const t = taxa.get(s.taxon);
     if (!t) errors.push(`${w}: unknown taxon "${s.taxon}"`);
     else if (t.kingdom !== s.kingdom) errors.push(`${w}: kingdom "${s.kingdom}" differs from taxon "${t.kingdom}"`);
     checkSources(w, s.sources);
     for (const ev of s.evolution?.evidence || []) checkSources(w + " evidence", [ev.source]);
-    if (s.conservation) checkSources(w + " conservation", [s.conservation.source]);
+    if (s.conservation?.source) checkSources(w + " conservation assessment", [s.conservation.source]);
+    for (const protection of s.conservation?.protections || []) checkSources(w + " legal protection", [protection.source]);
     const expectedId = s.scientific_name.toLowerCase().replace(/ × /g, " x ").replace(/[^a-z0-9]+/g, "-");
     if (s.id !== expectedId) warnings.push(`${w}: id differs from scientific name slug "${expectedId}"`);
     if (!s.sources?.length) warnings.push(`${w}: no sources`);
@@ -97,14 +130,18 @@ function checkIntegrity(data, errors, warnings) {
   // regions
   for (const r of data.regions) {
     const w = `region ${r.id}`;
+    checkReview("region", r);
     if (r.kind === "destination" && !r.center) errors.push(`${w}: destination needs center`);
     checkSources(w, r.sources);
+    const unsupported = r.species.filter((entry) => !(entry.evidence || []).length);
+    if (unsupported.length) warnings.push(`${w}: ${unsupported.length} species association(s) have no link-level evidence; their month ranges are unverified`);
     const seen = new Set();
     for (const e of r.species) {
       const sp = species.get(e.species);
       if (!sp) { errors.push(`${w}: unknown species "${e.species}"`); continue; }
       if (seen.has(e.species)) errors.push(`${w}: species "${e.species}" listed twice`);
       seen.add(e.species);
+      checkSources(`${w} species ${e.species} evidence`, (e.evidence || []).map((item) => item.source));
       for (const c of r.countries.length ? [] : []) void c;
       if (sp.travel?.countries?.length && !r.countries.some((c) => sp.travel.countries.includes(c)))
         warnings.push(`${w}: species "${e.species}" has no overlap between region countries and species countries`);

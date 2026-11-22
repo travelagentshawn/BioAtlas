@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "bryophyta",
+  "rank": "phylum",
+  "scientific_name": "Bryophyta",
+  "parent": "viridiplantae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "藓类植物门（狭义）",
+    "en": "Mosses (Bryophyta sensu stricto)",
+    "ja": "蘚類植物門（狭義）"
+  },
+  "summary": {
+    "zh": "本节点指狭义藓类（mosses），不把苔类、角苔类与藓类合并成一个未经限定的“苔藓植物”单系群。",
+    "en": "This node refers to mosses in the strict sense; it does not combine mosses, liverworts and hornworts into an unqualified monophyletic 'bryophyte' group.",
+    "ja": "ここでは蘚類を指す。苔類・ツノゴケ類・蘚類を一括して単系統群とみなす広義の「コケ植物」とは区別する。"
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "ncbi-taxonomy-polytrichum-3213",
+    "bibs-polytrichum-commune",
+    "eflora-bc-polytrichum-commune"
+  ],
+  "review_status": "seed"
+}

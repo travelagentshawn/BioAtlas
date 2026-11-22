@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-catalog-of-fishes",
+  "kind": "database",
+  "title": "Catalog of Fishes",
+  "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+  "citation": "California Academy of Sciences. Catalog of Fishes. Accessed 2026-11-22.",
+  "authority_role": "specialist-checklist",
+  "taxonomic_scope": [
+    "fishes"
+  ],
+  "identifier_scheme": "Catalog of Fishes taxon record",
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
+}

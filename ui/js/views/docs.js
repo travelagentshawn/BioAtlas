@@ -16,14 +16,14 @@ export async function docsView(root, { params, query }) {
   const page = pages.find((p) => p.slug === slug) || pages[0];
 
   const groups = [...new Set(pages.map((p) => p.group))];
-  const side = h("nav", { class: "doc-nav", "aria-label": "Documentation" },
+  const side = h("nav", { class: "doc-nav", "aria-label": tr("开发说明书", "Documentation") },
     groups.map((g) => h("div", { class: "doc-group" }, h("h4", null, g),
       pages.filter((p) => p.group === g).map((p) => h("a", { href: `#/docs/${p.slug}`, class: p.slug === page.slug ? "on" : "" }, p.title)))));
 
   const body = h("article", { class: "doc-body" });
   const tocBox = h("aside", { class: "doc-toc" });
   root.append(
-    h("header", { class: "page-head" }, h("h1", null, "Documentation"),
+    h("header", { class: "page-head" }, h("h1", null, tr("开发说明书", "Developer documentation")),
       h("p", { class: "lead" }, tr("给开发者与 AI 协作者的说明书：数据模型、API 契约、如何各自开发与编译。", "For developers and AI collaborators: the data model, the API contract, and how to develop and build each side independently."))),
     h("div", { class: "docs" }, side, body, tocBox));
 

@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "polytrichum",
+  "rank": "genus",
+  "scientific_name": "Polytrichum",
+  "parent": "polytrichaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "金发藓属",
+    "en": "Polytrichum",
+    "ja": "スギゴケ属"
+  },
+  "summary": {
+    "zh": "常见大型藓类，常形成直立、密集的草丛状群落。",
+    "en": "A genus of often large mosses that can form dense, upright turfs.",
+    "ja": "大型の蘚類を含み、直立した密な群落を形成することがある属。"
+  },
+  "pruned": false,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "ncbi-taxonomy-polytrichum-3213",
+    "bibs-polytrichum-commune",
+    "eflora-bc-polytrichum-commune"
+  ],
+  "review_status": "seed"
+}

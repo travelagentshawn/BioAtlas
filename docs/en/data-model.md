@@ -11,7 +11,7 @@ Four record kinds. Each has a directory, a JSON Schema and **one file per record
 
 Shared definitions: [`schema/common.schema.json`](repo:schema/common.schema.json). Also [`schema/trip.schema.json`](repo:schema/trip.schema.json), the trip workbench's interchange format.
 
-## Taxon
+## Kingdom scope\n\nThe current `kingdom` values are `plantae`, `animalia` and `fungi`; `root` is reserved for the shared eukaryote root. Bryophytes belong within Plantae; they are not a separate kingdom in this model.\n\n## Taxon
 
 - `parent` forms a **single-rooted tree**; the root is `eukaryota` with `parent: null`.
 - `rank` may be `clade` (unranked) — the norm in molecular phylogenetics; do not force traditional ranks.
@@ -49,3 +49,16 @@ Promoting a status requires saying in the PR what was checked.
 - ids are unique and equal the file name; species ids are the lowercase hyphenated scientific name (hybrid `×` becomes `x`).
 - `parent`, `taxon`, species and source references must exist; one root, no cycles; species and taxon share a `kingdom`.
 - Every species should appear in at least one region (warning otherwise).
+
+## Review audit metadata (optional `review`)
+
+`review_status` expresses the current review level; `review` stores the actual review event: date, reviewer, method, scope and sources. They are not interchangeable. Non-`seed` records must carry a review object. `expert-reviewed` additionally requires a specialist using the `expert-assessment` method. Audit metadata does not automatically validate scientific conclusions.
+
+
+## Evidence for region–species associations (optional `evidence`)
+
+Each `species[]` association in a region may carry its own `evidence` array. Evidence types distinguish field observations, published literature, regional checklists, database records and expert assessments. Every item must reference an existing source ID in `data/sources/`. Do not label global distribution, habitat inference or theoretical possibility as a field observation. Associations without `evidence` may still be displayed, but the UI marks their month ranges as unverified; they are not confirmed local phenology.
+
+## Taxonomic assertions and authority registry
+
+Taxa and species may include `taxonomic_assertions[]`. Each assertion stores the authority registry ID, exact provider record ID, provider-returned scientific name, name status, optional classification/version, access date and a supporting source record. `unassessed` is the correct status when an identifier has been carried over but the provider record has not been independently checked. Multiple authorities may disagree; preserve their assertions rather than overwriting one with another. The authority registry is generated at `api/v1/taxonomic-authorities.json` from source records with `authority_role` metadata. See [Taxonomic authority and name governance](taxonomy-authorities.md).

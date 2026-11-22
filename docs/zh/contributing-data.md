@@ -33,3 +33,47 @@
 - 分类单元的 `sources` 至少一条，否则 `validate` 会警告。
 - 想补充没有对应分类单元的物种：先建科（必要时建演化支），再建物种。
 - 外部标识（`external_ids`：GBIF、NCBI、Wikidata…）只写你**验证过**的值。
+
+
+## 可追溯审核记录（新增字段 `review`）
+
+当记录从 `seed` 提升为 `reviewed` 或 `expert-reviewed` 时，必须在同一条记录中填写 `review`，而不只是在 PR 描述中写一句“已核对”。
+
+```json
+{
+  "review": {
+    "reviewed_at": "YYYY-MM-DD",
+    "reviewed_by": "GitHub 用户名或可核验的审阅者标识",
+    "reviewer_role": "contributor",
+    "method": "literature-check",
+    "sources": ["对应的-source-id"],
+    "scope": ["taxonomy", "identification", "distribution", "phenology"],
+    "notes": { "zh": "核对范围与仍存疑点", "en": "What was checked and what remains uncertain" }
+  }
+}
+```
+
+- `reviewed_at` 使用实际审阅日期，不得回填或猜测。
+- `reviewed_by` 应能在贡献记录中对应到真实审阅者；不要写 AI 模型名冒充人类审阅者。
+- `reviewer_role: specialist` 且 `method: expert-assessment` 才能支持 `expert-reviewed`。
+- `sources` 必须至少包含一个仓库中已存在的来源 ID。现场观察也应建立可追溯的观察记录来源，不能伪装成已发表文献。
+- `review` 是审核过程记录，不是自动认证；有审核元数据不等于结论必然正确。
+- 旧记录保持原样；本次不会批量把任何 `seed` 改成已审核。
+
+
+## 地区出现记录的证据要求
+
+新增或修订 `data/regions/*.json` 中的物种月份关联时，优先为每条关联填写 `evidence`。例如：
+
+```json
+{
+  "species": "acer-palmatum",
+  "months": [10, 11],
+  "likelihood": "common",
+  "evidence": [
+    { "type": "regional-checklist", "source": "existing-regional-flora-source" }
+  ]
+}
+```
+
+来源必须确实支持该地区的出现记录及相应月份。若来源只支持“分布于该国家”，不能据此推导某个景区或某个月份。暂时找不到来源时，保留原始关联并让界面显示“月份待核实”，不要补造证据。

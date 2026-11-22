@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "index-fungorum-amanita-muscaria",
+  "kind": "database",
+  "title": "Index Fungorum name record 161267: Amanita muscaria (L.) Lam.",
+  "authors": "Index Fungorum; Royal Botanic Gardens, Kew",
+  "year": 2026,
+  "url": "https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=161267",
+  "citation": "Index Fungorum. Name record 161267: Amanita muscaria (L.) Lam. Royal Botanic Gardens, Kew. Accessed 2026-11-22. https://www.indexfungorum.org/names/NamesRecord.asp?RecordID=161267"
+}

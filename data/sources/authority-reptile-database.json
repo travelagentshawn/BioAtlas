@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-reptile-database",
+  "kind": "database",
+  "title": "The Reptile Database",
+  "url": "https://reptile-database.reptarium.cz/",
+  "citation": "The Reptile Database. Reptile taxonomic records. Accessed 2026-11-22. https://reptile-database.reptarium.cz/",
+  "authority_role": "specialist-checklist",
+  "taxonomic_scope": [
+    "reptiles"
+  ],
+  "identifier_scheme": "Reptile Database species page",
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
+}

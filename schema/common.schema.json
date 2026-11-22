@@ -13,17 +13,35 @@
       "type": "object",
       "description": "Human-readable text keyed by language code. zh (Simplified Chinese) and en are required; others optional.",
       "properties": {
-        "zh": { "type": "string", "minLength": 1 },
-        "en": { "type": "string", "minLength": 1 },
-        "ja": { "type": "string", "minLength": 1 }
+        "zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ja": {
+          "type": "string",
+          "minLength": 1
+        }
       },
-      "required": ["zh", "en"],
+      "required": [
+        "zh",
+        "en"
+      ],
       "additionalProperties": false
     },
-    "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "month": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
     "months": {
       "type": "array",
-      "items": { "$ref": "#/$defs/month" },
+      "items": {
+        "$ref": "#/$defs/month"
+      },
       "uniqueItems": true
     },
     "country": {
@@ -33,7 +51,12 @@
     },
     "kingdom": {
       "type": "string",
-      "enum": ["root", "plantae", "animalia"],
+      "enum": [
+        "root",
+        "plantae",
+        "animalia",
+        "fungi"
+      ],
       "description": "Top-level grouping used for colour and filtering. 'root' is only for nodes above the plant/animal split."
     },
     "habitat": {
@@ -50,18 +73,25 @@
         "forest",
         "mountain",
         "coast",
+        "coral-reef",
         "grassland",
         "building"
       ]
     },
     "review_status": {
       "type": "string",
-      "enum": ["seed", "reviewed", "expert-reviewed"],
+      "enum": [
+        "seed",
+        "reviewed",
+        "expert-reviewed"
+      ],
       "description": "seed = drafted, not yet independently verified; reviewed = checked against cited sources by a contributor; expert-reviewed = signed off by a domain specialist."
     },
     "source_refs": {
       "type": "array",
-      "items": { "$ref": "#/$defs/slug" },
+      "items": {
+        "$ref": "#/$defs/slug"
+      },
       "uniqueItems": true,
       "description": "Ids of files in data/sources/."
     },
@@ -69,13 +99,174 @@
       "type": "object",
       "description": "Identifiers in other databases. Only add an id you have verified.",
       "properties": {
-        "gbif": { "type": "string" },
-        "ncbi_taxonomy": { "type": "string" },
-        "open_tree_ott": { "type": "string" },
-        "wikidata": { "type": "string", "pattern": "^Q[0-9]+$" },
-        "inaturalist": { "type": "string" },
-        "iucn": { "type": "string" }
+        "gbif": {
+          "type": "string"
+        },
+        "ncbi_taxonomy": {
+          "type": "string"
+        },
+        "open_tree_ott": {
+          "type": "string"
+        },
+        "wikidata": {
+          "type": "string",
+          "pattern": "^Q[0-9]+$"
+        },
+        "inaturalist": {
+          "type": "string"
+        },
+        "iucn": {
+          "type": "string"
+        },
+        "index_fungorum": {
+          "type": "string"
+        },
+        "mycobank": {
+          "type": "string"
+        },
+        "catalogue_of_life": {
+          "type": "string"
+        },
+        "ipni": {
+          "type": "string"
+        },
+        "powo": {
+          "type": "string"
+        },
+        "itis": {
+          "type": "string"
+        },
+        "ioc": {
+          "type": "string"
+        },
+        "reptile_database": {
+          "type": "string"
+        },
+        "amphibian_species_of_world": {
+          "type": "string"
+        },
+        "mammal_diversity_database": {
+          "type": "string"
+        },
+        "catalog_of_fishes": {
+          "type": "string"
+        },
+        "worms": {
+          "type": "string"
+        }
       },
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "description": "Auditable metadata for a human review event. It records who checked the record, when, how, and which aspects were examined; it does not itself prove scientific correctness.",
+      "properties": {
+        "reviewed_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "reviewed_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewer_role": {
+          "type": "string",
+          "enum": [
+            "contributor",
+            "specialist"
+          ]
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "literature-check",
+            "database-check",
+            "field-observation",
+            "expert-assessment"
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/slug"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": {
+          "$ref": "common.schema.json#/$defs/i18n"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewed_by",
+        "reviewer_role",
+        "method",
+        "scope",
+        "sources"
+      ],
+      "additionalProperties": false
+    },
+    "taxonomic_assertion": {
+      "type": "object",
+      "description": "A sourced taxonomic/name usage assertion from a named authority. An assertion is not automatically the BioAtlas accepted classification.",
+      "properties": {
+        "authority": {
+          "$ref": "common.schema.json#/$defs/slug",
+          "description": "Authority registry record ID in data/sources/."
+        },
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scientific_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name_status": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "synonym",
+            "unresolved",
+            "unassessed"
+          ]
+        },
+        "classification_system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "accessed_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/slug",
+          "description": "Specific source record that supports this assertion."
+        },
+        "notes": {
+          "$ref": "common.schema.json#/$defs/i18n"
+        }
+      },
+      "required": [
+        "authority",
+        "record_id",
+        "scientific_name",
+        "name_status",
+        "accessed_at",
+        "source"
+      ],
       "additionalProperties": false
     }
   }

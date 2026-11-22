@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "scleractinia",
+  "rank": "order",
+  "scientific_name": "Scleractinia",
+  "parent": "hexacorallia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "石珊瑚目",
+    "en": "Stony corals"
+  },
+  "summary": {
+    "zh": "能够分泌碳酸钙骨骼的石珊瑚类群，许多种类参与珊瑚礁构建。",
+    "en": "Stony corals that secrete calcium-carbonate skeletons; many species contribute to reef construction."
+  },
+  "pruned": false,
+  "sources": [
+    "itis-acropora-cervicornis",
+    "itis-acropora-palmata"
+  ],
+  "review_status": "seed"
+}

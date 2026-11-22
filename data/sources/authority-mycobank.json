@@ -1,0 +1,16 @@
+{
+  "type": "source",
+  "id": "authority-mycobank",
+  "kind": "database",
+  "title": "MycoBank",
+  "url": "https://www.mycobank.org/",
+  "citation": "MycoBank. Fungal nomenclatural database. Accessed 2026-11-22. https://www.mycobank.org/",
+  "authority_role": "nomenclatural-index",
+  "taxonomic_scope": [
+    "fungal names",
+    "fungal nomenclature"
+  ],
+  "identifier_scheme": "MycoBank number",
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "british-irish-bogs-wet-heaths",
+  "kind": "scene",
+  "names": {
+    "zh": "英国与爱尔兰泥炭地、湿石楠地",
+    "en": "British and Irish bogs and wet heaths",
+    "ja": "英国・アイルランドの泥炭地と湿性ヒース"
+  },
+  "description": {
+    "zh": "泥炭沼泽、湿石楠地、泉流湿地及湿林边缘。大金发藓常形成高而密的草丛，适合观察叶片和夏季孢蒴。",
+    "en": "Peat bogs, wet heaths, flushes and damp woodland margins. Common haircap often forms tall, dense turfs, making its leaves and summer capsules easy to observe.",
+    "ja": "泥炭湿原、湿性ヒース、湧水湿地、湿った林縁。ウマスギゴケは背の高い密な群落をつくり、葉や夏の胞子嚢を観察しやすい。"
+  },
+  "countries": [
+    "GB",
+    "IE"
+  ],
+  "habitats": [
+    "wetland",
+    "grassland",
+    "forest"
+  ],
+  "species": [
+    {
+      "species": "polytrichum-commune",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common",
+      "note": {
+        "zh": "营养体全年可见；孢蒴在夏季成熟。优先观察湿润泥炭地边缘和湿石楠地。",
+        "en": "Vegetative shoots are visible year-round; capsules mature in summer. Look around moist bog margins and wet heaths.",
+        "ja": "栄養体は一年中観察でき、胞子嚢は夏に成熟する。湿った泥炭地の縁や湿性ヒースを探してみよう。"
+      },
+      "evidence": [
+        {
+          "type": "regional-checklist",
+          "source": "bibs-polytrichum-commune"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "bibs-polytrichum-commune",
+    "eflora-bc-polytrichum-commune"
+  ],
+  "review_status": "seed"
+}

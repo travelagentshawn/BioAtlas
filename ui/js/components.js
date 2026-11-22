@@ -66,3 +66,31 @@ export function nameBlock(names, sci) {
     h("div", { class: "alt" }, loc2(names)),
     sci ? h("div", { class: "sci big" }, sci) : null);
 }
+
+export function taxonomicAssertions(assertions = [], sources = []) {
+  if (!assertions.length) return null;
+  const byId = new Map(sources.map((source) => [source.id, source]));
+  const status = {
+    accepted: tr("该来源接受此名称", "Accepted by source"),
+    synonym: tr("该来源列为异名", "Listed as synonym"),
+    unresolved: tr("该来源状态未决", "Unresolved by source"),
+    unassessed: tr("尚未核验", "Not yet assessed"),
+  };
+  return h("section", { class: "panel" },
+    sectionTitle(tr("分类权威记录", "Taxonomic authority assertions"),
+      tr("不同来源的名称与分类意见分别保留，不自动互相覆盖。", "Provider claims are preserved independently and are not silently merged.")),
+    h("ul", { class: "plain" }, assertions.map((assertion) => {
+      const authority = byId.get(assertion.authority);
+      const source = byId.get(assertion.source);
+      return h("li", { class: "taxon-assertion" },
+        h("strong", null, authority?.title || assertion.authority), " ",
+        badge(status[assertion.name_status] || assertion.name_status, assertion.name_status),
+        h("div", { class: "sci" }, assertion.scientific_name),
+        h("div", { class: "muted small" },
+          `${tr("记录 ID", "Record ID")}: ${assertion.record_id} · ${tr("核对日期", "Accessed")}: ${assertion.accessed_at}`),
+        assertion.classification_system || assertion.version ? h("div", { class: "small muted" },
+          [assertion.classification_system, assertion.version].filter(Boolean).join(" · ")) : null,
+        source ? h("a", { class: "small", href: `#src-${source.id}` }, tr("查看支持来源", "View supporting source")) : null,
+        assertion.notes ? h("p", { class: "note small" }, loc(assertion.notes)) : null);
+    })));
+}

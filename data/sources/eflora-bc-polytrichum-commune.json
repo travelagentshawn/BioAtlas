@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "eflora-bc-polytrichum-commune",
+  "kind": "website",
+  "title": "Polytrichum commune — E-Flora BC Atlas",
+  "authors": "Wilf Schofield; University of British Columbia",
+  "year": 2019,
+  "url": "https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Polytrichum+commune",
+  "citation": "Schofield W. Polytrichum commune. E-Flora BC: Electronic Atlas of the Flora of British Columbia. University of British Columbia. Accessed 2026-11-22. https://linnet.geog.ubc.ca/Atlas/Atlas.aspx?sciname=Polytrichum+commune"
+}

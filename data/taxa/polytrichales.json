@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "polytrichales",
+  "rank": "order",
+  "scientific_name": "Polytrichales",
+  "parent": "polytrichopsida",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "金发藓目",
+    "en": "Polytrichales",
+    "ja": "スギゴケ目"
+  },
+  "summary": {
+    "zh": "金发藓科所在的藓类目。",
+    "en": "The moss order containing the family Polytrichaceae.",
+    "ja": "スギゴケ科を含む蘚類の目。"
+  },
+  "pruned": false,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "ncbi-taxonomy-polytrichum-3213",
+    "bibs-polytrichum-commune",
+    "eflora-bc-polytrichum-commune"
+  ],
+  "review_status": "seed"
+}

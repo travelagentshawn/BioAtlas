@@ -1,26 +1,212 @@
 {
   "zh": [
-    { "slug": "overview", "title": "项目概览", "group": "入门", "file": "zh/overview.md" },
-    { "slug": "quickstart", "title": "快速开始", "group": "入门", "file": "zh/quickstart.md" },
-    { "slug": "architecture", "title": "三层解耦架构", "group": "设计", "file": "zh/architecture.md" },
-    { "slug": "data-model", "title": "数据模型", "group": "设计", "file": "zh/data-model.md" },
-    { "slug": "api-contract", "title": "API 契约 v1", "group": "设计", "file": "zh/api-contract.md" },
-    { "slug": "contributing-data", "title": "贡献数据与科学规范", "group": "开发", "file": "zh/contributing-data.md" },
-    { "slug": "ui-development", "title": "UI 开发", "group": "开发", "file": "zh/ui-development.md" },
-    { "slug": "ai-collaboration", "title": "多 AI 协作协议", "group": "协作", "file": "zh/ai-collaboration.md" },
-    { "slug": "workbench-integration", "title": "对接旅行工作台", "group": "协作", "file": "zh/workbench-integration.md" },
-    { "slug": "roadmap", "title": "路线图", "group": "协作", "file": "zh/roadmap.md" }
+    {
+      "slug": "overview",
+      "title": "项目概览",
+      "group": "入门",
+      "file": "zh/overview.md"
+    },
+    {
+      "slug": "quickstart",
+      "title": "快速开始",
+      "group": "入门",
+      "file": "zh/quickstart.md"
+    },
+    {
+      "slug": "architecture",
+      "title": "三层解耦架构",
+      "group": "设计",
+      "file": "zh/architecture.md"
+    },
+    {
+      "slug": "data-model",
+      "title": "数据模型",
+      "group": "设计",
+      "file": "zh/data-model.md"
+    },
+    {
+      "slug": "api-contract",
+      "title": "API 契约 v1",
+      "group": "设计",
+      "file": "zh/api-contract.md"
+    },
+    {
+      "slug": "contributing-data",
+      "title": "贡献数据与科学规范",
+      "group": "开发",
+      "file": "zh/contributing-data.md"
+    },
+    {
+      "slug": "ui-development",
+      "title": "UI 开发",
+      "group": "开发",
+      "file": "zh/ui-development.md"
+    },
+    {
+      "slug": "ai-collaboration",
+      "title": "多 AI 协作协议",
+      "group": "协作",
+      "file": "zh/ai-collaboration.md"
+    },
+    {
+      "slug": "workbench-integration",
+      "title": "对接旅行工作台",
+      "group": "协作",
+      "file": "zh/workbench-integration.md"
+    },
+    {
+      "slug": "roadmap",
+      "title": "路线图",
+      "group": "协作",
+      "file": "zh/roadmap.md"
+    },
+    {
+      "slug": "field-modules",
+      "title": "季节日历与野外辨认",
+      "group": "模块",
+      "file": "zh/field-modules.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "自然地图、保护、声音与离线功能",
+      "group": "模块",
+      "file": "zh/platform-modules.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "分类权威与名称治理",
+      "group": "数据与科学",
+      "file": "zh/taxonomy-authorities.md"
+    }
   ],
   "en": [
-    { "slug": "overview", "title": "Overview", "group": "Start", "file": "en/overview.md" },
-    { "slug": "quickstart", "title": "Quick start", "group": "Start", "file": "en/quickstart.md" },
-    { "slug": "architecture", "title": "Three-layer architecture", "group": "Design", "file": "en/architecture.md" },
-    { "slug": "data-model", "title": "Data model", "group": "Design", "file": "en/data-model.md" },
-    { "slug": "api-contract", "title": "API contract v1", "group": "Design", "file": "en/api-contract.md" },
-    { "slug": "contributing-data", "title": "Contributing data & scientific rules", "group": "Develop", "file": "en/contributing-data.md" },
-    { "slug": "ui-development", "title": "UI development", "group": "Develop", "file": "en/ui-development.md" },
-    { "slug": "ai-collaboration", "title": "Multi-AI collaboration protocol", "group": "Collaborate", "file": "en/ai-collaboration.md" },
-    { "slug": "workbench-integration", "title": "Travel workbench integration", "group": "Collaborate", "file": "en/workbench-integration.md" },
-    { "slug": "roadmap", "title": "Roadmap", "group": "Collaborate", "file": "en/roadmap.md" }
+    {
+      "slug": "overview",
+      "title": "Overview",
+      "group": "Start",
+      "file": "en/overview.md"
+    },
+    {
+      "slug": "quickstart",
+      "title": "Quick start",
+      "group": "Start",
+      "file": "en/quickstart.md"
+    },
+    {
+      "slug": "architecture",
+      "title": "Three-layer architecture",
+      "group": "Design",
+      "file": "en/architecture.md"
+    },
+    {
+      "slug": "data-model",
+      "title": "Data model",
+      "group": "Design",
+      "file": "en/data-model.md"
+    },
+    {
+      "slug": "api-contract",
+      "title": "API contract v1",
+      "group": "Design",
+      "file": "en/api-contract.md"
+    },
+    {
+      "slug": "contributing-data",
+      "title": "Contributing data & scientific rules",
+      "group": "Develop",
+      "file": "en/contributing-data.md"
+    },
+    {
+      "slug": "ui-development",
+      "title": "UI development",
+      "group": "Develop",
+      "file": "en/ui-development.md"
+    },
+    {
+      "slug": "ai-collaboration",
+      "title": "Multi-AI collaboration protocol",
+      "group": "Collaborate",
+      "file": "en/ai-collaboration.md"
+    },
+    {
+      "slug": "workbench-integration",
+      "title": "Travel workbench integration",
+      "group": "Collaborate",
+      "file": "en/workbench-integration.md"
+    },
+    {
+      "slug": "roadmap",
+      "title": "Roadmap",
+      "group": "Collaborate",
+      "file": "en/roadmap.md"
+    },
+    {
+      "slug": "field-modules",
+      "title": "Seasonality and Field Identification",
+      "group": "Modules",
+      "file": "en/field-modules.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "Nature map, conservation, sounds & offline",
+      "group": "Modules",
+      "file": "en/platform-modules.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "Taxonomic authority and name governance",
+      "group": "Data & science",
+      "file": "en/taxonomy-authorities.md"
+    }
+  ],
+  "ja": [
+    {
+      "slug": "overview",
+      "title": "概要",
+      "group": "はじめに",
+      "file": "ja/overview.md"
+    },
+    {
+      "slug": "quickstart",
+      "title": "クイックスタート",
+      "group": "はじめに",
+      "file": "ja/quickstart.md"
+    },
+    {
+      "slug": "architecture",
+      "title": "アーキテクチャ",
+      "group": "設計",
+      "file": "ja/architecture.md"
+    },
+    {
+      "slug": "data-model",
+      "title": "データモデル",
+      "group": "設計",
+      "file": "ja/data-model.md"
+    },
+    {
+      "slug": "contributing-data",
+      "title": "データ提供と科学的ルール",
+      "group": "開発",
+      "file": "ja/contributing-data.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "プラットフォーム機能",
+      "group": "機能",
+      "file": "ja/platform-modules.md"
+    },
+    {
+      "slug": "roadmap",
+      "title": "ロードマップ",
+      "group": "計画",
+      "file": "ja/roadmap.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "分類権威と学名ガバナンス",
+      "group": "データと科学",
+      "file": "ja/taxonomy-authorities.md"
+    }
   ]
 }

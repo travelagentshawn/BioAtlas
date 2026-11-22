@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "agaricomycetes",
+  "rank": "class",
+  "scientific_name": "Agaricomycetes",
+  "parent": "basidiomycota",
+  "kingdom": "fungi",
+  "names": {
+    "zh": "伞菌纲",
+    "en": "Agaricomycetes",
+    "ja": "ハラタケ綱"
+  },
+  "summary": {
+    "zh": "担子菌门中包含大量蘑菇、齿菌和多孔菌类群的一个纲。",
+    "en": "A basidiomycete class containing many gilled mushrooms, toothed fungi and polypores.",
+    "ja": "多くのハラタケ類、歯状菌類、硬質菌類を含む担子菌の綱。"
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "index-fungorum-amanita-muscaria",
+    "ncbi-taxonomy-2020"
+  ],
+  "review_status": "seed"
+}

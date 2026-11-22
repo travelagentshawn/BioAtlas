@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "ncbi-taxonomy-polytrichum-3213",
+  "kind": "database",
+  "title": "NCBI Taxonomy record 3213: Polytrichum commune",
+  "authors": "National Center for Biotechnology Information",
+  "year": 2026,
+  "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3213&mode=Info",
+  "citation": "National Center for Biotechnology Information. NCBI Taxonomy record 3213: Polytrichum commune. Accessed 2026-11-22. https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=3213&mode=Info"
+}

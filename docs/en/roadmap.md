@@ -4,23 +4,30 @@ A public to-do list. Open an issue or say so in a PR before claiming an item.
 
 ## Data (top priority: verification)
 
+- [x] Add per-association evidence references and missing-evidence warnings for region–species–month links; existing month ranges still require individual verification.
+
 - [ ] Verify every `seed` record: that citations exist, DOIs, age ranges, IUCN categories.
-- [ ] Add `external_ids` (GBIF, NCBI Taxonomy, Open Tree, Wikidata) per group — verified values only.
+- [x] Add record-level review audit metadata and specialist sign-off constraints; actual scientific review remains outstanding.
+- [x] Add a layered, taxon-specific authority register and record-level taxonomic assertions; IDs remain `unassessed` until the provider record is checked.
+- [ ] Populate verified external IDs and accepted-name crosswalks for each group.
 - [ ] Broaden coverage: rainforest, reefs and coasts, alpine meadows, African savanna, European gardens.
-- [ ] Add fungi and bryophytes — just as common on trips.
+- [x] Add first fungal and bryophyte starter branches and species; continue broadening taxonomic and geographic coverage.
 - [ ] Add clearly licensed photographs (`media`).
 
 ## Modules
 
-- [ ] Phenology calendar view per species and per destination.
-- [ ] Identification search by colour, size and habitat.
-- [ ] Sound: links to redistributable bird and frog recordings.
-- [ ] Conservation and etiquette cards: local rules, protected areas.
-- [ ] Learning mode: quizzes guided by the tree.
+- [x] Nature locator map for documented scenes, with monthly filtering.
+- [x] Scientific source search and data quality dashboard for citations, review status and missing fields.
+
+- [x] Phenology calendar view per species and per destination (first pass; based on recorded months).
+- [x] Identification search by name, colour tags, size range, habitat, country and month (optional colour/size data still needs population).
+- [x] Sound library UI and licensing fields; recordings await licensed contributions.
+- [x] Conservation assessment and species field-etiquette index; current local regulations still need jurisdiction-by-jurisdiction verification.
+- [x] Initial species-recognition and common-ancestor quiz prototypes (removed; the Evolution Tree remains as a browsing view).
 
 ## Technical
 
-- [ ] Publish API v1 JSON Schemas at stable URLs for external validation.
-- [ ] More languages (`ja` is already allowed by the schema).
-- [ ] Accessibility review (tree under screen readers).
-- [ ] Offline PWA with per-trip pre-download.
+- [x] API v1 schemas and endpoint contract are published alongside the generated API.
+- [ ] Full Japanese localization (core UI and documentation groundwork exists; untranslated strings and older records still fall back to English).
+- [ ] Dedicated accessibility audit (keyboard focus, skip navigation, reduced motion and chart descriptions added; screen-reader review of the tree remains).
+- [x] PWA shell caching and per-trip pre-download for same-origin API data.

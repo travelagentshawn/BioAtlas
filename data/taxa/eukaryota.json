@@ -11,8 +11,8 @@
     "en": "Eukaryotes"
   },
   "summary": {
-    "zh": "细胞内有膜包被细胞核的生物。植物与动物是其中两个相距遥远的分支。",
-    "en": "Organisms whose cells contain a membrane-bound nucleus. Plants and animals are two distant branches within it."
+    "zh": "细胞内有膜包被细胞核的生物。植物、动物与真菌是真核生物中三个重要而彼此分化的演化支。",
+    "en": "Organisms whose cells contain a membrane-bound nucleus. Plants, animals and fungi are three major, deeply diverged branches within Eukaryota."
   },
   "pruned": true,
   "phylo": {

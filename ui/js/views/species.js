@@ -3,7 +3,7 @@ import { api, API_BASE } from "../api.js";
 import { tr, loc } from "../i18n.js";
 import { label, monthRanges } from "../labels.js";
 import { sigil, monthWheel } from "../viz.js";
-import { crumbs, nameBlock, reviewBadge, iucnBadge, badge, editOnGitHub, speciesCard, sectionTitle, link } from "../components.js";
+import { crumbs, nameBlock, reviewBadge, iucnBadge, badge, editOnGitHub, speciesCard, sectionTitle, link, taxonomicAssertions } from "../components.js";
 
 export async function speciesView(root, { params }) {
   const s = await api.species(params.id);
@@ -24,7 +24,8 @@ export async function speciesView(root, { params }) {
       h("div", { class: "head-main" },
         nameBlock(s.names, s.scientific_name),
         h("p", { class: "lead" }, loc(s.summary)),
-        h("div", { class: "badges" }, reviewBadge(s.review_status), iucnBadge(s.conservation?.iucn),
+        h("div", { class: "badges" }, reviewBadge(s.review_status), s.conservation?.iucn ? iucnBadge(s.conservation.iucn) : null,
+          s.conservation?.protections?.length ? badge(tr(`法规保护 ${s.conservation.protections.length} 项`, `${s.conservation.protections.length} legal protections`)) : null,
           s.authority ? badge(s.authority) : null))),
 
     h("div", { class: "layout-2" },
@@ -40,6 +41,8 @@ export async function speciesView(root, { params }) {
           h("ul", { class: "evidence" }, s.evolution.evidence.map((e) =>
             h("li", null, badge(label("evidence", e.type), "ev"), " ", e.note ? loc(e.note) + " " : "", cite(e.source))))),
 
+        taxonomicAssertions(s.taxonomic_assertions || [], s.sources_resolved),
+        
         h("section", { class: "panel" },
           sectionTitle(tr("在旅途中", "On the road")),
           h("p", null, loc(s.travel.notes)),
@@ -77,9 +80,17 @@ export async function speciesView(root, { params }) {
           h("li", { class: "leaf" }, h("b", null, loc(s.names)), h("span", { class: "sci sm" }, s.scientific_name))),
           h("a", { class: "btn small", href: `#/tree?focus=${s.id}` }, tr("在系统树中查看", "Show on the tree"))),
 
-        s.conservation ? h("section", { class: "panel" },
-          sectionTitle(tr("保护状况", "Conservation")),
-          h("p", null, iucnBadge(s.conservation.iucn), " ", h("span", { class: "muted" }, `${tr("截至", "as of")} ${s.conservation.as_of}`), " ", cite(s.conservation.source))) : null)),
+        s.conservation && (s.conservation.iucn || s.conservation.protections?.length) ? h("section", { class: "panel" },
+          sectionTitle(tr("保护状况与法规", "Conservation & legal protection")),
+          s.conservation.iucn
+            ? h("p", null, iucnBadge(s.conservation.iucn), " ", h("span", { class: "muted" }, `${tr("截至", "as of")} ${s.conservation.as_of}`), " ", cite(s.conservation.source))
+            : h("p", { class: "muted small" }, tr("暂无 IUCN 红色名录评估记录；下列法律保护记录与 IUCN 等级是不同体系。", "No IUCN Red List assessment is recorded; the legal protections below are separate from IUCN categories.")),
+          s.conservation.protections?.length ? h("ul", { class: "plain protection-list" }, s.conservation.protections.map((p) =>
+            h("li", null,
+              h("b", null, `${p.instrument} · ${p.status}`),
+              h("p", { class: "muted small" }, `${p.jurisdiction} · ${p.scope}`),
+              p.notes ? h("p", null, loc(p.notes)) : null,
+              h("p", { class: "muted small" }, `${tr("来源核对日期", "Source checked")}：${p.accessed_at} · `, cite(p.source))))) : null) : null)),
 
     h("section", { class: "panel sources" },
       sectionTitle(tr("参考文献", "References")),

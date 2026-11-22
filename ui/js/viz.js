@@ -10,7 +10,7 @@ function hash(str) {
   return (h >>> 0);
 }
 // Hue ranges keep kingdoms recognisable: plants in greens/teals, animals in ambers/terracottas.
-const HUES = { plantae: [95, 175], animalia: [8, 48], root: [200, 230] };
+const HUES = { plantae: [95, 175], animalia: [8, 48], fungi: [260, 310], root: [200, 230] };
 export function lineColor(id, kingdom, dark = false) {
   const [a, b] = HUES[kingdom] || HUES.root;
   const hue = a + (hash(id) % (b - a));

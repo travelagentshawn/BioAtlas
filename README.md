@@ -1,10 +1,12 @@
 # BioAtlas · 旅途生物图鉴
 
-An open **field atlas of the plants and animals travellers actually see**, joining molecular phylogeny with classical taxonomy. 把分子系统发育与传统分类学放进同一套公开数据，认识旅途中遇到的动植物。
+> **在线初稿 / Live draft:** [打开 BioAtlas 网页](https://bioatlas-draft-git-feat-field-modules-v1-7rk82my46w-2808.vercel.app) · 当前发布自 `feat/field-modules-v1`，内容仍处于 seed 初稿审核阶段。
+
+An open **field atlas of the plants, animals and fungi travellers actually see**, joining molecular phylogeny with classical taxonomy. 把分子系统发育与传统分类学放进同一套公开数据，认识旅途中遇到的植物、动物与真菌。
 
 - 🌳 **Tree of life** built on molecular phylogeny — divergence times as ranges with sources, paraphyletic groups flagged
 - 🧭 **Travel scenes & trip workbench** — what you may meet, where and in which month; export a checklist and a phylogeny of your trip
-- 📖 **Documentation built into the site** (中文 / English)
+- 📖 **Documentation built into the site** (中文 / English / 日本語)
 - 🤖 **Model-neutral AI collaboration** — see [`AGENTS.md`](AGENTS.md) and [`llms.txt`](llms.txt)
 - 🔌 **UI and data fully decoupled** — they meet only at the [API contract](contract/)
 
@@ -21,6 +23,7 @@ npm run dev     # validate + build + serve at http://localhost:8080
 | Command | Purpose |
 | --- | --- |
 | `npm run validate` | validate `data/` against `schema/` + cross-references |
+| `npm run audit:taxonomy` | read-only report of authority assertions and candidate conflicts |
 | `npm run build:api` | data side only → `dist/api/v1` |
 | `npm run build:ui` | UI side only → `dist/` |
 | `npm run check` | everything CI runs |
@@ -33,7 +36,7 @@ schema/    JSON Schemas for every record kind and the trip interchange format
 contract/  API v1: response shapes + endpoint list (the only link between data and UI)
 tools/     validate, build-api, build, serve, tests (zero dependencies)
 ui/        web interface (native ES modules, no build step)                — MIT
-docs/      documentation, zh + en, rendered inside the site
+docs/      documentation, zh + en + ja, rendered inside the site
 ```
 
 ## Read or extend the data

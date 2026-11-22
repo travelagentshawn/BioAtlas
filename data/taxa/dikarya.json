@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "dikarya",
+  "rank": "clade",
+  "scientific_name": "Dikarya",
+  "parent": "fungi",
+  "kingdom": "fungi",
+  "names": {
+    "zh": "双核菌类群",
+    "en": "Dikarya",
+    "ja": "二核菌類"
+  },
+  "summary": {
+    "zh": "包含担子菌门与子囊菌门的主要真菌演化支；此处为简化展示。",
+    "en": "A major fungal clade comprising Basidiomycota and Ascomycota; shown here as a simplified branch.",
+    "ja": "担子菌門と子嚢菌門を含む主要な真菌系統。ここでは簡略化した系統として表示する。"
+  },
+  "pruned": false,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "index-fungorum-amanita-muscaria",
+    "ncbi-taxonomy-2020"
+  ],
+  "review_status": "seed"
+}

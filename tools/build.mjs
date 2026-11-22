@@ -22,7 +22,7 @@ mkdirSync(out, { recursive: true });
 if (want("api")) buildApi(out);
 
 if (want("ui")) {
-  for (const f of ["index.html", "config.js", "css", "js"]) {
+  for (const f of ["index.html", "config.js", "manifest.webmanifest", "sw.js", "icons", "css", "js"]) {
     const dst = join(out, f);
     rmSync(dst, { recursive: true, force: true });
     cpSync(join(ROOT, "ui", f), dst, { recursive: true });

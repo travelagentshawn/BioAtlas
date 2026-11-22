@@ -1,0 +1,18 @@
+{
+  "type": "source",
+  "id": "authority-catalogue-of-life-xr",
+  "kind": "database",
+  "title": "Catalogue of Life eXtended Release",
+  "url": "https://www.catalogueoflife.org/data/download",
+  "citation": "Catalogue of Life. Extended Release 2026-10-16 XR (COL26.10 XR), issued 2026-10-16; DOI:10.48580/dgzlf. Accessed 2026-11-22. https://www.catalogueoflife.org/data/download",
+  "authority_role": "global-backbone",
+  "taxonomic_scope": [
+    "all major kingdoms"
+  ],
+  "identifier_scheme": "Catalogue of Life taxon identifier",
+  "update_policy": "Monthly releases; record the exact release used for every import.",
+  "accessed_at": "2026-11-22",
+  "current_version": "2026-10-16 XR",
+  "year": 2026,
+  "doi": "10.48580/dgzlf"
+}

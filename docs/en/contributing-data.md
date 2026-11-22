@@ -33,3 +33,47 @@ Every species, taxon and region page has a "Suggest an edit on GitHub" link poin
 - A taxon needs at least one source, otherwise `validate` warns.
 - Species without a suitable taxon: add the family (and a clade if needed) first.
 - Only fill `external_ids` (GBIF, NCBI, Wikidata…) with values you have **verified**.
+
+
+## Auditable review metadata (the optional `review` field)
+
+When promoting a record from `seed` to `reviewed` or `expert-reviewed`, add a `review` object to that same record. A PR description alone is not a durable record-level audit trail.
+
+```json
+{
+  "review": {
+    "reviewed_at": "YYYY-MM-DD",
+    "reviewed_by": "GitHub handle or verifiable reviewer identifier",
+    "reviewer_role": "contributor",
+    "method": "literature-check",
+    "sources": ["existing-source-id"],
+    "scope": ["taxonomy", "identification", "distribution", "phenology"],
+    "notes": { "zh": "核对范围与仍存疑点", "en": "What was checked and what remains uncertain" }
+  }
+}
+```
+
+- Use the actual review date; never backdate or guess it.
+- Identify a real reviewer. Do not present an AI model as a human reviewer.
+- `expert-reviewed` requires both `reviewer_role: specialist` and `method: expert-assessment`.
+- `sources` must include at least one source ID that exists in this repository. A field observation should also have a traceable observation record; it must not be misrepresented as published literature.
+- Review metadata documents a process; it is not automatic certification and does not guarantee a claim is correct.
+- Existing records remain unchanged. This change does not promote any `seed` record.
+
+
+## Evidence requirements for regional occurrence records
+
+When adding or editing a species/month association in `data/regions/*.json`, add link-level `evidence` whenever possible. For example:
+
+```json
+{
+  "species": "acer-palmatum",
+  "months": [10, 11],
+  "likelihood": "common",
+  "evidence": [
+    { "type": "regional-checklist", "source": "existing-regional-flora-source" }
+  ]
+}
+```
+
+The cited source must actually support occurrence in that region and the stated months. A source showing presence somewhere in a country does not establish presence at a particular site or in a particular month. If no source is available, retain the existing association with its unverified label; never invent evidence.

@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "basidiomycota",
+  "rank": "phylum",
+  "scientific_name": "Basidiomycota",
+  "parent": "dikarya",
+  "kingdom": "fungi",
+  "names": {
+    "zh": "担子菌门",
+    "en": "Basidiomycota",
+    "ja": "担子菌門"
+  },
+  "summary": {
+    "zh": "以担子结构产生担孢子的真菌类群，许多常见大型蘑菇属于此门。",
+    "en": "Fungi that produce basidiospores on basidia; many familiar mushroom-forming fungi belong here.",
+    "ja": "担子器上に担子胞子を形成する真菌群。身近なキノコの多くがこの門に属する。"
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "index-fungorum-amanita-muscaria",
+    "ncbi-taxonomy-2020"
+  ],
+  "review_status": "seed"
+}

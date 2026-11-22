@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "ostry-2012-macrofungi",
+  "kind": "book",
+  "title": "Field Guide to Common Macrofungi in Eastern Forests and Their Ecosystem Functions",
+  "authors": "Michael E. Ostry, Neil A. Anderson and Joseph G. O’Brien",
+  "year": 2012,
+  "venue": "USDA Forest Service, Northern Research Station, General Technical Report NRS-79 (revised February 2012)",
+  "url": "https://www.nrs.fs.usda.gov/pubs/gtr/gtr_nrs79r.pdf",
+  "citation": "Ostry ME, Anderson NA, O’Brien JG. Field Guide to Common Macrofungi in Eastern Forests and Their Ecosystem Functions. USDA Forest Service, Northern Research Station, General Technical Report NRS-79. Revised February 2012."
+}

@@ -1,6 +1,6 @@
 // Trip workbench: choose month + regions -> tick-off checklist, trip phylogeny, import/export.
 import { h, clear } from "../dom.js";
-import { api } from "../api.js";
+import { api, API_BASE } from "../api.js";
 import { tr, loc } from "../i18n.js";
 import { label, monthName, monthRanges } from "../labels.js";
 import { sigil } from "../viz.js";
@@ -87,11 +87,27 @@ export async function plannerView(root, { query }) {
         h("button", { class: "btn small", onclick: () => download(`bioatlas-trip-${slug(trip.name)}.json`, JSON.stringify({ ...trip, exported_at: new Date().toISOString() }, null, 2), "application/json") }, "JSON"),
         h("button", { class: "btn small", onclick: exportMd }, "Markdown"),
         h("button", { class: "btn small", onclick: () => importInput.click() }, tr("导入", "Import")),
+        h("button", { class: "btn small", onclick: cacheTripOffline }, tr("离线下载本行程", "Save trip offline")),
         h("button", { class: "btn small ghost", onclick: () => { Object.assign(trip, blank()); drawMonths(); drawRegions(); nameInput.value = ""; commit(); } }, tr("清空", "Reset"))),
       importInput,
       h("p", { class: "muted small" }, tr("格式见 schema/trip.schema.json，可由任何行程软件生成。", "Format: schema/trip.schema.json — any planner can generate it."))));
 
   // ----- helpers -----
+  async function cacheTripOffline() {
+    const reg = await navigator.serviceWorker?.getRegistration();
+    const worker = reg?.active || navigator.serviceWorker?.controller;
+    if (!worker) { nearMsg.textContent = tr("请先在线打开一次网站并刷新，启用离线缓存。", "Open the site online once and reload to enable offline caching."); return; }
+    const ids = new Set();
+    for (const id of trip.regions) {
+      ids.add(`${API_BASE}/regions/${encodeURIComponent(id)}.json`);
+      const r = await api.region(id).catch(() => null);
+      for (const e of r?.species || []) ids.add(`${API_BASE}/species/${encodeURIComponent(e.species.id)}.json`);
+    }
+    ids.add(`${API_BASE}/manifest.json`); ids.add(`${API_BASE}/taxa.json`);
+    ids.add(`${API_BASE}/species.json`); ids.add(`${API_BASE}/regions.json`);
+    worker.postMessage({ type: "BIOATLAS_CACHE_URLS", urls: [...ids] });
+    nearMsg.textContent = tr(`已发送 ${ids.size} 个行程数据文件至离线缓存。请保持页面在线片刻完成下载。`, `Queued ${ids.size} trip data files for offline caching. Keep this page online briefly while they download.`);
+  }
   const slug = (s) => (s || "trip").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "") || "trip";
   function download(name, text, type) {
     const a = h("a", { href: URL.createObjectURL(new Blob([text], { type })), download: name });
