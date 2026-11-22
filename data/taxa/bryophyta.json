@@ -8,11 +8,13 @@
   "kingdom": "plantae",
   "names": {
     "zh": "藓类植物门（狭义）",
-    "en": "Mosses (Bryophyta sensu stricto)"
+    "en": "Mosses (Bryophyta sensu stricto)",
+    "ja": "蘚類植物門（狭義）"
   },
   "summary": {
     "zh": "本节点指狭义藓类（mosses），不把苔类、角苔类与藓类合并成一个未经限定的“苔藓植物”单系群。",
-    "en": "This node refers to mosses in the strict sense; it does not combine mosses, liverworts and hornworts into an unqualified monophyletic 'bryophyte' group."
+    "en": "This node refers to mosses in the strict sense; it does not combine mosses, liverworts and hornworts into an unqualified monophyletic 'bryophyte' group.",
+    "ja": "蘚類植物門（狭義）"
   },
   "pruned": true,
   "phylo": {
