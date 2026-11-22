@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/eflora-bc-polytrichum-commune.json",
   "id": "eflora-bc-polytrichum-commune",
   "kind": "website",
   "title": "Polytrichum commune — E-Flora BC Atlas",
