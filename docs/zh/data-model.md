@@ -11,7 +11,7 @@
 
 公共定义见 [`schema/common.schema.json`](repo:schema/common.schema.json)。另有 [`schema/trip.schema.json`](repo:schema/trip.schema.json)，是行程工作台的交换格式。
 
-## 分类单元（taxon）
+## 生物界范围\n\n当前 `kingdom` 支持 `plantae`（植物）、`animalia`（动物）与 `fungi`（真菌）；`root` 仅用于真核生物共同根节点。苔藓归入植物界，不能因为它们是非维管植物而另建一个“界”。\n\n## 分类单元（taxon）
 
 - `parent` 构成一棵**单根树**；根是 `eukaryota`，`parent: null`。
 - `rank` 可以是 `clade`（无等级演化支），这是分子系统发育的常态，不必硬凑传统等级。
