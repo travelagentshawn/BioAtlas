@@ -68,3 +68,7 @@ GBIF Backbone Taxonomy 仅保留用于历史标识符映射和兼容。GBIF 官�
 - [GBIF 分类标识符处理](https://techdocs.gbif.org/en/data-publishing/LSID-lookup)
 - [NCBI 分类资源目录](https://ncbi.nlm.nih.gov/datasets/docs/v2/data-processing/taxonomy-processing/taxonomy-resources/)
 - [ITIS](https://www.itis.gov/)
+
+## 只读审计命令
+
+运行 `npm run audit:taxonomy` 可输出 JSON 报告，汇总权威来源、记录级断言、名称状态和潜在分歧。运行 `npm run audit:taxonomy -- --strict` 时，如果多个来源将不同的双名字符串标为同一 BioAtlas 记录的 accepted，则以代码 2 退出。该比较只为候选冲突检测而暂时忽略命名人，不负责解决异名或分类概念，也不会修改任何源数据。
