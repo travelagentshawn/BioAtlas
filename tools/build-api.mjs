@@ -169,7 +169,7 @@ export function buildApi(outRoot) {
     id: s.id, kind: s.kind, title: s.title, year: s.year ?? null, accessed_at: s.accessed_at ?? null, citation: s.citation,
     authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),
     authority_role: s.authority_role ?? null, taxonomic_scope: s.taxonomic_scope ?? [], identifier_scheme: s.identifier_scheme ?? null,
-    update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
+    current_version: s.current_version ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
   })));
   const hay = (...p) => p.filter(Boolean).join(" ").toLowerCase();
   put("search.json", [
