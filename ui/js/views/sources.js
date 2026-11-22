@@ -19,7 +19,7 @@ export async function sourcesView(root) {
   rows.forEach(s=>{
    const href=s.url||(s.doi?`https://doi.org/${s.doi}`:null);
    list.append(h("article",{class:"card"},h("div",{class:"card-body"},
-    h("div",{class:"kicker"},s.authority_role?roleLabels[s.authority_role]:`${s.kind} · ${s.year}`),h("h3",null,s.title),
+    h("div",{class:"kicker"},s.authority_role?roleLabels[s.authority_role]:`${s.kind} · ${s.year ?? s.accessed_at ?? ""}`),h("h3",null,s.title),
     s.authority_role?h("p",{class:"muted small"},(s.taxonomic_scope||[]).join(" · ")):null,
     s.accessed_at?h("p",{class:"small muted"},tr("访问日期：","Accessed: ")+s.accessed_at):null,
     s.authority_role&&s.identifier_scheme?h("p",{class:"small"},tr("标识符：","Identifier: ")+s.identifier_scheme):null,
