@@ -155,7 +155,12 @@
           ]
         },
         "sources": {
-          "$ref": "common.schema.json#/$defs/source_refs"
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/slug"
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "scope": {
           "type": "array",
@@ -175,7 +180,8 @@
         "reviewed_by",
         "reviewer_role",
         "method",
-        "scope"
+        "scope",
+        "sources"
       ],
       "additionalProperties": false
     }
