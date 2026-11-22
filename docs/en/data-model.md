@@ -58,3 +58,7 @@ Promoting a status requires saying in the PR what was checked.
 ## Evidence for region–species associations (optional `evidence`)
 
 Each `species[]` association in a region may carry its own `evidence` array. Evidence types distinguish field observations, published literature, regional checklists, database records and expert assessments. Every item must reference an existing source ID in `data/sources/`. Do not label global distribution, habitat inference or theoretical possibility as a field observation. Associations without `evidence` may still be displayed, but the UI marks their month ranges as unverified; they are not confirmed local phenology.
+
+## Taxonomic assertions and authority registry
+
+Taxa and species may include `taxonomic_assertions[]`. Each assertion stores the authority registry ID, exact provider record ID, provider-returned scientific name, name status, optional classification/version, access date and a supporting source record. `unassessed` is the correct status when an identifier has been carried over but the provider record has not been independently checked. Multiple authorities may disagree; preserve their assertions rather than overwriting one with another. The authority registry is generated at `api/v1/taxonomic-authorities.json` from source records with `authority_role` metadata. See [Taxonomic authority and name governance](taxonomy-authorities.md).
