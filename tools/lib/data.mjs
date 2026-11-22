@@ -118,12 +118,15 @@ export function checkIntegrity(data, errors, warnings) {
     checkReview("region", r);
     if (r.kind === "destination" && !r.center) errors.push(`${w}: destination needs center`);
     checkSources(w, r.sources);
+    const unsupported = r.species.filter((entry) => !(entry.evidence || []).length);
+    if (unsupported.length) warnings.push(`${w}: ${unsupported.length} species association(s) have no link-level evidence; their month ranges are unverified`);
     const seen = new Set();
     for (const e of r.species) {
       const sp = species.get(e.species);
       if (!sp) { errors.push(`${w}: unknown species "${e.species}"`); continue; }
       if (seen.has(e.species)) errors.push(`${w}: species "${e.species}" listed twice`);
       seen.add(e.species);
+      checkSources(`${w} species ${e.species} evidence`, (e.evidence || []).map((item) => item.source));
       for (const c of r.countries.length ? [] : []) void c;
       if (sp.travel?.countries?.length && !r.countries.some((c) => sp.travel.countries.includes(c)))
         warnings.push(`${w}: species "${e.species}" has no overlap between region countries and species countries`);
