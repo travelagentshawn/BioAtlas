@@ -86,3 +86,14 @@ test("review status cannot be promoted without an audit or false expert sign-off
   checkIntegrity(testData, errors, []);
   assert.ok(errors.some(e => e.includes("requires a specialist expert-assessment review")));
 });
+
+
+test("region species evidence requires a valid existing source", () => {
+  const { data } = loadAll();
+  const region = structuredClone(data.regions[0]);
+  region.species[0].evidence = [{ type: "published-literature", source: "source-that-does-not-exist" }];
+  const testData = { ...data, regions: [region] };
+  const errors = [];
+  checkIntegrity(testData, errors, []);
+  assert.ok(errors.some(e => e.includes("unknown source \"source-that-does-not-exist\"")));
+});
