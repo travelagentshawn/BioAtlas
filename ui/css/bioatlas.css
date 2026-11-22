@@ -245,3 +245,7 @@ audio { width:100%; margin:10px 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }
+
+.quality-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+.stat-card { display:flex; flex-direction:column; gap:6px; }
+.stat-card b { font:700 1.8rem var(--serif); color:var(--plant); }
