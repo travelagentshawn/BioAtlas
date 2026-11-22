@@ -2,7 +2,7 @@
 // Dependency-free tests (node:test).  node tools/test.mjs
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { loadSchemas, validate } from "./lib/schema.mjs";
@@ -262,5 +262,6 @@ test("quiz modules are removed and the complete module directory lists every rem
   assert.match(app, /\\["modules",/);
   assert.match(home, /moduleDirectory\\(root, true\\)/);
   assert.doesNotMatch(directory, /draggable|dragstart|touchmove/);
-  assert.ok(!readFileSync(join(ROOT, "ui/js/views/learn.js"), "utf8"));
+  assert.equal(existsSync(join(ROOT, "ui/js/views/learn.js")), false);
+  assert.equal(existsSync(join(ROOT, "ui/js/views/evolution.js")), false);
 });
