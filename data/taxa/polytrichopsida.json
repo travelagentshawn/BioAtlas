@@ -8,11 +8,13 @@
   "kingdom": "plantae",
   "names": {
     "zh": "金发藓纲",
-    "en": "Polytrichopsida"
+    "en": "Polytrichopsida",
+    "ja": "スギゴケ綱"
   },
   "summary": {
     "zh": "包含金发藓属等大型藓类；具体分类依采用的苔藓植物分类系统。",
-    "en": "A moss class including Polytrichum; details follow the adopted bryophyte classification."
+    "en": "A moss class including Polytrichum; details follow the adopted bryophyte classification.",
+    "ja": "スギゴケ綱"
   },
   "pruned": false,
   "phylo": {
