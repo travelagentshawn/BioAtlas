@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/oxford-plants400-polytrichum.json",
   "id": "oxford-plants400-polytrichum",
   "kind": "website",
   "title": "Polytrichum commune — Plants 400",
