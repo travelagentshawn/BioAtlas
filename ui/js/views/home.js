@@ -39,6 +39,16 @@ export async function home(root) {
         picks.map((s, i) => h("a", { class: `float f${i}`, href: `#/species/${s.id}`, tabindex: "-1", title: loc(s.names) },
           sigil(s.lineage, s.kingdom, [92, 64, 78, 56, 86, 60, 72, 52, 66][i]))))),
 
+    h("section", { class: "mode-entry-grid", "aria-label": tr("双主视图入口", "Two primary views") },
+      modeCard("#/explore", "atlas", tr("01 · 自然图鉴", "01 · Field atlas"),
+        tr("从物种、季节与目的地开始", "Start with species, seasons and places"),
+        tr("检索物种、查看当季观察线索、规划目的地，并使用野外辨认与保护工具。", "Search species, discover seasonal field notes, plan destinations, and use identification and conservation tools."),
+        [tr("物种检索", "Species search"), tr("季节观察", "Seasonal field notes"), tr("旅行场景", "Travel scenes")]),
+      modeCard("#/tree", "tree", tr("02 · 进化树", "02 · Evolution tree"),
+        tr("沿着共同祖先探索生命", "Explore life through shared ancestry"),
+        tr("展开 BioAtlas 自有主树，查看分类层级、分歧年代与物种之间的亲缘关系。", "Expand BioAtlas's own curated tree to explore taxonomic ranks, divergence times and relationships."),
+        [tr("系统发育", "Phylogeny"), tr("分歧年代", "Divergence times"), tr("分类大纲", "Taxonomic outline")])),
+
     h("section", { class: "block" },
       sectionTitle(tr(`${monthName(month)}值得留意`, `Worth looking for in ${monthName(month)}`),
         tr("按物种的最佳观察月份筛选。", "Filtered by each species' best months.")),
@@ -73,6 +83,20 @@ export async function home(root) {
           h("li", null, tr("并系类群（如‘蜥蜴’‘蛾’）会被明确标出，而不是悄悄沿用旧说法。", "Paraphyletic groups (like ‘lizards’ or ‘moths’) are flagged openly rather than silently reused.")),
           h("li", null, tr(`目前 ${seeds}/${species.length} 个物种为“初稿”。欢迎对照原文献核对后提交修订。`, `Currently ${seeds}/${species.length} species are marked “seed”. Check them against the cited papers and send a fix.`))),
         h("a", { class: "btn", href: "#/docs/data-model" }, tr("了解数据模型", "Read the data model")))));
+}
+
+function modeCard(href, kind, eyebrow, title, description, tags) {
+  return h("a", { class: `mode-card ${kind}`, href },
+    h("div", { class: "mode-card-copy" },
+      h("p", { class: "mode-eyebrow" }, eyebrow),
+      h("h2", null, title),
+      h("p", { class: "mode-description" }, description),
+      h("div", { class: "mode-tags" }, tags.map((tag) => h("span", null, tag))),
+      h("span", { class: "mode-open" }, tr("进入界面", "Open view"), " ↗")),
+    h("div", { class: `mode-visual ${kind}`, "aria-hidden": "true" },
+      kind === "atlas"
+        ? h("span", { class: "atlas-orbit" }, "✳")
+        : h("span", { class: "tree-glyph" }, "⑂")));
 }
 
 function pillar(href, title, text) {
