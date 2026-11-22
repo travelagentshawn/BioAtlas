@@ -278,6 +278,9 @@
         ],
         "additionalProperties": false
       }
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
     }
   },
   "required": [
