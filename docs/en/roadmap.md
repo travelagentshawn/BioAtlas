@@ -23,7 +23,7 @@ A public to-do list. Open an issue or say so in a PR before claiming an item.
 - [x] Identification search by name, colour tags, size range, habitat, country and month (optional colour/size data still needs population).
 - [x] Sound library UI and licensing fields; recordings await licensed contributions.
 - [x] Conservation assessment and species field-etiquette index; current local regulations still need jurisdiction-by-jurisdiction verification.
-- [x] Species recognition and common-ancestor learning modes (first pass).
+- [x] Initial species-recognition and common-ancestor quiz prototypes (removed; the Evolution Tree remains as a browsing view).
 
 ## Technical
 
