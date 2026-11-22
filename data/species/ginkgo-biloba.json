@@ -107,5 +107,9 @@
         "en": "IPNI records the name, authorship and place/date of publication. It is a nomenclatural index, not an accepted-taxonomy checklist, so no accepted status is inferred here."
       }
     }
-  ]
+  ],
+  "external_ids": {
+    "ipni": "262125-1",
+    "powo": "262125-1"
+  }
 }
