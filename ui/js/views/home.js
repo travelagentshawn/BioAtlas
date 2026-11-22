@@ -46,7 +46,7 @@ export async function home(root) {
         : h("p", { class: "muted" }, tr("本月暂无条目，欢迎补充。", "No entries for this month yet — contributions welcome."))),
 
     h("section", { class: "block pillars" },
-      sectionTitle(tr("三个入口", "Three ways in")),
+      sectionTitle(tr("主要模块", "Main modules")),
       h("div", { class: "pillar-grid" },
         pillar("#/tree", tr("生命之树", "Tree of life"), tr("以分子系统发育为骨架，从真核生物一路展开到你拍到的那只鸟。", "A phylogeny-first view that unfolds from eukaryotes down to the bird you photographed.")),
         pillar("#/regions", tr("旅行场景", "Travel scenes"), tr(`${regions.length} 个目的地与场景，告诉你在哪个月、哪种地方会遇到什么。`, `${regions.length} destinations and scenes telling you what to expect, where and when.`)),
