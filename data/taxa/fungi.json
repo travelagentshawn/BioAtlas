@@ -14,7 +14,7 @@
   "summary": {
     "zh": "包含酵母、霉菌与大型真菌等真核生物；真菌并非植物，且与动物的亲缘关系比与植物更近。",
     "en": "A eukaryotic kingdom including yeasts, moulds and macrofungi. Fungi are not plants and are more closely related to animals than to plants.",
-    "ja": "真菌界"
+    "ja": "真菌類を含む真核生物の界。酵母、カビ、大型のキノコなどを含む。真菌は植物ではなく、植物より動物に近縁である。"
   },
   "pruned": true,
   "phylo": {
