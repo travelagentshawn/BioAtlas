@@ -3,7 +3,7 @@
   "id": "authority-apg",
   "kind": "database",
   "title": "Angiosperm Phylogeny Group (APG)",
-  "year": 2026,
+  "year": 2016,
   "url": "https://doi.org/10.1111/boj.12385",
   "citation": "The Angiosperm Phylogeny Group. APG IV classification (2016). Botanical Journal of the Linnean Society. doi:10.1111/boj.12385.",
   "authority_role": "classification-framework",
@@ -11,5 +11,6 @@
     "angiosperm orders and families"
   ],
   "identifier_scheme": "APG publication/version",
-  "update_policy": "Versioned classification; cite publication"
+  "update_policy": "Versioned classification; cite publication",
+  "accessed_at": "2026-11-22"
 }
