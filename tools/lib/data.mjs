@@ -72,12 +72,25 @@ export function checkIntegrity(data, errors, warnings) {
       warnings.push(`${where}: specialist review should use expert-assessment method`);
   };
 
+  const checkTaxonomicAssertions = (kind, record) => {
+    for (const assertion of record.taxonomic_assertions || []) {
+      const where = `${kind} ${record.id} taxonomic assertion`;
+      const authority = sources.get(assertion.authority);
+      if (!authority) errors.push(`${where}: unknown authority "${assertion.authority}"`);
+      else if (!authority.authority_role) errors.push(`${where}: source "${assertion.authority}" is not registered as a taxonomy authority`);
+      checkSources(where, [assertion.source]);
+      if (assertion.accessed_at && Number.isNaN(Date.parse(assertion.accessed_at + "T00:00:00Z")))
+        errors.push(`${where}: accessed_at is not a valid calendar date`);
+    }
+  };
+
   // taxa
   const roots = data.taxa.filter((t) => t.parent === null);
   if (roots.length !== 1) errors.push(`taxa: exactly one root required, found ${roots.length}`);
   for (const t of data.taxa) {
     const w = `taxon ${t.id}`;
     checkReview("taxon", t);
+    checkTaxonomicAssertions("taxon", t);
     if (t.parent !== null && !taxa.has(t.parent)) errors.push(`${w}: unknown parent "${t.parent}"`);
     checkSources(w, t.sources);
     const age = t.phylo?.age_mya;
@@ -100,6 +113,7 @@ export function checkIntegrity(data, errors, warnings) {
   for (const s of data.species) {
     const w = `species ${s.id}`;
     checkReview("species", s);
+    checkTaxonomicAssertions("species", s);
     const t = taxa.get(s.taxon);
     if (!t) errors.push(`${w}: unknown taxon "${s.taxon}"`);
     else if (t.kingdom !== s.kingdom) errors.push(`${w}: kingdom "${s.kingdom}" differs from taxon "${t.kingdom}"`);
