@@ -59,7 +59,7 @@ export function buildApi(outRoot) {
     best_months: s.travel.best_months, habitats: s.travel.habitats, countries: s.travel.countries,
     iucn: s.conservation?.iucn ?? null, review_status: s.review_status,
   });
-  const resolveSources = (ids = []) => [...new Set(ids)].filter((i) => sources.has(i)).map((i) => ({ ...sources.get(i), year: sources.get(i).year ?? null, accessed_at: sources.get(i).accessed_at ?? null, authority_role: sources.get(i).authority_role ?? null, taxonomic_scope: sources.get(i).taxonomic_scope ?? [], identifier_scheme: sources.get(i).identifier_scheme ?? null, update_policy: sources.get(i).update_policy ?? null, legacy: sources.get(i).legacy ?? false }));
+  const resolveSources = (ids = []) => [...new Set(ids)].filter((i) => sources.has(i)).map((i) => ({ ...sources.get(i), year: sources.get(i).year ?? null, accessed_at: sources.get(i).accessed_at ?? null, authority_role: sources.get(i).authority_role ?? null, taxonomic_scope: sources.get(i).taxonomic_scope ?? [], identifier_scheme: sources.get(i).identifier_scheme ?? null, current_version: sources.get(i).current_version ?? null, update_policy: sources.get(i).update_policy ?? null, legacy: sources.get(i).legacy ?? false }));
   const regionsOfSpecies = (sid) =>
     data.regions.flatMap((r) => r.species.filter((e) => e.species === sid).map((e) => ({
       id: r.id, kind: r.kind, names: r.names, months: e.months, likelihood: e.likelihood,
