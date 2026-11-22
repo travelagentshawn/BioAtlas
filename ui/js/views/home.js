@@ -16,17 +16,17 @@ export async function home(root) {
   const stat = (n, zh, en) => h("div", { class: "stat" }, h("b", null, n), h("span", null, tr(zh, en)));
   const seeds = species.filter((s) => s.review_status === "seed").length;
 
-  // floating sigils: a mix of plants and animals
+  // floating sigils: a mix of plants, animals and fungi
   const picks = [...species].sort((a, b) => a.id.localeCompare(b.id)).filter((_, i) => i % 2 === 0).slice(0, 9);
 
   root.append(
     h("section", { class: "hero" },
       h("div", { class: "hero-copy" },
-        h("p", { class: "eyebrow" }, tr("植物 · 动物 · 旅途图鉴", "Plants · Animals · A travellers' field atlas")),
+        h("p", { class: "eyebrow" }, tr("植物 · 动物 · 真菌 · 旅途图鉴", "Plants · Animals · Fungi · A travellers' field atlas")),
         h("h1", null, tr("沿途所见，皆有谱系", "Everything you meet on the road has a lineage")),
         h("p", { class: "lead" }, tr(
-          "BioAtlas 把分子系统发育的证据与传统分类学放进同一张图，帮你在旅途中认出银杏、白鹭与梅花鹿，并知道它们在生命之树上的位置。",
-          "BioAtlas puts molecular-phylogenetic evidence and classical taxonomy on one map, so you can recognise ginkgo, egrets and sika deer on a trip — and know where they sit on the tree of life.")),
+          "BioAtlas 把分子系统发育的证据与传统分类学放进同一张图，帮你在旅途中认出银杏、白鹭、梅花鹿、蘑菇与苔藓，并知道它们在生命之树上的位置。",
+          "BioAtlas puts molecular-phylogenetic evidence and classical taxonomy on one map, so you can recognise ginkgo, egrets, sika deer, mushrooms and mosses on a trip — and know where they sit on the tree of life.")),
         h("div", { class: "cta" },
           h("a", { class: "btn primary", href: "#/explore" }, tr("开始探索", "Start exploring")),
           h("a", { class: "btn", href: "#/planner" }, tr("规划行程清单", "Plan a trip checklist")),
