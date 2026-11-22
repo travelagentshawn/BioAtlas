@@ -100,5 +100,19 @@
     "eflora-bc-polytrichum-commune",
     "oxford-plants400-polytrichum"
   ],
-  "review_status": "seed"
+  "review_status": "seed",
+  "taxonomic_assertions": [
+    {
+      "authority": "authority-ncbi-taxonomy",
+      "record_id": "3213",
+      "scientific_name": "Polytrichum commune",
+      "name_status": "unassessed",
+      "accessed_at": "2026-11-22",
+      "source": "ncbi-taxonomy-polytrichum-3213",
+      "notes": {
+        "zh": "登记现有 NCBI Taxonomy ID；名称与分类地位仍待与专业苔藓名录交叉核对。",
+        "en": "Registers the existing NCBI Taxonomy ID; nomenclatural and taxonomic status still requires cross-checking against specialist bryophyte references."
+      }
+    }
+  ]
 }
