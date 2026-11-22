@@ -47,7 +47,7 @@ const navLinks = [
   ["planner", tr("行程工作台", "Workbench")], ["seasonality", tr("季节日历", "Seasonality")],
   ["identify", tr("野外辨认", "Field ID")], ["learn", tr("学习", "Learn")], ["map", tr("自然地图", "Nature map")],
   ["conservation", tr("保护与礼仪", "Conservation")], ["sounds", tr("自然声音", "Sounds")], ["evolution", tr("演化学习", "Evolution")],
-  ["sources", tr("科学来源", "Sources")], ["quality", tr("数据质量", "Data quality")], ["docs", "Documentation"],
+  ["sources", tr("科学来源", "Sources")], ["quality", tr("数据质量", "Data quality")], ["docs", tr("开发说明书", "Developer docs")],
 ];
 
 function header() {
@@ -67,7 +67,7 @@ function header() {
 async function footer() {
   let m = null; try { m = await api.manifest(); } catch { /* shown by views */ }
   return h("footer", { class: "site-footer" }, h("div", { class: "wrap" },
-    h("div", null, h("b", null, "BioAtlas"), " · ", tr("开源的旅途动植物图鉴：代码 MIT，数据 CC BY 4.0。", "Open travel field atlas — code MIT, data CC BY 4.0.")),
+    h("div", null, h("b", null, "BioAtlas"), " · ", tr("开源的旅途生物图鉴：代码 MIT，数据 CC BY 4.0。", "Open travel biodiversity atlas — code MIT, data CC BY 4.0.")),
     h("div", { class: "muted" },
       m ? `API v${m.api_version} · data ${m.data_hash} · ${m.counts.species} ${tr("物种", "species")}` : "",
       " · ", h("a", { href: `${API_BASE}/manifest.json`, target: "_blank", rel: "noopener" }, "manifest.json"),
