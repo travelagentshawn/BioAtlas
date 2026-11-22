@@ -85,7 +85,7 @@ export function buildApi(outRoot) {
       children: (children.get(t.id) || []).map((i) => taxonLite(taxa.get(i))),
       species: (speciesByTaxon.get(t.id) || []).map((i) => speciesLite(speciesById.get(i))),
       sources_resolved: resolveSources(srcIds),
-      review_status: t.review_status,
+      review_status: t.review_status, review: t.review ?? null,
     });
   }
 
