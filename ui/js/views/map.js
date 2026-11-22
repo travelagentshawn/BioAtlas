@@ -27,9 +27,13 @@ export async function mapView(root,{query}) {
     const active=list.filter(r=>r.center&&(!country||r.countries.includes(country))&&(r.month_counts?.[month-1]||0)>0);
     active.forEach(r=>{
       const x=(r.center.lng+180)/360*960,y=(90-r.center.lat)/180*380;
-      const mark=svg("circle",{cx:x,cy:y,r:6,class:"map-dot",tabindex:0,role:"button","aria-label":loc(r.names)});
+      const openRegion=()=>{location.hash=`#/region/${r.id}`;};
+      const mark=svg("circle",{cx:x,cy:y,r:6,class:"map-dot",tabindex:0,role:"button","aria-label":tr(`打开地点档案：${loc(r.names)}`,`Open scene record: ${loc(r.names)}`)});
       mark.append(svg("title",{},loc(r.names)));
-      mark.addEventListener("click",()=>location.hash=`#/region/${r.id}`);
+      mark.addEventListener("click",openRegion);
+      mark.addEventListener("keydown",event=>{
+        if(event.key==="Enter"||event.key===" "){event.preventDefault();openRegion();}
+      });
       plot.append(mark);
       const text=svg("text",{x:x+9,y:y-8,class:"map-label"},loc(r.names));
       plot.append(text);
