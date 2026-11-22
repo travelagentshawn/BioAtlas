@@ -17,7 +17,7 @@ export async function mapView(root,{query}) {
   countrySelect.append(h("option",{value:""},tr("所有国家","All countries")));
   countries.forEach(c=>countrySelect.append(h("option",{value:c,selected:c===country},label("country",c))));
   filters.append(monthSelect,countrySelect);
-  const plot=svg("svg",{class:"world-plot",viewBox:"0 0 960 440",role:"img","aria-label":tr("按经纬度绘制的旅行自然场景分布图，不显示海岸线","Equirectangular plot of atlas locations; coastlines are not shown")});
+  const plot=svg("svg",{class:"world-plot",viewBox:"0 0 960 440",role:"group","aria-label":tr("可交互的旅行自然场景地图。使用 Tab 聚焦地点，按 Enter 或空格打开地点档案。","Interactive travel-scene map. Tab to a location and press Enter or Space to open its record.")});
   const listBox=h("div",{class:"grid small"});
   const note=h("p",{class:"muted small"});
   function draw(){
