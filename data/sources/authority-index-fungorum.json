@@ -1,0 +1,16 @@
+{
+  "type": "source",
+  "id": "authority-index-fungorum",
+  "kind": "database",
+  "title": "Index Fungorum / Species Fungorum",
+  "year": 2026,
+  "url": "https://www.indexfungorum.org/",
+  "citation": "Index Fungorum. Index Fungorum / Species Fungorum nomenclatural records. Accessed 2026-11-22. https://www.indexfungorum.org/",
+  "authority_role": "nomenclatural-index",
+  "taxonomic_scope": [
+    "fungal names",
+    "fungal nomenclature"
+  ],
+  "identifier_scheme": "Index Fungorum RecordID",
+  "update_policy": "Continuously updated; retain access date"
+}
