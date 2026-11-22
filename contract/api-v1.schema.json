@@ -404,6 +404,31 @@
         "travel": {
           "type": "object"
         },
+        "conservation": {
+          "type": ["object", "null"],
+          "description": "IUCN assessments and legal/treaty protections are distinct evidence types.",
+          "properties": {
+            "iucn": { "type": "string" },
+            "as_of": { "type": "string" },
+            "source": { "type": "string" },
+            "protections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "instrument": { "type": "string" },
+                  "jurisdiction": { "type": "string" },
+                  "status": { "type": "string" },
+                  "scope": { "type": "string" },
+                  "source": { "type": "string" },
+                  "accessed_at": { "type": "string" },
+                  "notes": { "$ref": "#/$defs/i18n" }
+                },
+                "required": ["instrument", "jurisdiction", "status", "scope", "source", "accessed_at"]
+              }
+            }
+          }
+        },
         "review_status": {
           "type": "string"
         },
