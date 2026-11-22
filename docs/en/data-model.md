@@ -53,3 +53,8 @@ Promoting a status requires saying in the PR what was checked.
 ## Review audit metadata (optional `review`)
 
 `review_status` expresses the current review level; `review` stores the actual review event: date, reviewer, method, scope and sources. They are not interchangeable. Non-`seed` records must carry a review object. `expert-reviewed` additionally requires a specialist using the `expert-assessment` method. Audit metadata does not automatically validate scientific conclusions.
+
+
+## Evidence for region–species associations (optional `evidence`)
+
+Each `species[]` association in a region may carry its own `evidence` array. Evidence types distinguish field observations, published literature, regional checklists, database records and expert assessments. Every item must reference an existing source ID in `data/sources/`. Do not label global distribution, habitat inference or theoretical possibility as a field observation. Associations without `evidence` may still be displayed, but the UI marks their month ranges as unverified; they are not confirmed local phenology.
