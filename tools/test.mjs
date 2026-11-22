@@ -182,4 +182,15 @@ test("read-only taxonomy audit summarizes authority assertions without rewriting
   assert.equal(ginkgo.assertions.length, 2);
   assert.ok(ginkgo.assertions.some(assertion => assertion.authority === "authority-powo" && assertion.name_status === "accepted"));
   assert.ok(ginkgo.assertions.some(assertion => assertion.authority === "authority-ipni" && assertion.name_status === "unassessed"));
+  const synthetic = structuredClone(data);
+  synthetic.species.find(record => record.id === "ginkgo-biloba").taxonomic_assertions.push({
+    authority: "authority-catalogue-of-life-base",
+    record_id: "synthetic-test-only",
+    scientific_name: "Ginkgo testname",
+    name_status: "accepted",
+    accessed_at: "2026-11-22",
+    source: "powo-ginkgo-biloba"
+  });
+  assert.equal(auditTaxonomy(synthetic).summary.potential_conflicts, 1);
+  assert.equal(data.species.find(record => record.id === "ginkgo-biloba").taxonomic_assertions.length, 2);
 });
