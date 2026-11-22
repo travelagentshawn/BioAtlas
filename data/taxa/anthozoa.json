@@ -14,7 +14,7 @@
     "zh": "刺胞动物中的海生类群，包括造礁石珊瑚、软珊瑚和海葵。",
     "en": "A marine cnidarian class including reef-building stony corals, soft corals and sea anemones."
   },
-  "pruned": true,
+  "pruned": false,
   "sources": [
     "itis-acropora-cervicornis",
     "itis-acropora-palmata"
