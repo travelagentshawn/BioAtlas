@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "cyprinidae",
+  "rank": "family",
+  "scientific_name": "Cyprinidae",
+  "parent": "actinopterygii",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鲤科",
+    "en": "Carps and minnows"
+  },
+  "summary": {
+    "zh": "淡水鱼最大的科，无齿颚而有咽齿，锦鲤、金鱼、斑马鱼都属于此科。",
+    "en": "The largest freshwater fish family: no jaw teeth but pharyngeal teeth; koi, goldfish and zebrafish belong here."
+  },
+  "phylo": {
+    "monophyly": "moderate",
+    "debate": {
+      "zh": "科内亚科划分经多次修订。",
+      "en": "Subfamily boundaries have been revised several times."
+    }
+  },
+  "sources": [
+    "xu-2014-carp"
+  ],
+  "review_status": "seed"
+}

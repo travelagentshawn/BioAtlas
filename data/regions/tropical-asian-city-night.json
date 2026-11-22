@@ -1,0 +1,79 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "tropical-asian-city-night",
+  "kind": "scene",
+  "names": {
+    "zh": "热带亚洲城市之夜",
+    "en": "Tropical Asian city nights"
+  },
+  "description": {
+    "zh": "街灯与墙面是壁虎的猎场，也吸引趋光昆虫。",
+    "en": "Street lamps and walls are gecko hunting grounds and attract insects to the light."
+  },
+  "countries": [
+    "TH",
+    "VN",
+    "MY",
+    "SG"
+  ],
+  "habitats": [
+    "building",
+    "street"
+  ],
+  "species": [
+    {
+      "species": "hemidactylus-frenatus",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "passer-montanus",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "pantala-flavescens",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "uncommon",
+      "note": {
+        "zh": "雨季前后偶见趋光。",
+        "en": "Occasionally drawn to lights around the rains."
+      }
+    }
+  ],
+  "review_status": "seed"
+}

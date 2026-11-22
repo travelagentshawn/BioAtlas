@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "equisetum-arvense",
+  "scientific_name": "Equisetum arvense",
+  "taxon": "equisetaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "问荆（木贼类）",
+    "en": "Field horsetail"
+  },
+  "summary": {
+    "zh": "路边与田埂常见的小型蕨类近亲，茎有节，富含硅质。",
+    "en": "A common roadside and field-edge relative of ferns with jointed, silica-rich stems."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "早春先出棕色孢子穗茎，之后长出绿色轮生枝的营养茎；茎节间中空。",
+      "en": "Brown spore-bearing shoots appear first in early spring, followed by green branched sterile shoots; hollow internodes."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "木贼属是一个古老谱系，石炭纪的近亲曾长成大树。分子证据显示木贼类嵌套在真蕨类中，二者合称 monilophytes。",
+      "en": "A very old lineage; Carboniferous relatives grew into trees. Molecular data nest horsetails within ferns, together forming the monilophytes."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "pryer-2001"
+      },
+      {
+        "type": "classification",
+        "source": "ppg-i-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "3–4 月孢子穗，之后至 9 月为绿色茎。",
+      "en": "Spore shoots in March–April; green shoots through September."
+    },
+    "best_months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "habitats": [
+      "farmland",
+      "river-lake",
+      "grassland",
+      "street"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "sources": [
+    "pryer-2001",
+    "ppg-i-2016"
+  ],
+  "review_status": "seed"
+}

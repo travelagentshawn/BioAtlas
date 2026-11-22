@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "upham-2019",
+  "kind": "paper",
+  "title": "Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation",
+  "year": 2019,
+  "authors": "Upham NS, Esselstyn JA, Jetz W",
+  "venue": "PLoS Biology",
+  "doi": "10.1371/journal.pbio.3000494",
+  "citation": "Upham NS, Esselstyn JA, Jetz W (2019) Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS Biology 17(12): e3000494."
+}

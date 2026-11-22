@@ -1,0 +1,81 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "ginkgo-biloba",
+  "scientific_name": "Ginkgo biloba",
+  "taxon": "ginkgoaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "银杏",
+    "en": "Ginkgo"
+  },
+  "summary": {
+    "zh": "唯一存活的银杏目植物，扇形叶、秋季金黄，是东亚寺庙与街道的标志树。",
+    "en": "The sole survivor of an ancient order; fan-shaped leaves that turn gold in autumn make it an icon of East Asian temples and avenues."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "叶扇形，中央常有缺刻（biloba＝两裂），叶脉二叉状，无主脉。雌树秋季结黄色种子，外种皮腐熟后有强烈异味。",
+      "en": "Fan-shaped leaves often notched in the middle (biloba = two-lobed) with dichotomous veins and no midrib. Female trees bear yellow seeds in autumn whose fleshy coat smells strongly when ripe."
+    },
+    "similar": {
+      "zh": "与枫、悬铃木的区别：银杏叶无主脉、叶脉从叶柄呈扇状分叉。",
+      "en": "Unlike maples or plane trees, ginkgo leaves have no midrib; veins fan out from the stalk."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "银杏所属谱系可追溯到二叠纪，侏罗纪时分布极广。今天的银杏只有一种，被称为‘活化石’。全基因组草图显示其基因组很大，约 10 Gb，并保留了古老的基因家族。",
+      "en": "The lineage reaches back to the Permian and was widespread in the Jurassic. Today one species remains — a 'living fossil'. Its draft genome is large (~10 Gb) and retains ancient gene families."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "guan-2016",
+        "note": {
+          "zh": "银杏基因组草图。",
+          "en": "Draft genome of ginkgo."
+        }
+      },
+      {
+        "type": "classification",
+        "source": "christenhusz-2011",
+        "note": {
+          "zh": "裸子植物现行分类。",
+          "en": "Current gymnosperm classification."
+        }
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "秋季叶片转金黄约在 10 月下旬至 12 月初（随纬度推迟）。雌树落果时请避开，气味刺鼻且果肉可能引起皮肤过敏。",
+      "en": "Leaves turn gold from late October to early December depending on latitude. Avoid fallen female seeds: the smell is pungent and the pulp can irritate skin."
+    },
+    "best_months": [
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "temple-garden",
+      "street",
+      "urban-park"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "conservation": {
+    "iucn": "EN",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "guan-2016",
+    "christenhusz-2011"
+  ],
+  "review_status": "seed"
+}

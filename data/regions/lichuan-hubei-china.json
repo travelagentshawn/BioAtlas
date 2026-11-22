@@ -1,0 +1,60 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "lichuan-hubei-china",
+  "kind": "destination",
+  "names": {
+    "zh": "湖北利川（中国）",
+    "en": "Lichuan, Hubei, China"
+  },
+  "description": {
+    "zh": "现存水杉原生地所在的区域，是‘活化石’的发现地。",
+    "en": "The region of the native dawn redwood population — where the 'living fossil' was found."
+  },
+  "countries": [
+    "CN"
+  ],
+  "center": {
+    "lat": 30.29,
+    "lng": 108.94
+  },
+  "radius_km": 40,
+  "habitats": [
+    "forest",
+    "mountain"
+  ],
+  "species": [
+    {
+      "species": "metasequoia-glyptostroboides",
+      "months": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular",
+      "note": {
+        "zh": "原生母树所在区域，受保护。",
+        "en": "Home of the protected native mother trees."
+      }
+    },
+    {
+      "species": "phyllostachys-edulis",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "likelihood": "regular"
+    }
+  ],
+  "review_status": "seed"
+}

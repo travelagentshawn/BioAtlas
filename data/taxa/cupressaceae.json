@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "cupressaceae",
+  "rank": "family",
+  "scientific_name": "Cupressaceae",
+  "parent": "gymnospermae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "柏科（广义）",
+    "en": "Cypress family (broad sense)"
+  },
+  "summary": {
+    "zh": "分子证据支持把杉科并入柏科，水杉、柳杉、柏木等同属一家。",
+    "en": "Molecular evidence supports merging Taxodiaceae into Cupressaceae: dawn redwood, cryptomeria and cypresses all belong here."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "debate": {
+      "zh": "传统分类把杉科独立，现行系统多数并入柏科。",
+      "en": "Older classifications kept Taxodiaceae separate; most current systems merge it."
+    }
+  },
+  "sources": [
+    "christenhusz-2011"
+  ],
+  "review_status": "seed"
+}

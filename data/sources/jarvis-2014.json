@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "jarvis-2014",
+  "kind": "paper",
+  "title": "Whole-genome analyses resolve early branches in the tree of life of modern birds",
+  "year": 2014,
+  "authors": "Jarvis ED, et al.",
+  "venue": "Science",
+  "doi": "10.1126/science.1253451",
+  "citation": "Jarvis ED, et al. (2014) Whole-genome analyses resolve early branches in the tree of life of modern birds. Science 346: 1320–1331."
+}

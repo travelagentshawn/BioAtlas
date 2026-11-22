@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/travelagentshawn/BioAtlas/schema/source.schema.json",
+  "title": "Source (a citation that backs a claim)",
+  "description": "One file per reference in data/sources/. Every non-trivial scientific claim should point at one.",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "type": { "const": "source" },
+    "id": { "$ref": "common.schema.json#/$defs/slug" },
+    "kind": { "type": "string", "enum": ["paper", "database", "book", "website"] },
+    "title": { "type": "string", "minLength": 1 },
+    "authors": { "type": "string" },
+    "year": { "type": "integer", "minimum": 1700, "maximum": 2100 },
+    "venue": { "type": "string" },
+    "doi": { "type": "string", "pattern": "^10\\.[0-9]{4,9}/\\S+$" },
+    "url": { "type": "string", "pattern": "^https://" },
+    "citation": { "type": "string", "minLength": 1, "description": "Full human-readable citation line." }
+  },
+  "required": ["type", "id", "kind", "title", "year", "citation"],
+  "additionalProperties": false
+}

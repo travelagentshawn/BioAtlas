@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/travelagentshawn/BioAtlas/schema/species.schema.json",
+  "title": "Species (a thing a traveller can actually see)",
+  "description": "One file per species in data/species/. Attaches to the tree through `taxon` (usually the family).",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "type": { "const": "species" },
+    "id": { "$ref": "common.schema.json#/$defs/slug" },
+    "scientific_name": {
+      "type": "string",
+      "pattern": "^[A-Z][a-z]+ (× )?[a-z-]+$",
+      "description": "Binomial. Use '×' for hybrids, e.g. 'Prunus × yedoensis'."
+    },
+    "authority": { "type": "string" },
+    "synonyms": { "type": "array", "items": { "type": "string" } },
+    "taxon": { "$ref": "common.schema.json#/$defs/slug" },
+    "kingdom": { "$ref": "common.schema.json#/$defs/kingdom" },
+    "names": { "$ref": "common.schema.json#/$defs/i18n" },
+    "summary": { "$ref": "common.schema.json#/$defs/i18n" },
+    "identification": {
+      "type": "object",
+      "properties": {
+        "field_marks": { "$ref": "common.schema.json#/$defs/i18n" },
+        "similar": { "$ref": "common.schema.json#/$defs/i18n" }
+      },
+      "required": ["field_marks"],
+      "additionalProperties": false
+    },
+    "evolution": {
+      "type": "object",
+      "description": "What molecular data and the fossil record say about this lineage.",
+      "properties": {
+        "story": { "$ref": "common.schema.json#/$defs/i18n" },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["genome", "phylogenomics", "molecular-clock", "fossil", "morphology", "ecology", "classification"]
+              },
+              "source": { "$ref": "common.schema.json#/$defs/slug" },
+              "note": { "$ref": "common.schema.json#/$defs/i18n" }
+            },
+            "required": ["type", "source"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["story", "evidence"],
+      "additionalProperties": false
+    },
+    "travel": {
+      "type": "object",
+      "properties": {
+        "notes": { "$ref": "common.schema.json#/$defs/i18n" },
+        "best_months": { "$ref": "common.schema.json#/$defs/months" },
+        "habitats": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/habitat" },
+          "uniqueItems": true
+        },
+        "countries": {
+          "type": "array",
+          "items": { "$ref": "common.schema.json#/$defs/country" },
+          "uniqueItems": true
+        },
+        "etiquette": { "$ref": "common.schema.json#/$defs/i18n" }
+      },
+      "required": ["notes", "best_months", "habitats", "countries"],
+      "additionalProperties": false
+    },
+    "conservation": {
+      "type": "object",
+      "properties": {
+        "iucn": { "type": "string", "enum": ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"] },
+        "as_of": { "type": "string", "pattern": "^[0-9]{4}(-[0-9]{2})?$" },
+        "source": { "$ref": "common.schema.json#/$defs/slug" }
+      },
+      "required": ["iucn", "as_of", "source"],
+      "additionalProperties": false
+    },
+    "media": {
+      "type": "array",
+      "description": "Optional photos. Only add media you have the right to redistribute; license and attribution are mandatory.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "pattern": "^https://" },
+          "license": { "type": "string", "minLength": 1 },
+          "attribution": { "type": "string", "minLength": 1 },
+          "source_url": { "type": "string", "pattern": "^https://" },
+          "caption": { "$ref": "common.schema.json#/$defs/i18n" }
+        },
+        "required": ["url", "license", "attribution", "source_url"],
+        "additionalProperties": false
+      }
+    },
+    "external_ids": { "$ref": "common.schema.json#/$defs/external_ids" },
+    "sources": { "$ref": "common.schema.json#/$defs/source_refs" },
+    "review_status": { "$ref": "common.schema.json#/$defs/review_status" }
+  },
+  "required": [
+    "type", "id", "scientific_name", "taxon", "kingdom", "names", "summary",
+    "identification", "evolution", "travel", "review_status"
+  ],
+  "additionalProperties": false
+}

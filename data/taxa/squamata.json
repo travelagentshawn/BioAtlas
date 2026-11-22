@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "squamata",
+  "rank": "order",
+  "scientific_name": "Squamata",
+  "parent": "tetrapoda",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "有鳞目",
+    "en": "Lizards and snakes"
+  },
+  "summary": {
+    "zh": "蜥蜴与蛇。蛇嵌套在蜥蜴之中，所以‘蜥蜴’是并系类群。",
+    "en": "Lizards and snakes. Snakes nest within lizards, so 'lizards' are paraphyletic."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 200,
+      "min": 170,
+      "max": 220,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "debate": {
+      "zh": "Squamata 本身是强单系群，但蜥蜴并系。",
+      "en": "Squamata is solidly monophyletic; 'lizards' alone are not."
+    }
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

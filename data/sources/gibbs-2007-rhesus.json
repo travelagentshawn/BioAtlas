@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "gibbs-2007-rhesus",
+  "kind": "paper",
+  "title": "Evolutionary and biomedical insights from the rhesus macaque genome",
+  "year": 2007,
+  "authors": "Rhesus Macaque Genome Sequencing and Analysis Consortium",
+  "venue": "Science",
+  "doi": "10.1126/science.1139247",
+  "citation": "Rhesus Macaque Genome Sequencing and Analysis Consortium (2007) Evolutionary and biomedical insights from the rhesus macaque genome. Science 316: 222–234."
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "apg-iv-2016",
+  "kind": "paper",
+  "title": "An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG IV",
+  "year": 2016,
+  "authors": "The Angiosperm Phylogeny Group",
+  "venue": "Botanical Journal of the Linnean Society",
+  "doi": "10.1111/boj.12385",
+  "citation": "Byng JW, et al. (2016) An update of the Angiosperm Phylogeny Group classification for the orders and families of flowering plants: APG IV. Botanical Journal of the Linnean Society 181(1): 1–20."
+}

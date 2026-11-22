@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "carnivora",
+  "rank": "order",
+  "scientific_name": "Carnivora",
+  "parent": "mammalia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "食肉目",
+    "en": "Carnivorans"
+  },
+  "summary": {
+    "zh": "具裂齿的哺乳动物；熊、猫、犬、鼬都属其中，但并非都吃肉。",
+    "en": "Mammals with carnassial teeth: bears, cats, dogs and weasels, though not all are carnivores."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 55,
+      "min": 45,
+      "max": 65,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "upham-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

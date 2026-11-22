@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "monocots",
+  "rank": "clade",
+  "scientific_name": "Monocotyledoneae",
+  "parent": "angiospermae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "单子叶植物",
+    "en": "Monocots"
+  },
+  "summary": {
+    "zh": "叶脉平行、子叶一枚、花部常为 3 基数，包括禾本科、兰科、棕榈等。",
+    "en": "Parallel-veined leaves, one cotyledon, flower parts often in threes: grasses, orchids, palms."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 140,
+      "min": 115,
+      "max": 180,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

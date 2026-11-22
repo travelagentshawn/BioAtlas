@@ -1,0 +1,42 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "spermatophyta",
+  "rank": "clade",
+  "scientific_name": "Spermatophyta",
+  "parent": "tracheophyta",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "种子植物",
+    "en": "Seed plants"
+  },
+  "summary": {
+    "zh": "以种子繁殖的维管植物，包括裸子植物与被子植物。",
+    "en": "Vascular plants that reproduce by seeds: gymnosperms and angiosperms."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 340,
+      "min": 310,
+      "max": 370,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "胚珠发育为种子",
+        "en": "Ovules develop into seeds"
+      },
+      {
+        "zh": "花粉管传递精子",
+        "en": "Pollen tubes deliver sperm"
+      }
+    ]
+  },
+  "sources": [
+    "one-thousand-plant-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

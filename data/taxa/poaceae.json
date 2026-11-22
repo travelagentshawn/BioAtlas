@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "poaceae",
+  "rank": "family",
+  "scientific_name": "Poaceae",
+  "parent": "monocots",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "禾本科",
+    "en": "Grass family"
+  },
+  "summary": {
+    "zh": "含稻、麦、玉米与竹类，风媒传粉，是人类最重要的植物类群。",
+    "en": "Includes rice, wheat, maize and bamboos; wind-pollinated and humanity's most important plant family."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "peng-2013"
+  ],
+  "review_status": "seed"
+}

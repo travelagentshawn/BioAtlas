@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "papilionidae",
+  "rank": "family",
+  "scientific_name": "Papilionidae",
+  "parent": "lepidoptera",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "凤蝶科",
+    "en": "Swallowtails"
+  },
+  "summary": {
+    "zh": "大型蝴蝶，后翅常有尾突，幼虫头后有臭角。",
+    "en": "Large butterflies, hindwings often tailed; larvae have a forked osmeterium behind the head."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "arikawa-2017"
+  ],
+  "review_status": "seed"
+}

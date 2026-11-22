@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "ppg-i-2016",
+  "kind": "paper",
+  "title": "A community-derived classification for extant lycophytes and ferns",
+  "year": 2016,
+  "authors": "Pteridophyte Phylogeny Group",
+  "venue": "Journal of Systematics and Evolution",
+  "doi": "10.1111/jse.12229",
+  "citation": "PPG I (2016) A community-derived classification for extant lycophytes and ferns. Journal of Systematics and Evolution 54(6): 563–603."
+}

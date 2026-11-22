@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "actinopterygii",
+  "rank": "class",
+  "scientific_name": "Actinopterygii",
+  "parent": "chordata",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "辐鳍鱼类",
+    "en": "Ray-finned fishes"
+  },
+  "summary": {
+    "zh": "鳍由鳍条支撑，占现存鱼类的 99%，包括鲤、鲑与鲈。",
+    "en": "Fins supported by rays; 99% of living fishes, including carp, salmon and perch."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 380,
+      "min": 340,
+      "max": 420,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

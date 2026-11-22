@@ -1,0 +1,18 @@
+{
+  "api_version": "1.0.0",
+  "base": "api/v1",
+  "notes": "Static files only. Every path is relative to the API base URL. `{id}` is a record id. The compiler generates each file and validates it against the named shape in api-v1.schema.json.",
+  "endpoints": [
+    { "key": "manifest",     "path": "manifest.json",        "shape": "Manifest",    "description": "Entry point: version, counts, endpoint map." },
+    { "key": "tree",         "path": "tree.json",            "shape": "TreeNode",    "description": "Whole phylogeny as a nested tree, species attached to their taxon." },
+    { "key": "taxa",         "path": "taxa.json",            "shape": "TaxonList",   "description": "Flat list of every taxon." },
+    { "key": "taxon",        "path": "taxa/{id}.json",       "shape": "Taxon",       "description": "One taxon with lineage, children, species and sources." },
+    { "key": "species_list", "path": "species.json",         "shape": "SpeciesList", "description": "Lightweight list of every species." },
+    { "key": "species",      "path": "species/{id}.json",    "shape": "Species",     "description": "Full species record with lineage, regions, relatives and sources." },
+    { "key": "region_list",  "path": "regions.json",         "shape": "RegionList",  "description": "Lightweight list of every region / scene." },
+    { "key": "region",       "path": "regions/{id}.json",    "shape": "Region",      "description": "One region with its species and month counts." },
+    { "key": "calendar",     "path": "calendar.json",        "shape": "Calendar",    "description": "Month → species ids (by species best_months)." },
+    { "key": "sources",      "path": "sources.json",         "shape": "SourceList",  "description": "All citations." },
+    { "key": "search",       "path": "search.json",          "shape": "SearchIndex", "description": "Flat search index for client-side search." }
+  ]
+}

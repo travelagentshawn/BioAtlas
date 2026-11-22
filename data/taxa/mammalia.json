@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "mammalia",
+  "rank": "class",
+  "scientific_name": "Mammalia",
+  "parent": "tetrapoda",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "哺乳纲",
+    "en": "Mammals"
+  },
+  "summary": {
+    "zh": "有毛发与乳腺，中耳三块听小骨。",
+    "en": "Hair, mammary glands and three middle-ear bones."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 180,
+      "min": 160,
+      "max": 200,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "upham-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

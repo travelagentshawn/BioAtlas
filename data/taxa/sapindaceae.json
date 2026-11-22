@@ -1,0 +1,31 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "sapindaceae",
+  "rank": "family",
+  "scientific_name": "Sapindaceae",
+  "parent": "rosids",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "无患子科（广义）",
+    "en": "Soapberry family (broad sense)"
+  },
+  "summary": {
+    "zh": "APG 系统把槭树科并入本科，所以枫树与荔枝、无患子同科。",
+    "en": "APG systems merge the maples into this family, so maples share a family with lychee and soapberry."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "debate": {
+      "zh": "传统的槭树科（Aceraceae）现被视为无患子科的一个亚科。",
+      "en": "The traditional Aceraceae is now treated as a subfamily of Sapindaceae."
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

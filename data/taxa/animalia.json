@@ -1,0 +1,38 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "animalia",
+  "rank": "kingdom",
+  "scientific_name": "Animalia",
+  "parent": "eukaryota",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "动物",
+    "en": "Animals"
+  },
+  "summary": {
+    "zh": "多细胞、异养、通常能运动的真核生物，与领鞭毛虫互为姐妹。",
+    "en": "Multicellular, heterotrophic eukaryotes, sister to choanoflagellates."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 700,
+      "min": 570,
+      "max": 800,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "胶原蛋白与细胞间连接",
+        "en": "Collagen and specialised cell junctions"
+      }
+    ]
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

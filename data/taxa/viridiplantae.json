@@ -1,0 +1,43 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "viridiplantae",
+  "rank": "clade",
+  "scientific_name": "Viridiplantae",
+  "parent": "eukaryota",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "绿色植物",
+    "en": "Green plants"
+  },
+  "summary": {
+    "zh": "含叶绿素 a、b 的光合真核生物，包括绿藻与全部陆生植物。",
+    "en": "Photosynthetic eukaryotes with chlorophylls a and b: green algae plus all land plants."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 1000,
+      "min": 800,
+      "max": 1200,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "叶绿体含叶绿素 a 和 b",
+        "en": "Chloroplasts with chlorophylls a and b"
+      },
+      {
+        "zh": "细胞壁含纤维素",
+        "en": "Cellulose-containing cell walls"
+      }
+    ]
+  },
+  "sources": [
+    "one-thousand-plant-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

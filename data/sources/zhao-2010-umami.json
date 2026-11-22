@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "zhao-2010-umami",
+  "kind": "paper",
+  "title": "Pseudogenization of the umami taste receptor gene Tas1r1 in the giant panda coincided with its dietary switch to bamboo",
+  "year": 2010,
+  "authors": "Zhao H, Yang JR, Xu H, Zhang J",
+  "venue": "Molecular Biology and Evolution",
+  "citation": "Zhao H, Yang JR, Xu H, Zhang J (2010) Pseudogenization of the umami taste receptor gene Tas1r1 in the giant panda coincided with its dietary switch to bamboo. Molecular Biology and Evolution 27: 2669–2673."
+}

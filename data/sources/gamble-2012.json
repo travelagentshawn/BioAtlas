@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "gamble-2012",
+  "kind": "paper",
+  "title": "Repeated origin and loss of adhesive toepads in geckos",
+  "year": 2012,
+  "authors": "Gamble T, Greenbaum E, Jackman TR, Russell AP, Bauer AM",
+  "venue": "PLoS ONE",
+  "doi": "10.1371/journal.pone.0039429",
+  "citation": "Gamble T, Greenbaum E, Jackman TR, Russell AP, Bauer AM (2012) Repeated origin and loss of adhesive toepads in geckos. PLoS ONE 7(6): e39429."
+}

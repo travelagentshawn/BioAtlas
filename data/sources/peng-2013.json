@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "peng-2013",
+  "kind": "paper",
+  "title": "The draft genome of the fast-growing non-timber forest species moso bamboo (Phyllostachys heterocycla)",
+  "year": 2013,
+  "authors": "Peng Z, et al.",
+  "venue": "Nature Genetics",
+  "doi": "10.1038/ng.2569",
+  "citation": "Peng Z, et al. (2013) The draft genome of the fast-growing non-timber forest species moso bamboo (Phyllostachys heterocycla). Nature Genetics 45: 456–461."
+}

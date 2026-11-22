@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "rosids",
+  "rank": "clade",
+  "scientific_name": "Rosidae",
+  "parent": "eudicots",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "蔷薇类",
+    "en": "Rosids"
+  },
+  "summary": {
+    "zh": "包含蔷薇目、豆目、无患子目等，约 7 万种，花多有 5 枚花瓣与萼片。",
+    "en": "Roses, legumes, soapberries and more; ~70,000 species, flowers often with five petals and sepals."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 110,
+      "min": 95,
+      "max": 125,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

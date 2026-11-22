@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "libellulidae",
+  "rank": "family",
+  "scientific_name": "Libellulidae",
+  "parent": "odonata",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "蜻科",
+    "en": "Skimmers"
+  },
+  "summary": {
+    "zh": "蜻蜓目中最大的科，常停栖于水边枝头，飞行强健。",
+    "en": "The largest dragonfly family, perching at water edges and strong fliers."
+  },
+  "phylo": {
+    "monophyly": "moderate",
+    "debate": {
+      "zh": "科内属间关系尚未完全解析。",
+      "en": "Relationships among genera within the family are not fully resolved."
+    }
+  },
+  "sources": [
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

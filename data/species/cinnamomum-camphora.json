@@ -1,0 +1,68 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "cinnamomum-camphora",
+  "scientific_name": "Cinnamomum camphora",
+  "taxon": "lauraceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "樟",
+    "en": "Camphor tree"
+  },
+  "summary": {
+    "zh": "东亚常见的行道树与寺庙古树，揉碎叶片有樟脑香气。",
+    "en": "A common East Asian avenue and temple tree whose crushed leaves smell of camphor."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "常绿乔木，叶互生、离基三出脉，脉腋有小腺窝；揉碎有樟脑香气。",
+      "en": "Evergreen tree with alternate leaves, three-veined from near the base, with small domatia in the vein axils; crushed leaves smell of camphor."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "樟科属于木兰类，是早期分化的被子植物分支之一，不属于真双子叶植物。同科的台湾樟（Cinnamomum kanehirae）基因组帮助确定了木兰类在被子植物中的位置。",
+      "en": "Lauraceae belongs to the magnoliids, an early-diverging flowering plant lineage outside the eudicots. The genome of the related stout camphor (Cinnamomum kanehirae) helped place magnoliids on the angiosperm tree."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "chaw-2019-camphor",
+        "note": {
+          "zh": "该基因组来自同属的牛樟（C. kanehirae），不是樟本种。",
+          "en": "The genome is from congener C. kanehirae, not C. camphora itself."
+        }
+      },
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "3–4 月老叶集中更替，新叶呈红褐色，是春季观赏点。古樟常被奉为神木，参观时勿攀折。",
+      "en": "Old leaves are shed in March–April while reddish new leaves emerge. Ancient trees are often sacred; do not climb or break branches."
+    },
+    "best_months": [
+      3,
+      4,
+      5
+    ],
+    "habitats": [
+      "temple-garden",
+      "street",
+      "urban-park"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "sources": [
+    "chaw-2019-camphor",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

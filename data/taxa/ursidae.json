@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "ursidae",
+  "rank": "family",
+  "scientific_name": "Ursidae",
+  "parent": "carnivora",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "熊科",
+    "en": "Bears"
+  },
+  "summary": {
+    "zh": "体型大，足跖行。大熊猫在基因组上属熊科，尽管几乎只吃竹子。",
+    "en": "Large and plantigrade. The giant panda is genomically a bear although it eats almost only bamboo."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "li-2010-panda",
+    "upham-2019"
+  ],
+  "review_status": "seed"
+}

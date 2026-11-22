@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "polypodiopsida",
+  "rank": "class",
+  "scientific_name": "Polypodiopsida",
+  "parent": "tracheophyta",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "蕨类（广义，含木贼）",
+    "en": "Ferns (broad sense, incl. horsetails)"
+  },
+  "summary": {
+    "zh": "分子证据显示木贼类嵌套在蕨类之中，二者合称真蕨类（monilophytes），是种子植物的姐妹群。",
+    "en": "Molecular data nest horsetails inside the ferns; together they form the monilophytes, sister to seed plants."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 380,
+      "min": 350,
+      "max": 420,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "依靠孢子繁殖，叶多为羽状",
+        "en": "Spore-bearing, fronds often pinnate"
+      }
+    ],
+    "debate": {
+      "zh": "传统上木贼被单独列为木贼纲；分子系统发育推翻了这一做法。",
+      "en": "Horsetails were traditionally a separate class; molecular phylogenies overturned that."
+    },
+    "classification_systems": [
+      "PPG I"
+    ]
+  },
+  "sources": [
+    "ppg-i-2016",
+    "pryer-2001"
+  ],
+  "review_status": "seed"
+}

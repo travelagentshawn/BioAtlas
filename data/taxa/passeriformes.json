@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "passeriformes",
+  "rank": "order",
+  "scientific_name": "Passeriformes",
+  "parent": "aves",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "雀形目",
+    "en": "Perching birds"
+  },
+  "summary": {
+    "zh": "占现存鸟类种数近六成，足具三前一后趾，善于鸣唱。",
+    "en": "Nearly 60% of living bird species; three toes forward, one back, many are songbirds."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 52,
+      "min": 45,
+      "max": 62,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

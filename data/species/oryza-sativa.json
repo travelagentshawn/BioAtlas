@@ -1,0 +1,64 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "oryza-sativa",
+  "scientific_name": "Oryza sativa",
+  "taxon": "poaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "稻",
+    "en": "Rice"
+  },
+  "summary": {
+    "zh": "亚洲最重要的粮食作物，稻田四季景观是旅途最常见的农田植物景观。",
+    "en": "Asia's staple grain; paddy landscapes are among the most common farmland scenes on a trip."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "丛生草本，叶线形，圆锥花序，成熟时垂穗；田间常见水层与整齐的插秧行。",
+      "en": "Tufted grass with linear leaves and drooping panicles when ripe; usually seen in flooded, evenly planted rows."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "稻是禾本科中最早完成基因组测序的作物之一，驯化过程发生在长江流域一带，距今约 9000 年。本条目的驯化年代为概述，需要进一步文献核对。",
+      "en": "Rice was among the first crop genomes sequenced; domestication is placed in the Yangtze valley roughly 9,000 years ago. The date here is a summary and needs a primary-literature check."
+    },
+    "evidence": [
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "插秧 5–6 月，绿浪 7–8 月，金黄成熟 9–10 月。梯田区域雨季路滑，勿踩田埂。",
+      "en": "Transplanting May–June, green waves July–August, golden harvest September–October. Terraces are slippery in the wet season; do not walk on the bunds."
+    },
+    "best_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "habitats": [
+      "paddy",
+      "farmland"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR",
+      "TH",
+      "VN",
+      "IN"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

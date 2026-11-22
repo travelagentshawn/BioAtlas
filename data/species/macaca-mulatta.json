@@ -1,0 +1,83 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "macaca-mulatta",
+  "scientific_name": "Macaca mulatta",
+  "taxon": "cercopithecidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "猕猴（恒河猴）",
+    "en": "Rhesus macaque"
+  },
+  "summary": {
+    "zh": "分布最广的非人灵长类之一，与人类共享约 93% 的 DNA 序列。",
+    "en": "One of the widest-ranging non-human primates, sharing roughly 93% sequence identity with humans."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "黄褐至灰褐色，面部和臀部皮肤裸露为粉红色，尾中等长度。",
+      "en": "Yellowish to grey-brown with bare pinkish face and rump skin and a medium-length tail."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "猕猴与人类的共同祖先距今约 2500 万年。基因组比较是理解人类基因差异的重要参照。",
+      "en": "Macaques and humans share a common ancestor around 25 million years ago. Comparative genomics with macaques is a key reference for understanding human genes."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "gibbs-2007-rhesus"
+      },
+      {
+        "type": "molecular-clock",
+        "source": "timetree-5-2022"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "寺庙、山地与旅游景点常见，群体活动。",
+      "en": "Common at temples, hills and tourist sites, living in troops."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "temple-garden",
+      "mountain",
+      "forest",
+      "street"
+    ],
+    "countries": [
+      "IN",
+      "CN",
+      "NP"
+    ],
+    "etiquette": {
+      "zh": "不要喂食、不要露出食物、不要直视并露齿，包袋拉好。",
+      "en": "Do not feed or show food, avoid staring and baring teeth, and keep bags zipped."
+    }
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "gibbs-2007-rhesus",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

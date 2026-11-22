@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "pantala-flavescens",
+  "scientific_name": "Pantala flavescens",
+  "taxon": "libellulidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "黄蜻",
+    "en": "Wandering glider"
+  },
+  "summary": {
+    "zh": "几乎遍布全球的蜻蜓，以长距离迁飞闻名。",
+    "en": "A near-cosmopolitan dragonfly famed for long-distance migration."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "橙黄色，腹部较细，翅基部有橙色斑，常成群飞行。",
+      "en": "Orange-yellow with a slim abdomen and amber patches at the hindwing base; often in swarms."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "成虫可跨海迁飞，需要多代接力。本条目的迁飞距离未列具体数值，待补充文献。蜻蜓目是最古老的有翅昆虫类群之一。",
+      "en": "Adults migrate across seas over several generations. No distance figure is given here pending a citation. Odonata are among the oldest winged insect lineages."
+    },
+    "evidence": [
+      {
+        "type": "classification",
+        "source": "misof-2014"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "雨季前后常见成群飞行，稚虫可在暂时性水坑中发育。",
+      "en": "Swarms are common around the rains; nymphs can develop in temporary pools."
+    },
+    "best_months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "habitats": [
+      "paddy",
+      "pond",
+      "wetland",
+      "grassland"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "TH",
+      "IN"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

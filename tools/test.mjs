@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+// Dependency-free tests (node:test).  node tools/test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { loadSchemas, validate } from "./lib/schema.mjs";
+import { loadAll, ROOT } from "./lib/data.mjs";
+import { buildApi } from "./build-api.mjs";
+
+const schemas = loadSchemas(join(ROOT, "schema"));
+
+test("validator rejects bad records and accepts good ones", () => {
+  const base = JSON.parse(readFileSync(join(ROOT, "data/species/ginkgo-biloba.json"), "utf8"));
+  assert.deepEqual(validate(base, schemas["species.schema.json"], schemas, "species.schema.json"), []);
+  const bad = structuredClone(base);
+  bad.travel.best_months = [13]; delete bad.names.en; bad.extra = 1;
+  assert.ok(validate(bad, schemas["species.schema.json"], schemas, "species.schema.json").length >= 3);
+});
+
+test("all data validates with no cross-reference errors", () => {
+  const { errors } = loadAll();
+  assert.deepEqual(errors, []);
+});
+
+test("every divergence age is a consistent range", () => {
+  for (const t of loadAll().data.taxa) {
+    const a = t.phylo?.age_mya;
+    if (a) assert.ok(a.min <= a.estimate && a.estimate <= a.max, t.id);
+  }
+});
+
+test("API build satisfies the contract and computes MRCA correctly", () => {
+  const out = mkdtempSync(join(tmpdir(), "bioatlas-"));
+  try {
+    buildApi(out);
+    const read = (p) => JSON.parse(readFileSync(join(out, "api/v1", p), "utf8"));
+    const m = read("manifest.json");
+    assert.equal(m.api_version, "1.0.0");
+    const panda = read("species/ailuropoda-melanoleuca.json");
+    const deer = panda.relatives.find((r) => r.species.id === "cervus-nippon");
+    assert.equal(deer.mrca.id, "mammalia");
+    const duck = panda.relatives.find((r) => r.species.id === "aix-galericulata");
+    assert.equal(duck.mrca.id, "tetrapoda");
+    assert.equal(read("tree.json").id, "eukaryota");
+    assert.equal(read("species.json").length, m.counts.species);
+  } finally { rmSync(out, { recursive: true, force: true }); }
+});

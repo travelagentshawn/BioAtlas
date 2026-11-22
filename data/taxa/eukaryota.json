@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "eukaryota",
+  "rank": "domain",
+  "scientific_name": "Eukaryota",
+  "parent": null,
+  "kingdom": "root",
+  "names": {
+    "zh": "真核生物",
+    "en": "Eukaryotes"
+  },
+  "summary": {
+    "zh": "细胞内有膜包被细胞核的生物。植物与动物是其中两个相距遥远的分支。",
+    "en": "Organisms whose cells contain a membrane-bound nucleus. Plants and animals are two distant branches within it."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

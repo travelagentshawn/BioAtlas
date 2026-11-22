@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "theaceae",
+  "rank": "family",
+  "scientific_name": "Theaceae",
+  "parent": "asterids",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "山茶科",
+    "en": "Tea family"
+  },
+  "summary": {
+    "zh": "常绿灌木或乔木，含山茶属，茶树是其中最著名的经济植物。",
+    "en": "Evergreen shrubs and trees, including Camellia, whose best-known economic member is the tea plant."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "xia-2017-tea"
+  ],
+  "review_status": "seed"
+}

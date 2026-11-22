@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "insecta",
+  "rank": "class",
+  "scientific_name": "Insecta",
+  "parent": "arthropoda",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "昆虫纲",
+    "en": "Insects"
+  },
+  "summary": {
+    "zh": "六足、三体段。分子系统发育显示昆虫嵌套在甲壳类之中（泛甲壳类），年龄约 4.8 亿年。",
+    "en": "Six legs, three body regions. Phylogenomics nests insects inside crustaceans (Pancrustacea); ~479 Mya."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 479,
+      "min": 454,
+      "max": 501,
+      "confidence": "moderate",
+      "source": "misof-2014"
+    },
+    "debate": {
+      "zh": "‘甲壳类’并非单系群；昆虫的姐妹群可能是桨足类（remipedes）等甲壳类。",
+      "en": "'Crustacea' is not monophyletic; insects' closest relatives lie among crustacean groups."
+    }
+  },
+  "sources": [
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

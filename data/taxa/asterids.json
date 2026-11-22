@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "asterids",
+  "rank": "clade",
+  "scientific_name": "Asteridae",
+  "parent": "eudicots",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "菊类",
+    "en": "Asterids"
+  },
+  "summary": {
+    "zh": "包含杜鹃花目、茄目、唇形目、菊目等，约 8 万种。",
+    "en": "Heaths, nightshades, mints and daisies; ~80,000 species."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 120,
+      "min": 105,
+      "max": 135,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

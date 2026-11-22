@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "pycnonotidae",
+  "rank": "family",
+  "scientific_name": "Pycnonotidae",
+  "parent": "passeriformes",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹎科",
+    "en": "Bulbuls"
+  },
+  "summary": {
+    "zh": "中小型树栖鸟类，鸣声婉转，亚洲城市公园常见。",
+    "en": "Small to medium arboreal birds with melodious calls, common in Asian city parks."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

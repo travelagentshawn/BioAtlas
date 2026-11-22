@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "xu-2014-carp",
+  "kind": "paper",
+  "title": "Genome sequence and genetic diversity of the common carp, Cyprinus carpio",
+  "year": 2014,
+  "authors": "Xu P, et al.",
+  "venue": "Nature Genetics",
+  "doi": "10.1038/ng.3098",
+  "citation": "Xu P, et al. (2014) Genome sequence and genetic diversity of the common carp, Cyprinus carpio. Nature Genetics 46: 1212–1219."
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "pelecaniformes",
+  "rank": "order",
+  "scientific_name": "Pelecaniformes",
+  "parent": "aves",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹈形目",
+    "en": "Pelicans, herons and ibises"
+  },
+  "summary": {
+    "zh": "现行分类把鹭、鹮、鹈鹕合为一目，传统的‘鹳形目’被拆分。",
+    "en": "Current classifications unite herons, ibises and pelicans; the traditional 'Ciconiiformes' was split."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "moderate",
+    "debate": {
+      "zh": "深层关系在不同研究间有出入。",
+      "en": "Deep relationships differ between studies."
+    }
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

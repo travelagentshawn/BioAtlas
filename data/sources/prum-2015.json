@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "prum-2015",
+  "kind": "paper",
+  "title": "A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing",
+  "year": 2015,
+  "authors": "Prum RO, et al.",
+  "venue": "Nature",
+  "doi": "10.1038/nature15697",
+  "citation": "Prum RO, et al. (2015) A comprehensive phylogeny of birds (Aves) using targeted next-generation DNA sequencing. Nature 526: 569–573."
+}

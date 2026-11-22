@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "iucn-red-list",
+  "kind": "database",
+  "title": "The IUCN Red List of Threatened Species",
+  "year": 2024,
+  "authors": "IUCN",
+  "url": "https://www.iucnredlist.org",
+  "citation": "IUCN. The IUCN Red List of Threatened Species. https://www.iucnredlist.org"
+}

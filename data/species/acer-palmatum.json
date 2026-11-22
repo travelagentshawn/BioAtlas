@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "acer-palmatum",
+  "scientific_name": "Acer palmatum",
+  "taxon": "sapindaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "鸡爪槭（日本红枫）",
+    "en": "Japanese maple"
+  },
+  "summary": {
+    "zh": "东亚秋季红叶的代表，叶掌状深裂。",
+    "en": "A symbol of East Asian autumn colour, with deeply palmate leaves."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "叶对生，掌状 5–9 深裂；翅果成对、两翅近水平张开。",
+      "en": "Opposite palmately lobed leaves with 5–9 lobes; paired winged fruits spread nearly horizontally."
+    },
+    "similar": {
+      "zh": "枫香（Liquidambar）叶互生，果为球形刺球。",
+      "en": "Sweetgum (Liquidambar) has alternate leaves and spiky round fruits."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "按 APG 系统，槭属与无患子、荔枝同科，说明形态相差很大的类群可以是近亲。",
+      "en": "Under APG, maples share a family with soapberry and lychee, showing that very different-looking groups can be close relatives."
+    },
+    "evidence": [
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "红叶期由北向南推进：日本多在 11 月中旬至下旬（京都约 11 月下旬）。",
+      "en": "Colour advances from north to south: mid to late November in much of Japan, around late November in Kyoto."
+    },
+    "best_months": [
+      10,
+      11
+    ],
+    "habitats": [
+      "temple-garden",
+      "mountain",
+      "urban-park"
+    ],
+    "countries": [
+      "JP",
+      "CN",
+      "KR"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

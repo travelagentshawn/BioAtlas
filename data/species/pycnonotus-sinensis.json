@@ -1,0 +1,73 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "pycnonotus-sinensis",
+  "scientific_name": "Pycnonotus sinensis",
+  "taxon": "pycnonotidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "白头鹎",
+    "en": "Light-vented bulbul"
+  },
+  "summary": {
+    "zh": "东亚城市公园与寺庙常见的鸣禽，头后有白斑。",
+    "en": "A common songbird of East Asian parks and temples, with a white patch behind the eye."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "头顶黑，头后有白色斑块，背灰橄榄色，胸前有浅色横带。",
+      "en": "Black crown, white nape patch, olive-grey back and a pale breast band."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "鹎科为中小型树栖鸟，在雀形目中分类稳定。",
+      "en": "Bulbuls are small to medium tree-dwelling birds with a stable place in Passeriformes."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "prum-2015"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "清晨树冠上最易发现，常成对或小群出现。",
+      "en": "Easiest to find in tree canopies in the morning, often in pairs or small groups."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "urban-park",
+      "temple-garden",
+      "street"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "TW"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "chaw-2019-camphor",
+  "kind": "paper",
+  "title": "Stout camphor tree genome fills gaps in understanding of flowering plant genome evolution",
+  "year": 2019,
+  "authors": "Chaw SM, et al.",
+  "venue": "Nature Plants",
+  "doi": "10.1038/s41477-018-0337-0",
+  "citation": "Chaw SM, et al. (2019) Stout camphor tree genome fills gaps in understanding of flowering plant genome evolution. Nature Plants 5: 63–73."
+}

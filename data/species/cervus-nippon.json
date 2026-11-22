@@ -1,0 +1,76 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "cervus-nippon",
+  "scientific_name": "Cervus nippon",
+  "taxon": "cervidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "梅花鹿",
+    "en": "Sika deer"
+  },
+  "summary": {
+    "zh": "夏毛带白斑；日本奈良公园的鹿被视为神明使者。",
+    "en": "White-spotted summer coat; the deer of Nara Park, Japan, are regarded as sacred messengers."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "夏季体侧有白色斑点，臀部有白色斑块；雄鹿有分叉角。",
+      "en": "White spots on the flanks in summer and a pale rump patch; stags have branched antlers."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "鹿科在偶蹄目反刍类中与牛科、长颈鹿近缘，年轻的角每年脱落重生。",
+      "en": "Deer belong to the ruminant artiodactyls and are close to bovids and giraffes; antlers are shed and regrown annually."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "upham-2019"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "奈良公园全年可见，春夏有小鹿；秋季发情期雄鹿具攻击性，应保持距离。",
+      "en": "Visible all year at Nara Park, fawns in spring and summer; stags are aggressive in the autumn rut, so keep distance."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "temple-garden",
+      "urban-park",
+      "forest"
+    ],
+    "countries": [
+      "JP",
+      "CN"
+    ],
+    "etiquette": {
+      "zh": "只喂景区出售的鹿仙贝，不要拉扯鹿角或尾巴，不要在发情期靠近雄鹿。",
+      "en": "Feed only the crackers sold on site; do not pull antlers or tails and keep away from stags during the rut."
+    }
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "upham-2019"
+  ],
+  "review_status": "seed"
+}

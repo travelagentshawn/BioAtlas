@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "cervidae",
+  "rank": "family",
+  "scientific_name": "Cervidae",
+  "parent": "artiodactyla",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹿科",
+    "en": "Deer"
+  },
+  "summary": {
+    "zh": "雄性多具每年更换的实心骨质角（不同于牛科的永久角鞘）。",
+    "en": "Males usually carry solid antlers shed annually, unlike the permanent horns of bovids."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "upham-2019"
+  ],
+  "review_status": "seed"
+}

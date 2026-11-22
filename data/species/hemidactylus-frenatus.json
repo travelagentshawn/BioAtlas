@@ -1,0 +1,78 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "hemidactylus-frenatus",
+  "scientific_name": "Hemidactylus frenatus",
+  "taxon": "gekkonidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "原尾蜥虎（家壁虎）",
+    "en": "Common house gecko"
+  },
+  "summary": {
+    "zh": "热带亚洲夜晚灯下的常客，靠趾垫垂直攀爬。",
+    "en": "A regular visitor beneath lamps on tropical Asian nights, climbing vertical walls with toepads."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "灰褐色、半透明，趾下有横列褶皮；会发出‘chk-chk’叫声。",
+      "en": "Grey-brown, semi-translucent with lamellae under the toes; it makes a clicking 'chk-chk' call."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "壁虎的粘附趾垫在家族内独立演化多次、也多次丢失，说明复杂结构并非沿单一路线演化。",
+      "en": "Adhesive toepads evolved repeatedly within geckos and were lost several times, showing that a complex structure need not follow a single path."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "gamble-2012"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "夜晚在灯光下捕食昆虫，是无害的室内共居者。",
+      "en": "Hunts insects under lights at night; a harmless housemate."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "building",
+      "street"
+    ],
+    "countries": [
+      "TH",
+      "VN",
+      "MY",
+      "SG",
+      "CN"
+    ],
+    "etiquette": {
+      "zh": "不要抓尾，壁虎遇险会自断尾巴。",
+      "en": "Do not grab the tail; geckos shed it when threatened."
+    }
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "gamble-2012"
+  ],
+  "review_status": "seed"
+}

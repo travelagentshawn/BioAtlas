@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/travelagentshawn/BioAtlas/schema/common.schema.json",
+  "title": "BioAtlas shared definitions",
+  "description": "Reusable building blocks referenced by every record schema.",
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Lowercase ASCII slug. Must equal the file name (without .json)."
+    },
+    "i18n": {
+      "type": "object",
+      "description": "Human-readable text keyed by language code. zh (Simplified Chinese) and en are required; others optional.",
+      "properties": {
+        "zh": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 },
+        "ja": { "type": "string", "minLength": 1 }
+      },
+      "required": ["zh", "en"],
+      "additionalProperties": false
+    },
+    "month": { "type": "integer", "minimum": 1, "maximum": 12 },
+    "months": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/month" },
+      "uniqueItems": true
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "ISO 3166-1 alpha-2 country code."
+    },
+    "kingdom": {
+      "type": "string",
+      "enum": ["root", "plantae", "animalia"],
+      "description": "Top-level grouping used for colour and filtering. 'root' is only for nodes above the plant/animal split."
+    },
+    "habitat": {
+      "type": "string",
+      "enum": [
+        "temple-garden",
+        "urban-park",
+        "street",
+        "farmland",
+        "paddy",
+        "wetland",
+        "pond",
+        "river-lake",
+        "forest",
+        "mountain",
+        "coast",
+        "grassland",
+        "building"
+      ]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["seed", "reviewed", "expert-reviewed"],
+      "description": "seed = drafted, not yet independently verified; reviewed = checked against cited sources by a contributor; expert-reviewed = signed off by a domain specialist."
+    },
+    "source_refs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/slug" },
+      "uniqueItems": true,
+      "description": "Ids of files in data/sources/."
+    },
+    "external_ids": {
+      "type": "object",
+      "description": "Identifiers in other databases. Only add an id you have verified.",
+      "properties": {
+        "gbif": { "type": "string" },
+        "ncbi_taxonomy": { "type": "string" },
+        "open_tree_ott": { "type": "string" },
+        "wikidata": { "type": "string", "pattern": "^Q[0-9]+$" },
+        "inaturalist": { "type": "string" },
+        "iucn": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

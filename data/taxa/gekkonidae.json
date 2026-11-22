@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "gekkonidae",
+  "rank": "family",
+  "scientific_name": "Gekkonidae",
+  "parent": "squamata",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "壁虎科",
+    "en": "Geckos"
+  },
+  "summary": {
+    "zh": "多数种类趾下有刚毛垫，可攀附光滑表面；这一结构在壁虎中独立演化多次。",
+    "en": "Most have setae-covered toepads for climbing smooth surfaces, an innovation that arose repeatedly within geckos."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "moderate"
+  },
+  "sources": [
+    "gamble-2012"
+  ],
+  "review_status": "seed"
+}

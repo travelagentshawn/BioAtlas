@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "hu-cheng-1948",
+  "kind": "paper",
+  "title": "On the new family Metasequoiaceae and on Metasequoia glyptostroboides, a living species of the genus Metasequoia found in Szechuan and Hupeh",
+  "year": 1948,
+  "authors": "Hu HH, Cheng WC",
+  "venue": "Bulletin of the Fan Memorial Institute of Biology",
+  "citation": "Hu HH, Cheng WC (1948) On the new family Metasequoiaceae and on Metasequoia glyptostroboides, a living species of the genus Metasequoia found in Szechuan and Hupeh. Bulletin of the Fan Memorial Institute of Biology, New Series 1: 153–161."
+}

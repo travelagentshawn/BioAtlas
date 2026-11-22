@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "chordata",
+  "rank": "phylum",
+  "scientific_name": "Chordata",
+  "parent": "animalia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "脊索动物",
+    "en": "Chordates"
+  },
+  "summary": {
+    "zh": "至少在胚胎期具脊索、背神经管与咽鳃裂；脊椎动物是其中最大的类群。",
+    "en": "Notochord, dorsal nerve cord and pharyngeal slits at least in the embryo; vertebrates are its largest group."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 550,
+      "min": 520,
+      "max": 600,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

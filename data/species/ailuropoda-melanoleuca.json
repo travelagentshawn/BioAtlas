@@ -1,0 +1,78 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "ailuropoda-melanoleuca",
+  "scientific_name": "Ailuropoda melanoleuca",
+  "taxon": "ursidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "大熊猫",
+    "en": "Giant panda"
+  },
+  "summary": {
+    "zh": "基因组上是熊，食性却几乎完全是竹子。",
+    "en": "Genetically a bear, yet almost entirely a bamboo eater."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "黑白相间的毛色，圆脸，前掌有伪拇指。",
+      "en": "Black-and-white coat, round face and a pseudo-thumb on the forepaw."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "基因组测序证实熊猫属于熊科。负责鲜味受体的基因 Tas1r1 在熊猫中失去功能，时间大致与它转为吃竹子的时期吻合。肉食祖先的消化系统几乎未变。",
+      "en": "Genome sequencing confirmed pandas are bears. The umami receptor gene Tas1r1 was pseudogenised, roughly coinciding with the dietary switch to bamboo. The digestive system is still that of a carnivore."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "li-2010-panda"
+      },
+      {
+        "type": "molecular-clock",
+        "source": "zhao-2010-umami"
+      },
+      {
+        "type": "classification",
+        "source": "upham-2019"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "成都等地的繁育研究基地是最稳妥的观察点，早晨喂食时段最活跃。野外几乎不可能偶遇。",
+      "en": "Breeding centres such as Chengdu are the practical places to watch pandas, most active in the morning feeding hours. Wild encounters are very unlikely."
+    },
+    "best_months": [
+      3,
+      4,
+      5,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "mountain",
+      "forest"
+    ],
+    "countries": [
+      "CN"
+    ],
+    "etiquette": {
+      "zh": "遵守工作人员指示，不使用闪光灯，不投喂。",
+      "en": "Follow staff instructions, no flash and no feeding."
+    }
+  },
+  "conservation": {
+    "iucn": "VU",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "li-2010-panda",
+    "zhao-2010-umami",
+    "upham-2019"
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "misof-2014",
+  "kind": "paper",
+  "title": "Phylogenomics resolves the timing and pattern of insect evolution",
+  "year": 2014,
+  "authors": "Misof B, et al.",
+  "venue": "Science",
+  "doi": "10.1126/science.1257570",
+  "citation": "Misof B, et al. (2014) Phylogenomics resolves the timing and pattern of insect evolution. Science 346: 763–767."
+}

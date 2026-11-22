@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "tetrapoda",
+  "rank": "clade",
+  "scientific_name": "Tetrapoda",
+  "parent": "chordata",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "四足动物",
+    "en": "Tetrapods"
+  },
+  "summary": {
+    "zh": "具四肢（或由四肢演化而来）的脊椎动物，约 3.5 亿年前登陆。",
+    "en": "Vertebrates with four limbs (or descended from such); they emerged onto land ~350 Mya."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 350,
+      "min": 330,
+      "max": 370,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

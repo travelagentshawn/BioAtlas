@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "cercopithecidae",
+  "rank": "family",
+  "scientific_name": "Cercopithecidae",
+  "parent": "primates",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "猕猴科",
+    "en": "Old World monkeys"
+  },
+  "summary": {
+    "zh": "旧大陆猴类，鼻孔向下，有颊囊与臀胼胝。",
+    "en": "Old World monkeys: downward-facing nostrils, cheek pouches and ischial callosities."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "gibbs-2007-rhesus",
+    "upham-2019"
+  ],
+  "review_status": "seed"
+}
