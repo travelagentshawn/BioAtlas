@@ -39,6 +39,9 @@ test("API build satisfies the contract and computes MRCA correctly", () => {
     const read = (p) => JSON.parse(readFileSync(join(out, "api/v1", p), "utf8"));
     const m = read("manifest.json");
     assert.equal(m.api_version, "1.0.0");
+    const coral = read("species/acropora-cervicornis.json");
+    assert.equal(coral.conservation.protections.length, 4);
+    assert.ok(coral.sources_resolved.some(source => source.id === "noaa-staghorn-coral"));
     const panda = read("species/ailuropoda-melanoleuca.json");
     const deer = panda.relatives.find((r) => r.species.id === "cervus-nippon");
     assert.equal(deer.mrca.id, "mammalia");
