@@ -266,7 +266,8 @@ test("quiz modules are removed and the complete module directory lists every rem
   assert.ok(serviceWorker.includes("./js/views/modules.js"));
   assert.equal(serviceWorker.includes("./js/views/learn.js"), false);
   assert.equal(serviceWorker.includes("./js/views/evolution.js"), false);
-  assert.ok(home.includes("moduleDirectory(root, true)"));
+  assert.ok(/moduleDirectory\(\w+, true, INTEGRATED\)/.test(home));
+  assert.ok(serviceWorker.includes("./js/jungle.js") && serviceWorker.includes("./js/home-tree.js"));
   assert.equal(/draggable|dragstart|touchmove/.test(directory), false);
   assert.equal(existsSync(join(ROOT, "ui/js/views/learn.js")), false);
   assert.equal(existsSync(join(ROOT, "ui/js/views/evolution.js")), false);

@@ -56,16 +56,18 @@ const sections = [
   }
 ];
 
-export function moduleDirectory(root, compact = false) {
+export function moduleDirectory(root, compact = false, exclude = []) {
+  const skip = new Set(exclude);
+  const shown = sections.map((sec) => ({ ...sec, groups: sec.groups.map((g) => ({ ...g, modules: g.modules.filter((m) => !skip.has(m[2])) })).filter((g) => g.modules.length) })).filter((sec) => sec.groups.length);
   root.append(
     h("section", { class: "module-directory block", "aria-labelledby": "module-directory-title" },
       h("header", { class: "module-directory-head" },
         h("div", null,
-          h("p", { class: "eyebrow" }, tr("完整功能目录", "Complete module directory")),
-          h("h2", { id: "module-directory-title" }, tr("所有模块，一览可达", "Every module, visible at a glance")),
-          h("p", { class: "muted" }, tr("按用途分层排列；所有入口同时列示，无需拖拽或横向滑动。", "Grouped by purpose. Every entry is listed without dragging or horizontal scrolling."))),
+          h("p", { class: "eyebrow" }, skip.size ? tr("未并入丛林的模块", "Modules not in the jungle") : tr("完整功能目录", "Complete module directory")),
+          h("h2", { id: "module-directory-title" }, skip.size ? tr("其余模块，分开列示", "The remaining modules, listed separately") : tr("所有模块，一览可达", "Every module, visible at a glance")),
+          h("p", { class: "muted" }, skip.size ? tr("探索、进化树、旅行场景、行程、季节与文档已融入上方丛林与木牌；其余在此。", "Explore, tree, scenes, planner, seasons and docs live in the jungle and its signs above; the rest are here.") : tr("按用途分层排列；所有入口同时列示，无需拖拽或横向滑动。", "Grouped by purpose. Every entry is listed without dragging or horizontal scrolling."))),
         compact ? h("a", { class: "btn small", href: "#/modules" }, tr("独立查看目录", "Open full directory")) : null),
-      sections.map((section, index) =>
+      shown.map((section, index) =>
         h("section", { class: "module-level", "aria-labelledby": `module-level-${index}` },
           h("h3", { id: `module-level-${index}`, class: "module-level-title" }, section.title[0] && tr(section.title[0], section.title[1])),
           section.groups.map((group) =>
