@@ -167,20 +167,11 @@
     },
     "conservation": {
       "type": "object",
+      "description": "IUCN assessment and legal protection instruments are distinct evidence types; either may be present without implying the other.",
       "properties": {
         "iucn": {
           "type": "string",
-          "enum": [
-            "LC",
-            "NT",
-            "VU",
-            "EN",
-            "CR",
-            "EW",
-            "EX",
-            "DD",
-            "NE"
-          ]
+          "enum": ["LC", "NT", "VU", "EN", "CR", "EW", "EX", "DD", "NE"]
         },
         "as_of": {
           "type": "string",
@@ -188,12 +179,29 @@
         },
         "source": {
           "$ref": "common.schema.json#/$defs/slug"
+        },
+        "protections": {
+          "type": "array",
+          "description": "Legal or treaty protections. These are not IUCN Red List categories.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "instrument": { "type": "string", "minLength": 1 },
+              "jurisdiction": { "type": "string", "minLength": 1 },
+              "status": { "type": "string", "minLength": 1 },
+              "scope": { "type": "string", "minLength": 1 },
+              "source": { "$ref": "common.schema.json#/$defs/slug" },
+              "accessed_at": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+              "notes": { "$ref": "common.schema.json#/$defs/i18n" }
+            },
+            "required": ["instrument", "jurisdiction", "status", "scope", "source", "accessed_at"],
+            "additionalProperties": false
+          }
         }
       },
-      "required": [
-        "iucn",
-        "as_of",
-        "source"
+      "anyOf": [
+        { "required": ["iucn", "as_of", "source"] },
+        { "required": ["protections"] }
       ],
       "additionalProperties": false
     },
