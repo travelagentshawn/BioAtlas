@@ -62,7 +62,7 @@
     },
     {
       "slug": "field-modules",
-      "title": "季节日历、野外辨认与学习",
+      "title": "季节日历与野外辨认",
       "group": "模块",
       "file": "zh/field-modules.md"
     },
@@ -142,7 +142,7 @@
     },
     {
       "slug": "field-modules",
-      "title": "Seasonality, Field ID & Learning",
+      "title": "Seasonality and Field Identification",
       "group": "Modules",
       "file": "en/field-modules.md"
     },
