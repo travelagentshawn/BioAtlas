@@ -5,7 +5,8 @@ import { label, monthName } from "../labels.js";
 import { badge, sectionTitle, empty, reviewBadge } from "../components.js";
 
 export async function mapView(root,{query}) {
-  const list=await api.regionList();
+  const regionLite=await api.regionList();
+  const list=await Promise.all(regionLite.map(r=>api.region(r.id)));
   let month=Number(query.get("month"))||new Date().getMonth()+1;
   let country=query.get("country")||"";
   const filters=h("div",{class:"selects"});
@@ -23,7 +24,7 @@ export async function mapView(root,{query}) {
     clear(plot);clear(listBox);
     for(let lon=-180;lon<=180;lon+=30){const x=(lon+180)/360*960;plot.append(svg("line",{x1:x,y1:0,x2:x,y2:380,class:"map-grid"}),svg("text",{x,y:400,class:"map-axis","text-anchor":"middle"},String(lon)));}
     for(let lat=-60;lat<=80;lat+=20){const y=(90-lat)/180*380;plot.append(svg("line",{x1:0,y1:y,x2:960,y2:y,class:"map-grid"}),svg("text",{x:6,y:y-4,class:"map-axis"},String(lat)));}
-    const active=list.filter(r=>r.center&&(!country||r.countries.includes(country)));
+    const active=list.filter(r=>r.center&&(!country||r.countries.includes(country))&&(r.month_counts?.[month-1]||0)>0);
     active.forEach(r=>{
       const x=(r.center.lng+180)/360*960,y=(90-r.center.lat)/180*380;
       const mark=svg("circle",{cx:x,cy:y,r:6,class:"map-dot",tabindex:0,role:"button","aria-label":loc(r.names)});
@@ -35,7 +36,7 @@ export async function mapView(root,{query}) {
       const card=h("a",{class:"card",href:`#/region/${r.id}`},h("div",{class:"card-body"},h("h3",null,loc(r.names)),h("p",null,loc(r.description)),h("div",{class:"badges"},...r.countries.map(c=>badge(label("country",c))),reviewBadge(r.review_status))));
       listBox.append(card);
     });
-    note.textContent=tr(`显示 ${active.length} 个有坐标的场景。地图为等距经纬度示意图，不代表物种连续分布范围；月份筛选在场景详情页查看。`,`${active.length} georeferenced scenes. This is an equirectangular locator plot, not a species range map; check each scene page for monthly observations.`);
+    note.textContent=tr(`显示 ${active.length} 个在 ${monthName(month)} 有物种观察记录的地理场景。地图为等距经纬度示意图，不代表物种连续分布范围。`,`${active.length} georeferenced scenes with species records in ${monthName(month)}. This is an equirectangular locator plot, not a species range map.`);
     if(!active.length)listBox.append(empty(tr("没有匹配的地理场景。","No georeferenced scenes match.")));
   }
   root.append(h("header",{class:"page-head"},h("h1",null,tr("旅行自然地图","Nature map")),h("p",{class:"lead"},tr("查看已收录旅行场景的地理位置，并进入地点档案查看当季物种。","Locate documented travel scenes and open each record for seasonal species."))),filters,h("section",{class:"panel"},plot,note),h("section",null,sectionTitle(tr("地图地点","Mapped places")),listBox));
