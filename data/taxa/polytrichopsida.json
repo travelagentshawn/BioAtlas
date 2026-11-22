@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "polytrichopsida",
+  "rank": "class",
+  "scientific_name": "Polytrichopsida",
+  "parent": "bryophyta",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "金发藓纲",
+    "en": "Polytrichopsida"
+  },
+  "summary": {
+    "zh": "包含金发藓属等大型藓类；具体分类依采用的苔藓植物分类系统。",
+    "en": "A moss class including Polytrichum; details follow the adopted bryophyte classification."
+  },
+  "pruned": false,
+  "phylo": {
+    "monophyly": "unknown"
+  },
+  "sources": [
+    "ncbi-taxonomy-polytrichum-3213",
+    "bibs-polytrichum-commune",
+    "eflora-bc-polytrichum-commune"
+  ],
+  "review_status": "seed"
+}
