@@ -3,7 +3,6 @@
   "id": "authority-itis",
   "kind": "database",
   "title": "Integrated Taxonomic Information System (ITIS)",
-  "year": 2026,
   "url": "https://www.itis.gov/",
   "citation": "Integrated Taxonomic Information System. ITIS taxonomic records. Accessed 2026-11-22. https://www.itis.gov/",
   "authority_role": "specialist-checklist",
@@ -14,5 +13,6 @@
     "microbes"
   ],
   "identifier_scheme": "TSN",
-  "update_policy": "Monthly name updates; retain version or access date"
+  "update_policy": "Monthly name updates; retain version or access date",
+  "accessed_at": "2026-11-22"
 }
