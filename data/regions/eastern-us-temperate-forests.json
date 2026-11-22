@@ -1,0 +1,48 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "eastern-us-temperate-forests",
+  "kind": "scene",
+  "names": {
+    "zh": "美国东部温带森林",
+    "en": "Eastern US temperate forests"
+  },
+  "description": {
+    "zh": "美国中西部与东北部的落叶林、针阔混交林等森林生态系统。该场景的月份是区域指南中的夏秋季窗口，不代表每个地点每年都会出现。",
+    "en": "Forest ecosystems of the Midwestern and Northeastern United States, including deciduous and mixed forests. The month range follows a regional field guide's summer-to-fall window; it does not guarantee fruiting at every site or every year."
+  },
+  "countries": [
+    "US"
+  ],
+  "habitats": [
+    "forest"
+  ],
+  "species": [
+    {
+      "species": "amanita-muscaria",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "likelihood": "common",
+      "note": {
+        "zh": "美国林务局指南将其列为该地区常见大型真菌之一，记载夏季至秋季结果；结果量受温度和降水影响。",
+        "en": "The US Forest Service guide includes it among common macrofungi in eastern forests and records summer-to-fall fruiting; fruiting varies with temperature and precipitation."
+      },
+      "evidence": [
+        {
+          "type": "published-literature",
+          "source": "ostry-2012-macrofungi"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "ostry-2012-macrofungi"
+  ],
+  "review_status": "seed"
+}
