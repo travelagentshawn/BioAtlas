@@ -8,6 +8,7 @@ import { join } from "node:path";
 import { loadSchemas, validate } from "./lib/schema.mjs";
 import { loadAll, checkIntegrity, ROOT } from "./lib/data.mjs";
 import { buildApi } from "./build-api.mjs";
+import { auditTaxonomy } from "./audit-taxonomy.mjs";
 
 const schemas = loadSchemas(join(ROOT, "schema"));
 
@@ -168,4 +169,17 @@ test("API publishes authority registry and taxonomic assertions", () => {
     assert.ok(flyAgaric.sources_resolved.some(s => s.id === "authority-index-fungorum"));
     assert.ok(manifest.languages.includes("ja"));
   } finally { rmSync(out, { recursive: true, force: true }); }
+});
+
+
+test("read-only taxonomy audit summarizes authority assertions without rewriting them", () => {
+  const { data } = loadAll();
+  const report = auditTaxonomy(data);
+  assert.ok(report.summary.registered_authorities >= 17);
+  assert.ok(report.summary.records_with_assertions >= 3);
+  assert.equal(report.summary.potential_conflicts, 0);
+  const ginkgo = report.records.find(record => record.record === "species:ginkgo-biloba");
+  assert.equal(ginkgo.assertions.length, 2);
+  assert.ok(ginkgo.assertions.some(assertion => assertion.authority === "authority-powo" && assertion.name_status === "accepted"));
+  assert.ok(ginkgo.assertions.some(assertion => assertion.authority === "authority-ipni" && assertion.name_status === "unassessed"));
 });
