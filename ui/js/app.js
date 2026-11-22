@@ -63,16 +63,21 @@ const navLinks = [
 
 function header() {
   const theme = document.documentElement.dataset.theme;
-  return h("header", { class: "site-header" }, h("div", { class: "wrap bar" },
-    h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
-    h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l, cls = ""]) => h("a", { href: k === "home" ? "#/" : `#/${k}`, "data-k": k, class: cls }, l))),
-    h("div", { class: "tools" },
-      h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(({zh:"en",en:"ja",ja:"zh"})[getLang()] || "zh"); boot(); } }, ({zh:"EN",en:"日本語",ja:"中"})[getLang()] || "EN"),
-      h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
-        const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
-        document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
-      } }, theme === "dark" ? "☀" : "☾"),
-      h("a", { class: "icon-btn gh", href: REPO.url, target: "_blank", rel: "noopener noreferrer", title: "GitHub" }, "GitHub"))));
+  return h("header", { class: "site-header" },
+    h("div", { class: "wrap bar" },
+      h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
+      h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l, cls = ""]) => h("a", { href: k === "home" ? "#/" : `#/${k}`, "data-k": k, class: cls }, l))),
+      h("div", { class: "tools" },
+        h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(({zh:"en",en:"ja",ja:"zh"})[getLang()] || "zh"); boot(); } }, ({zh:"EN",en:"日本語",ja:"中"})[getLang()] || "EN"),
+        h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
+          const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
+          document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
+        } }, theme === "dark" ? "☀" : "☾"),
+        h("a", { class: "icon-btn gh", href: REPO.url, target: "_blank", rel: "noopener noreferrer", title: "GitHub" }, "GitHub"))),
+    h("div", { class: "site-notice" },
+      h("div", { class: "wrap site-notice-inner" },
+        h("span", null, tr("公开初稿 · 数据记录尚待逐条核验", "Public draft · records still require source-by-source review")),
+        h("a", { href: "#/quality" }, tr("查看数据质量", "Review data quality"), " →"))));
 }
 
 async function footer() {
