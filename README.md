@@ -20,7 +20,7 @@ npm run dev     # validate + build + serve at http://localhost:8080
 
 | Command | Purpose |
 | --- | --- |
-| `npm run validate` | validate `data/` against `schema/` + cross-references |
+| `npm run validate` | validate `data/` against `schema/` + cross-references |\n| `npm run audit:taxonomy` | read-only report of authority assertions and candidate conflicts |
 | `npm run build:api` | data side only → `dist/api/v1` |
 | `npm run build:ui` | UI side only → `dist/` |
 | `npm run check` | everything CI runs |
