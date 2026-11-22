@@ -76,7 +76,8 @@ export function checkIntegrity(data, errors, warnings) {
   const roots = data.taxa.filter((t) => t.parent === null);
   if (roots.length !== 1) errors.push(`taxa: exactly one root required, found ${roots.length}`);
   for (const t of data.taxa) {
-    const w = `taxon ${t.id}`;\n    checkReview("taxon", t);
+    const w = `taxon ${t.id}`;
+    checkReview("taxon", t);
     if (t.parent !== null && !taxa.has(t.parent)) errors.push(`${w}: unknown parent "${t.parent}"`);
     checkSources(w, t.sources);
     const age = t.phylo?.age_mya;
@@ -97,7 +98,8 @@ export function checkIntegrity(data, errors, warnings) {
 
   // species
   for (const s of data.species) {
-    const w = `species ${s.id}`;\n    checkReview("species", s);
+    const w = `species ${s.id}`;
+    checkReview("species", s);
     const t = taxa.get(s.taxon);
     if (!t) errors.push(`${w}: unknown taxon "${s.taxon}"`);
     else if (t.kingdom !== s.kingdom) errors.push(`${w}: kingdom "${s.kingdom}" differs from taxon "${t.kingdom}"`);
@@ -112,7 +114,8 @@ export function checkIntegrity(data, errors, warnings) {
 
   // regions
   for (const r of data.regions) {
-    const w = `region ${r.id}`;\n    checkReview("region", r);
+    const w = `region ${r.id}`;
+    checkReview("region", r);
     if (r.kind === "destination" && !r.center) errors.push(`${w}: destination needs center`);
     checkSources(w, r.sources);
     const seen = new Set();
