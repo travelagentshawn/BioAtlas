@@ -11,20 +11,24 @@
   "kingdom": "fungi",
   "names": {
     "zh": "毒蝇伞",
-    "en": "Fly agaric"
+    "en": "Fly agaric",
+    "ja": "ベニテングタケ"
   },
   "summary": {
     "zh": "著名的红色或橙红色白斑大型真菌，与多种树木形成外生菌根。毒性物种，只适合观察与摄影，切勿食用。",
-    "en": "A conspicuous red to orange-red, white-spotted mushroom that forms ectomycorrhizal associations with trees. It is poisonous: observe and photograph only; never eat it."
+    "en": "A conspicuous red to orange-red, white-spotted mushroom that forms ectomycorrhizal associations with trees. It is poisonous: observe and photograph only; never eat it.",
+    "ja": "鮮やかな赤色から橙赤色の傘に白い斑点を持つ大型のキノコ。樹木と外生菌根を形成する。毒性があるため、観察・撮影のみとし、絶対に食べないこと。"
   },
   "identification": {
     "field_marks": {
       "zh": "菌盖红色至橙红色，常有白色至乳白色疣状鳞片；菌褶白色且离生；菌柄白色，有菌环，基部膨大并具菌托残余。颜色与白斑会随个体和天气变化。",
-      "en": "Cap red to orange-red, often with white to cream warty veil remnants; gills white and free from the stalk; stem white with a ring and a bulbous base bearing volval remnants. Colour and spots vary with age and weather."
+      "en": "Cap red to orange-red, often with white to cream warty veil remnants; gills white and free from the stalk; stem white with a ring and a bulbous base bearing volval remnants. Colour and spots vary with age and weather.",
+      "ja": "傘は赤色から橙赤色で、白色から乳白色のいぼ状の被膜片が残ることが多い。ひだは白色で柄から離生し、白い柄にはつばがあり、基部は膨らんでつぼの残片を伴う。色や斑点は個体や天候によって変化する。"
     },
     "similar": {
       "zh": "鹅膏菌属内有多种外观相似物种；不能只凭红色菌盖判断，需结合菌褶、菌环和基部菌托等特征。不要采摘或尝食。",
-      "en": "Other Amanita species can look similar. Do not identify by cap colour alone; several structures must be considered. Do not pick or taste."
+      "en": "Other Amanita species can look similar. Do not identify by cap colour alone; several structures must be considered. Do not pick or taste.",
+      "ja": "テングタケ属にはよく似た種がある。傘の色だけで同定せず、ひだ・つば・基部のつぼなど複数の特徴を確認すること。採取や味見はしない。"
     },
     "color_tags": [
       "red",
@@ -35,7 +39,8 @@
   "evolution": {
     "story": {
       "zh": "毒蝇伞属于担子菌门伞菌目鹅膏菌科。多位点分子研究发现，传统广义毒蝇伞在洲际及洲内具有明显的系统地理结构，并识别出多个不同的系统发育谱系；这提示其遗传结构并非全球均一，但不等于所有谱系已被正式拆分为独立物种。",
-      "en": "Fly agaric is a basidiomycete in Amanitaceae, Agaricales. A multilocus study found strong inter- and intracontinental phylogeographic structure and several distinct phylogenetic lineages within A. muscaria sensu lato. This indicates substantial genetic structure, but does not mean every lineage has been formally split into a separate species."
+      "en": "Fly agaric is a basidiomycete in Amanitaceae, Agaricales. A multilocus study found strong inter- and intracontinental phylogeographic structure and several distinct phylogenetic lineages within A. muscaria sensu lato. This indicates substantial genetic structure, but does not mean every lineage has been formally split into a separate species.",
+      "ja": "ベニテングタケは担子菌門、テングタケ科、ハラタケ目に属する。複数遺伝子座を用いた研究では、広義の A. muscaria に大陸間・大陸内の強い系統地理構造と複数の系統が認められた。これは遺伝的構造の多様性を示すが、すべての系統が正式に別種へ分割されたことを意味しない。"
     },
     "evidence": [
       {
@@ -59,7 +64,8 @@
   "travel": {
     "notes": {
       "zh": "温带地区通常在夏末至初冬出现；美国东部森林指南记载其夏季至秋季结果。实际月份受当地降雨、温度、树种与纬度影响，地区证据优先于全球月份提示。",
-      "en": "In temperate regions, fruit bodies are generally seen from late summer into early winter; an eastern-US forest guide records summer-to-fall fruiting. Actual timing depends on rainfall, temperature, host trees and latitude, so regional evidence takes precedence over this broad month guide."
+      "en": "In temperate regions, fruit bodies are generally seen from late summer into early winter; an eastern-US forest guide records summer-to-fall fruiting. Actual timing depends on rainfall, temperature, host trees and latitude, so regional evidence takes precedence over this broad month guide.",
+      "ja": "温帯地域では晩夏から初冬にかけて子実体が見られる。米国東部の森林ガイドでは夏から秋の発生が記録されている。実際の時期は降水量、気温、共生樹種、緯度によって変わるため、地域ごとの証拠を優先する。"
     },
     "best_months": [
       8,
@@ -78,7 +84,8 @@
     ],
     "etiquette": {
       "zh": "仅作远距离或近距离摄影观察，不采摘、不食用；不要让儿童或宠物误食。不要为了辨认而破坏菌体或周围林地。",
-      "en": "Observe and photograph without picking or eating. Keep children and pets from ingesting it, and do not damage the fruit body or surrounding habitat for identification."
+      "en": "Observe and photograph without picking or eating. Keep children and pets from ingesting it, and do not damage the fruit body or surrounding habitat for identification.",
+      "ja": "採取・食用はせず、観察と撮影にとどめる。子どもやペットが誤って口にしないよう注意し、撮影のために子実体や周囲の環境を傷つけないこと。"
     }
   },
   "external_ids": {
