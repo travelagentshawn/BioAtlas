@@ -245,7 +245,7 @@ test("interactive diagrams expose accurate accessibility semantics and keyboard 
 test("platform documentation uses real Markdown line breaks", () => {
   for (const lang of ["zh", "en"]) {
     const content = readFileSync(join(ROOT, `docs/${lang}/platform-modules.md`), "utf8");
-    assert.doesNotMatch(content, /\\\\n/);
+    assert.doesNotMatch(content, /\\n/);
     assert.match(content, /## Marine taxa and coral protections|## 海洋类群与珊瑚保护/);
   }
 });
