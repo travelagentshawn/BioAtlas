@@ -8,7 +8,7 @@ const TABLES = {
     "temple-garden": M("寺庙庭园", "Temple garden"), "urban-park": M("城市公园", "Urban park"),
     street: M("街道", "Street"), farmland: M("农田", "Farmland"), paddy: M("稻田", "Paddy"),
     wetland: M("湿地", "Wetland"), pond: M("池塘", "Pond"), "river-lake": M("河湖", "River / lake"),
-    forest: M("森林", "Forest"), mountain: M("山地", "Mountain"), coast: M("海岸", "Coast"),
+    forest: M("森林", "Forest"), mountain: M("山地", "Mountain"), coast: M("海岸", "Coast"), "coral-reef": M("珊瑚礁", "Coral reef"),
     grassland: M("草地", "Grassland"), building: M("建筑", "Buildings"),
   },
   likelihood: { common: M("常见", "Common"), regular: M("较常见", "Regular"), uncommon: M("少见", "Uncommon"), rare: M("罕见", "Rare") },
@@ -19,7 +19,7 @@ const TABLES = {
   },
   rank: {
     domain: M("域", "Domain"), kingdom: M("界", "Kingdom"), clade: M("演化支", "Clade"), phylum: M("门", "Phylum"),
-    class: M("纲", "Class"), order: M("目", "Order"), family: M("科", "Family"), genus: M("属", "Genus"),
+    class: M("纲", "Class"), subclass: M("亚纲", "Subclass"), order: M("目", "Order"), family: M("科", "Family"), genus: M("属", "Genus"),
   },
   kingdom: { plantae: M("植物", "Plants"), animalia: M("动物", "Animals"), fungi: M("真菌", "Fungi"), root: M("真核生物", "Eukaryotes") },
   review: {
@@ -33,7 +33,7 @@ const TABLES = {
   country: {
     CN: M("中国", "China"), JP: M("日本", "Japan"), KR: M("韩国", "South Korea"), GB: M("英国", "United Kingdom"), IE: M("爱尔兰", "Ireland"), US: M("美国", "United States"), CA: M("加拿大", "Canada"), FI: M("芬兰", "Finland"), TH: M("泰国", "Thailand"),
     VN: M("越南", "Vietnam"), IN: M("印度", "India"), NP: M("尼泊尔", "Nepal"), LK: M("斯里兰卡", "Sri Lanka"),
-    MY: M("马来西亚", "Malaysia"), SG: M("新加坡", "Singapore"), TW: M("台湾", "Taiwan"), ID: M("印度尼西亚", "Indonesia"),
+    MY: M("马来西亚", "Malaysia"), SG: M("新加坡", "Singapore"), TW: M("台湾", "Taiwan"), ID: M("印度尼西亚", "Indonesia"), BS: M("巴哈马", "Bahamas"), PR: M("波多黎各", "Puerto Rico"), VI: M("美属维尔京群岛", "U.S. Virgin Islands"),
   },
   iucn: {
     LC: M("无危 LC", "Least Concern"), NT: M("近危 NT", "Near Threatened"), VU: M("易危 VU", "Vulnerable"),
