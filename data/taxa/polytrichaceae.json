@@ -8,11 +8,13 @@
   "kingdom": "plantae",
   "names": {
     "zh": "金发藓科",
-    "en": "Polytrichaceae"
+    "en": "Polytrichaceae",
+    "ja": "スギゴケ科"
   },
   "summary": {
     "zh": "包含金发藓属等具有直立茎和明显叶片结构的藓类。",
-    "en": "A moss family including Polytrichum, with upright shoots and conspicuous leaf structures."
+    "en": "A moss family including Polytrichum, with upright shoots and conspicuous leaf structures.",
+    "ja": "スギゴケ属など、直立する茎と明瞭な葉を持つ蘚類を含む科。"
   },
   "pruned": false,
   "phylo": {
