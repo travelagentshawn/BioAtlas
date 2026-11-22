@@ -12,6 +12,9 @@ A public to-do list. Open an issue or say so in a PR before claiming an item.
 
 ## Modules
 
+- [x] Nature locator map for documented scenes, with monthly filtering.
+- [x] Scientific source search and data quality dashboard for citations, review status and missing fields.
+
 - [x] Phenology calendar view per species and per destination (first pass; based on recorded months).
 - [x] Identification search by name, colour tags, size range, habitat, country and month (optional colour/size data still needs population).
 - [x] Sound library UI and licensing fields; recordings await licensed contributions.
