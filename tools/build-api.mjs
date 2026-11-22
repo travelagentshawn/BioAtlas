@@ -121,7 +121,8 @@ export function buildApi(outRoot) {
     const srcIds = [
       ...(s.sources || []),
       ...s.evolution.evidence.map((e) => e.source),
-      ...(s.conservation ? [s.conservation.source] : []),
+      ...(s.conservation?.source ? [s.conservation.source] : []),
+      ...(s.conservation?.protections || []).map((p) => p.source),
       ...(s.taxonomic_assertions || []).flatMap((a) => [a.authority, a.source]),
     ];
     put(`species/${s.id}.json`, {
