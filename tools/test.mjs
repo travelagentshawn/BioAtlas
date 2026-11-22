@@ -233,8 +233,8 @@ test("interactive diagrams expose accurate accessibility semantics and keyboard 
   const mapView = readFileSync(join(ROOT, "ui/js/views/map.js"), "utf8");
   const treeLayout = readFileSync(join(ROOT, "ui/js/tree-layout.js"), "utf8");
   const treeView = readFileSync(join(ROOT, "ui/js/views/tree.js"), "utf8");
-  assert.match(mapView, /event\.key==="Enter"\|\|event\.key===" "/);
-  assert.match(mapView, /role:"button"/);
+  assert.ok(mapView.includes('event.key==="Enter"') && mapView.includes('event.key===" "'));
+  assert.ok(mapView.includes('event.key==="Enter"') && mapView.includes('event.key===" "'));
   assert.match(treeLayout, /role: "group"/);
   assert.match(treeLayout, /aria-expanded/);
   assert.doesNotMatch(treeLayout, /role: "treeitem"/);
