@@ -24,7 +24,7 @@ Status: every record is `review_status: "seed"` (drafted, not yet verified again
 
 - [AGENTS.md](https://github.com/travelagentshawn/BioAtlas/blob/main/AGENTS.md): rules, roles, commands for any AI agent
 - [Documentation (English)](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/en) / [中文](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/zh) / [日本語](https://github.com/travelagentshawn/BioAtlas/tree/main/docs/ja)
-- Commands: `npm run validate`, `npm run build`, `npm run check` (Node >= 20, no dependencies)
+- Commands: `npm run validate`, `npm run audit:taxonomy` (read-only authority conflict report), `npm run build`, `npm run check` (Node >= 20, no dependencies)
 
 ## Optional
 
