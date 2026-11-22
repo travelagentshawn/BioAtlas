@@ -8,11 +8,13 @@
   "kingdom": "plantae",
   "names": {
     "zh": "金发藓目",
-    "en": "Polytrichales"
+    "en": "Polytrichales",
+    "ja": "スギゴケ目"
   },
   "summary": {
     "zh": "金发藓科所在的藓类目。",
-    "en": "The moss order containing the family Polytrichaceae."
+    "en": "The moss order containing the family Polytrichaceae.",
+    "ja": "スギゴケ目"
   },
   "pruned": false,
   "phylo": {
