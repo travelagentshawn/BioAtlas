@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/ncbi-taxonomy-2020.json",
   "id": "ncbi-taxonomy-2020",
   "kind": "paper",
   "title": "NCBI Taxonomy: a comprehensive update",
