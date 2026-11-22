@@ -25,3 +25,6 @@ A Japanese language option is available; untranslated UI strings currently fall 
 
 ## Data quality
 All modules preserve each record's `review_status`. Conservation, phenology, distribution, recording and regulatory claims need traceable sources. Seed records must never be presented as verified facts.
+
+## Scientific sources and data quality
+`#/sources` indexes citations and supports search by type, author, title and DOI. `#/quality` summarizes species, taxa, scenes, references, conservation assessments, external IDs, licensed media and review status. These metrics describe repository coverage, not complete biodiversity coverage.
