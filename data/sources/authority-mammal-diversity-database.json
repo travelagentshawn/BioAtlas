@@ -3,7 +3,6 @@
   "id": "authority-mammal-diversity-database",
   "kind": "database",
   "title": "Mammal Diversity Database",
-  "year": 2026,
   "url": "https://www.mammaldiversity.org/",
   "citation": "American Society of Mammalogists. Mammal Diversity Database. Accessed 2026-11-22. https://www.mammaldiversity.org/",
   "authority_role": "specialist-checklist",
@@ -11,5 +10,6 @@
     "mammals"
   ],
   "identifier_scheme": "MDD species ID / record URL",
-  "update_policy": "Versioned releases; retain version"
+  "update_policy": "Versioned releases; retain version",
+  "accessed_at": "2026-11-22"
 }
