@@ -8,11 +8,13 @@
   "kingdom": "fungi",
   "names": {
     "zh": "伞菌纲",
-    "en": "Agaricomycetes"
+    "en": "Agaricomycetes",
+    "ja": "ハラタケ綱"
   },
   "summary": {
     "zh": "担子菌门中包含大量蘑菇、齿菌和多孔菌类群的一个纲。",
-    "en": "A basidiomycete class containing many gilled mushrooms, toothed fungi and polypores."
+    "en": "A basidiomycete class containing many gilled mushrooms, toothed fungi and polypores.",
+    "ja": "ハラタケ綱"
   },
   "pruned": true,
   "phylo": {
