@@ -57,6 +57,7 @@ test("review audit metadata is schema-validated", () => {
     reviewed_by: "test-reviewer",
     reviewer_role: "contributor",
     method: "literature-check",
+    sources: ["apg-iv-2016"],
     scope: ["taxonomy", "identification"]
   };
   assert.deepEqual(validate(good, schemas["species.schema.json"], schemas, "species.schema.json"), []);
@@ -79,6 +80,7 @@ test("review status cannot be promoted without an audit or false expert sign-off
     reviewed_by: "test-reviewer",
     reviewer_role: "contributor",
     method: "literature-check",
+    sources: ["apg-iv-2016"],
     scope: ["taxonomy"]
   };
   record.review_status = "expert-reviewed";
