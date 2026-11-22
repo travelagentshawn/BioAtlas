@@ -13,6 +13,9 @@ const routes = [
   ["regions", () => import("./views/regions.js").then((m) => m.regionsView)],
   ["region/:id", () => import("./views/regions.js").then((m) => m.regionView)],
   ["planner", () => import("./views/planner.js").then((m) => m.plannerView)],
+  ["seasonality", () => import("./views/seasonality.js").then((m) => m.seasonalityView)],
+  ["identify", () => import("./views/identify.js").then((m) => m.identifyView)],
+  ["learn", () => import("./views/learn.js").then((m) => m.learnView)],
   ["docs", () => import("./views/docs.js").then((m) => m.docsView)],
   ["docs/:slug", () => import("./views/docs.js").then((m) => m.docsView)],
 ];
@@ -35,7 +38,8 @@ function parse() {
 const main = h("main", { id: "view", tabindex: "-1" });
 const navLinks = [
   ["explore", tr("探索", "Explore")], ["tree", tr("生命之树", "Tree of life")], ["regions", tr("旅行场景", "Scenes")],
-  ["planner", tr("行程工作台", "Workbench")], ["docs", "Documentation"],
+  ["planner", tr("行程工作台", "Workbench")], ["seasonality", tr("季节日历", "Seasonality")],
+  ["identify", tr("野外辨认", "Field ID")], ["learn", tr("学习", "Learn")], ["docs", "Documentation"],
 ];
 
 function header() {
