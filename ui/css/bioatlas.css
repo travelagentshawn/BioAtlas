@@ -299,3 +299,8 @@ audio { width:100%; margin:10px 0; }
 }
 
 .cladogram .dot[role="button"]:focus-visible { outline:none; stroke-width:4; filter:drop-shadow(0 0 3px var(--plant)); }
+
+.site-notice { border-top:1px solid var(--line); background:var(--surface-2); }
+.site-notice-inner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:5px; padding-bottom:5px; color:var(--muted); font-size:.78rem; line-height:1.5; }
+.site-notice-inner a { flex:none; font-weight:700; text-decoration:none; }
+@media(max-width:760px) { .site-notice-inner { align-items:flex-start; flex-direction:column; gap:2px; padding-top:7px; padding-bottom:7px; } }
