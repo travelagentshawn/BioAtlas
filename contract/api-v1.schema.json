@@ -964,6 +964,12 @@
         "legacy",
         "url"
       ]
+    },
+    "TaxonomicAuthorities": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/TaxonomicAuthority"
+      }
     }
   }
 }
