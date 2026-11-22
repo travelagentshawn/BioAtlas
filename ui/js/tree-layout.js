@@ -39,9 +39,6 @@ export function render(root, { collapsed = new Set(), onToggle, showAge = true, 
     const g = svg("g", {
       class: `node ${n.kind}${focusId === n.id ? " focus" : ""}`,
       transform: `translate(${n._x},${n._y})`,
-      role: "treeitem",
-      "aria-level": n._depth + 1,
-      "aria-expanded": n.kind === "taxon" && hasKids ? String(!collapsed.has(n.id)) : null,
     });
     if (n.kind === "species") {
       g.append(svg("circle", { r: 4.5, fill: col, class: "dot" }));
