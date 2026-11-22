@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/ncbi-taxonomy-polytrichum-3213.json",
   "id": "ncbi-taxonomy-polytrichum-3213",
   "kind": "database",
   "title": "NCBI Taxonomy record 3213: Polytrichum commune",
