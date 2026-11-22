@@ -87,6 +87,37 @@
           },
           "note": {
             "$ref": "common.schema.json#/$defs/i18n"
+          },
+          "evidence": {
+            "type": "array",
+            "description": "Evidence for this specific species-in-region association and its month range. Empty or absent means the association has not been source-verified.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "field-observation",
+                    "published-literature",
+                    "regional-checklist",
+                    "database-record",
+                    "expert-assessment"
+                  ]
+                },
+                "source": {
+                  "$ref": "common.schema.json#/$defs/slug"
+                },
+                "note": {
+                  "$ref": "common.schema.json#/$defs/i18n"
+                }
+              },
+              "required": [
+                "type",
+                "source"
+              ],
+              "additionalProperties": false
+            },
+            "uniqueItems": true
           }
         },
         "required": [
