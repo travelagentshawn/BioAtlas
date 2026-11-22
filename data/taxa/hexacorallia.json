@@ -2,7 +2,7 @@
   "$schema": "../../schema/taxon.schema.json",
   "type": "taxon",
   "id": "hexacorallia",
-  "rank": "clade",
+  "rank": "subclass",
   "scientific_name": "Hexacorallia",
   "parent": "anthozoa",
   "kingdom": "animalia",
