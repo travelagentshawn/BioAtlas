@@ -122,6 +122,36 @@
         },
         "mycobank": {
           "type": "string"
+        },
+        "catalogue_of_life": {
+          "type": "string"
+        },
+        "ipni": {
+          "type": "string"
+        },
+        "powo": {
+          "type": "string"
+        },
+        "itis": {
+          "type": "string"
+        },
+        "ioc": {
+          "type": "string"
+        },
+        "reptile_database": {
+          "type": "string"
+        },
+        "amphibian_species_of_world": {
+          "type": "string"
+        },
+        "mammal_diversity_database": {
+          "type": "string"
+        },
+        "catalog_of_fishes": {
+          "type": "string"
+        },
+        "worms": {
+          "type": "string"
         }
       },
       "additionalProperties": false
