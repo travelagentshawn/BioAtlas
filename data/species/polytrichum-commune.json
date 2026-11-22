@@ -8,20 +8,24 @@
   "kingdom": "plantae",
   "names": {
     "zh": "大金发藓",
-    "en": "Common haircap moss"
+    "en": "Common haircap moss",
+    "ja": "ウマスギゴケ"
   },
   "summary": {
     "zh": "常见的大型藓类，常在沼泽、湿草原、湿林和泥炭地边缘形成直立的深绿色草丛。营养体全年可见，孢蒴通常在夏季成熟。",
-    "en": "A large, widespread moss forming upright dark-green turfs in bog margins, wet heaths, damp woodland and other moist habitats. Vegetative shoots can be seen year-round; capsules mature in summer."
+    "en": "A large, widespread moss forming upright dark-green turfs in bog margins, wet heaths, damp woodland and other moist habitats. Vegetative shoots can be seen year-round; capsules mature in summer.",
+    "ja": "湿地、泥炭地の縁、湿ったヒースや林床に直立した濃緑色の群落をつくる大型のコケ。栄養体は一年を通じて観察でき、胞子体の蒴は主に夏に成熟する。"
   },
   "identification": {
     "field_marks": {
       "zh": "植株直立，常形成密集草丛；叶狭长、边缘有齿，叶基部具光亮的鞘状部分；成熟孢蒴呈四棱角状。潮湿时叶片展开，干燥时可内卷。",
-      "en": "Upright shoots often form dense turfs. Leaves are narrow and toothed, with a glossy sheathing base; mature capsules are typically four-angled. Leaves spread when moist and become incurved when dry."
+      "en": "Upright shoots often form dense turfs. Leaves are narrow and toothed, with a glossy sheathing base; mature capsules are typically four-angled. Leaves spread when moist and become incurved when dry.",
+      "ja": "茎は直立し、密な群落をつくる。葉は細長く縁に鋸歯があり、葉の基部は光沢のある鞘状になる。成熟した蒴は一般に四角形の断面を持つ。湿ると葉が開き、乾くと内側に巻く。"
     },
     "similar": {
       "zh": "与其他金发藓属物种及 Polytrichastrum formosum 相似；叶基部是否光亮、叶缘齿和孢蒴形状可辅助区分，必要时需显微观察。",
-      "en": "Similar to other Polytrichum species and Polytrichastrum formosum. Glossy leaf sheaths, toothed margins and capsule shape help separate them; microscopy may be needed."
+      "en": "Similar to other Polytrichum species and Polytrichastrum formosum. Glossy leaf sheaths, toothed margins and capsule shape help separate them; microscopy may be needed.",
+      "ja": "同属の他種や Polytrichastrum formosum と似る。光沢のある葉鞘、葉縁の鋸歯、蒴の形が識別の手がかりとなるが、必要に応じて顕微鏡で確認する。"
     },
     "color_tags": [
       "green",
@@ -37,7 +41,8 @@
   "evolution": {
     "story": {
       "zh": "大金发藓属于藓类植物门狭义藓类，位于金发藓纲、金发藓目和金发藓科。它是非维管植物，不能与蕨类或种子植物混为一类。",
-      "en": "Common haircap is a moss in Bryophyta sensu stricto, placed in Polytrichopsida, Polytrichales and Polytrichaceae. It is non-vascular and should not be conflated with ferns or seed plants."
+      "en": "Common haircap is a moss in Bryophyta sensu stricto, placed in Polytrichopsida, Polytrichales and Polytrichaceae. It is non-vascular and should not be conflated with ferns or seed plants.",
+      "ja": "ウマスギゴケは狭義の蘚類である蘚類植物門に属し、金髪藓綱、金髪藓目、金髪藓科に分類される。維管束を持たない植物であり、シダ植物や種子植物とは区別される。"
     },
     "evidence": [
       {
@@ -53,7 +58,8 @@
   "travel": {
     "notes": {
       "zh": "营养体在适宜湿度下全年可见；夏季可留意红褐色刚毛和孢蒴。雨后或露水未干时，叶片展开、绿色草丛更容易拍摄。",
-      "en": "Vegetative turfs can be seen year-round where moisture is suitable. Look for reddish setae and capsules in summer. After rain or before dew dries, the leaves spread and the green turfs are especially photogenic."
+      "en": "Vegetative turfs can be seen year-round where moisture is suitable. Look for reddish setae and capsules in summer. After rain or before dew dries, the leaves spread and the green turfs are especially photogenic.",
+      "ja": "水分条件がよければ栄養体は一年中観察できる。夏には赤褐色の蒴柄と胞子嚢を探してみよう。雨上がりや朝露が乾く前は葉が開き、緑の群落を撮影しやすい。"
     },
     "best_months": [
       1,
@@ -81,7 +87,8 @@
     ],
     "etiquette": {
       "zh": "在泥炭地、沼泽和湿地边缘拍摄时避免踩踏草丛，不为拍摄而拔取植株或翻动基质。",
-      "en": "Avoid trampling turfs at bogs, marshes and wetland margins. Do not uproot plants or disturb the substrate for photographs."
+      "en": "Avoid trampling turfs at bogs, marshes and wetland margins. Do not uproot plants or disturb the substrate for photographs.",
+      "ja": "泥炭地、沼地、湿地の縁では群落を踏みつけない。撮影のために植物を引き抜いたり、地面を掘り返したりしないこと。"
     }
   },
   "external_ids": {
