@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/geml-2008-amanita-phylogeography.json",
   "id": "geml-2008-amanita-phylogeography",
   "kind": "paper",
   "title": "Evidence for strong inter- and intracontinental phylogeographic structure in Amanita muscaria, a wind-dispersed ectomycorrhizal basidiomycete",
