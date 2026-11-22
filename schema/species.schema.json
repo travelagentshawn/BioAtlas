@@ -281,6 +281,14 @@
     },
     "review": {
       "$ref": "common.schema.json#/$defs/review"
+    },
+    "taxonomic_assertions": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/taxonomic_assertion"
+      },
+      "uniqueItems": true,
+      "description": "Independent sourced name/classification assertions from relevant taxonomic authorities; conflicting assertions are preserved."
     }
   },
   "required": [
