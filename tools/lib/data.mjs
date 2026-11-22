@@ -56,11 +56,27 @@ function checkIntegrity(data, errors, warnings) {
     for (const s of ids) if (!sources.has(s)) errors.push(`${where}: unknown source "${s}"`);
   };
 
+  const checkReview = (kind, record) => {
+    const where = `${kind} ${record.id}`;
+    const review = record.review;
+    if (record.review_status !== "seed" && !review)
+      errors.push(`${where}: non-seed review_status requires an auditable review object`);
+    if (!review) return;
+    checkSources(where + " review", review.sources);
+    if (review.reviewed_at && Number.isNaN(Date.parse(review.reviewed_at + "T00:00:00Z")))
+      errors.push(`${where}: review.reviewed_at is not a valid calendar date`);
+    if (record.review_status === "expert-reviewed" &&
+        (review.reviewer_role !== "specialist" || review.method !== "expert-assessment"))
+      errors.push(`${where}: expert-reviewed requires a specialist expert-assessment review`);
+    if (review.reviewer_role === "specialist" && review.method !== "expert-assessment")
+      warnings.push(`${where}: specialist review should use expert-assessment method`);
+  };
+
   // taxa
   const roots = data.taxa.filter((t) => t.parent === null);
   if (roots.length !== 1) errors.push(`taxa: exactly one root required, found ${roots.length}`);
   for (const t of data.taxa) {
-    const w = `taxon ${t.id}`;
+    const w = `taxon ${t.id}`;\n    checkReview("taxon", t);
     if (t.parent !== null && !taxa.has(t.parent)) errors.push(`${w}: unknown parent "${t.parent}"`);
     checkSources(w, t.sources);
     const age = t.phylo?.age_mya;
@@ -81,7 +97,7 @@ function checkIntegrity(data, errors, warnings) {
 
   // species
   for (const s of data.species) {
-    const w = `species ${s.id}`;
+    const w = `species ${s.id}`;\n    checkReview("species", s);
     const t = taxa.get(s.taxon);
     if (!t) errors.push(`${w}: unknown taxon "${s.taxon}"`);
     else if (t.kingdom !== s.kingdom) errors.push(`${w}: kingdom "${s.kingdom}" differs from taxon "${t.kingdom}"`);
@@ -96,7 +112,7 @@ function checkIntegrity(data, errors, warnings) {
 
   // regions
   for (const r of data.regions) {
-    const w = `region ${r.id}`;
+    const w = `region ${r.id}`;\n    checkReview("region", r);
     if (r.kind === "destination" && !r.center) errors.push(`${w}: destination needs center`);
     checkSources(w, r.sources);
     const seen = new Set();
