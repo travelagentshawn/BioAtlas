@@ -311,7 +311,10 @@
           "type": "string"
         },
         "year": {
-          "type": "integer"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "citation": {
           "type": "string"
@@ -342,6 +345,12 @@
         },
         "legacy": {
           "type": "boolean"
+        },
+        "accessed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
@@ -354,7 +363,8 @@
         "taxonomic_scope",
         "identifier_scheme",
         "update_policy",
-        "legacy"
+        "legacy",
+        "accessed_at"
       ]
     },
     "Species": {
