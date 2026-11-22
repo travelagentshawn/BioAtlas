@@ -120,6 +120,16 @@
         },
         "review_status": {
           "type": "string"
+        },
+        "review": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewAudit"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -437,6 +447,16 @@
               "attribution"
             ]
           }
+        },
+        "review": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewAudit"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -587,6 +607,16 @@
             "type": "integer"
           },
           "description": "12 integers: number of species expected in each month (index 0 = January)."
+        },
+        "review": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ReviewAudit"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -731,6 +761,45 @@
       "items": {
         "$ref": "#/$defs/Source"
       }
+    },
+    "ReviewAudit": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": {
+          "type": "string"
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "reviewer_role": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "$ref": "#/$defs/i18n"
+        }
+      },
+      "required": [
+        "reviewed_at",
+        "reviewed_by",
+        "reviewer_role",
+        "method",
+        "scope"
+      ]
     }
   }
 }
