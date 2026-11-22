@@ -8,11 +8,13 @@
   "kingdom": "fungi",
   "names": {
     "zh": "伞菌目",
-    "en": "Agaricales"
+    "en": "Agaricales",
+    "ja": "ハラタケ目"
   },
   "summary": {
     "zh": "包含鹅膏菌、蘑菇等多种具伞状子实体的真菌；分类边界以现代系统学资料为准。",
-    "en": "An order containing Amanita and many other mushroom-forming fungi; classification follows current systematic sources."
+    "en": "An order containing Amanita and many other mushroom-forming fungi; classification follows current systematic sources.",
+    "ja": "ハラタケ目"
   },
   "pruned": true,
   "phylo": {
