@@ -126,7 +126,7 @@ export function buildApi(outRoot) {
     put(`species/${s.id}.json`, {
       id: s.id, scientific_name: s.scientific_name, authority: s.authority ?? null, synonyms: s.synonyms ?? [],
       names: s.names, summary: s.summary, kingdom: s.kingdom, taxon: s.taxon,
-      identification: s.identification, evolution: s.evolution, travel: s.travel,
+      identification: s.identification, evolution: s.evolution, travel: s.travel, sounds: s.sounds ?? [],
       conservation: s.conservation ?? null, media: s.media ?? [], external_ids: s.external_ids ?? {},
       review_status: s.review_status,
       lineage: lineageIds(s.taxon).map((i) => taxonLite(taxa.get(i))),
