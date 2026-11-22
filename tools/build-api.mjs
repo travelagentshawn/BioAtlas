@@ -149,7 +149,7 @@ export function buildApi(outRoot) {
       center: r.center ?? null, radius_km: r.radius_km ?? null, habitats: r.habitats ?? [],
       review_status: r.review_status, review: r.review ?? null,
       species: r.species.map((e) => ({
-        species: speciesLite(speciesById.get(e.species)), months: e.months, likelihood: e.likelihood, note: e.note ?? null,
+        species: speciesLite(speciesById.get(e.species)), months: e.months, likelihood: e.likelihood, note: e.note ?? null, evidence: e.evidence ?? [],
       })),
       month_counts,
       sources_resolved: resolveSources(r.sources),
