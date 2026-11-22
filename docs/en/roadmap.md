@@ -2,10 +2,14 @@
 
 A public to-do list. Open an issue or say so in a PR before claiming an item.
 
-## Data (top priority: verification)\n\n- [x] Add per-association evidence references and missing-evidence warnings for region–species–month links; existing month ranges still require individual verification.
+## Data (top priority: verification)
 
-- [ ] Verify every `seed` record: that citations exist, DOIs, age ranges, IUCN categories.\n- [x] Add record-level review audit metadata and specialist sign-off constraints; actual scientific review remains outstanding.
-- [x] Add a layered, taxon-specific authority register and record-level taxonomic assertions; IDs remain `unassessed` until the provider record is checked.\n- [ ] Populate verified external IDs and accepted-name crosswalks for each group.
+- [x] Add per-association evidence references and missing-evidence warnings for region–species–month links; existing month ranges still require individual verification.
+
+- [ ] Verify every `seed` record: that citations exist, DOIs, age ranges, IUCN categories.
+- [x] Add record-level review audit metadata and specialist sign-off constraints; actual scientific review remains outstanding.
+- [x] Add a layered, taxon-specific authority register and record-level taxonomic assertions; IDs remain `unassessed` until the provider record is checked.
+- [ ] Populate verified external IDs and accepted-name crosswalks for each group.
 - [ ] Broaden coverage: rainforest, reefs and coasts, alpine meadows, African savanna, European gardens.
 - [x] Add first fungal and bryophyte starter branches and species; continue broadening taxonomic and geographic coverage.
 - [ ] Add clearly licensed photographs (`media`).
