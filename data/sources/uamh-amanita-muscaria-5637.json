@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/uamh-amanita-muscaria-5637.json",
   "id": "uamh-amanita-muscaria-5637",
   "kind": "database",
   "title": "UAMH 5637 — Amanita muscaria",
