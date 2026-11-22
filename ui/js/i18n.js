@@ -96,7 +96,24 @@ const JA = {
   "请确认已运行 npm run build，并检查 ui/config.js 中的 apiBase。": "npm run build を実行し、ui/config.js の apiBase を確認してください。",
   "没有符合条件的物种。试试放宽筛选。": "条件に一致する種がありません。絞り込み条件を緩めてください。",
   "没有匹配项，请调整条件。": "一致する項目がありません。条件を変更してください。",
-  "请确认已运行 npm run build，并检查 ui/config.js 中的 apiBase。": "npm run build を実行し、ui/config.js の apiBase を確認してください。"
+  "请确认已运行 npm run build，并检查 ui/config.js 中的 apiBase。": "npm run build を実行し、ui/config.js の apiBase を確認してください。",
+
+  "分类权威记录": "分類権威の記録",
+  "不同来源的名称与分类意见分别保留，不自动互相覆盖。": "異なる情報源の学名と分類判断を個別に保持し、自動的に上書きしません。",
+  "该来源接受此名称": "この情報源では受容名",
+  "该来源列为异名": "この情報源では異名",
+  "该来源状态未决": "この情報源では未決",
+  "尚未核验": "未確認",
+  "记录 ID": "レコードID",
+  "核对日期": "確認日",
+  "查看支持来源": "根拠資料を見る",
+  "权威角色": "権威の役割",
+  "所有权威角色": "すべての役割",
+  "标识符：": "識別子：",
+  "当前版本：": "現在の版：",
+  "访问日期：": "アクセス日：",
+  "历史兼容用途；不用于新分类判断。": "旧データとの互換性のみ。新しい分類判断には使用しません。",
+
 };
 export const tr = (zh, en, ja) => (lang === "zh" ? zh : lang === "ja" ? (ja || JA[zh] || en) : en);
 // Pick text from a data i18n object, falling back across languages.
