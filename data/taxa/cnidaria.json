@@ -14,7 +14,7 @@
     "zh": "以刺细胞为特征的动物类群，包括珊瑚、水母、海葵和水螅等。",
     "en": "Animals characterised by cnidocytes, including corals, jellyfish, sea anemones and hydroids."
   },
-  "pruned": true,
+  "pruned": false,
   "sources": [
     "itis-acropora-cervicornis",
     "itis-acropora-palmata"
