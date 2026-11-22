@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/kew-growwild-2023-fly-agaric.json",
   "id": "kew-growwild-2023-fly-agaric",
   "kind": "website",
   "title": "Deck the halls with festive fungi",
