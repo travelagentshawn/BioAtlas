@@ -31,7 +31,7 @@ const TABLES = {
   },
   confidence: { high: M("可信度高", "High confidence"), moderate: M("可信度中等", "Moderate confidence"), approximate: M("粗略估计", "Approximate") },
   country: {
-    CN: M("中国", "China"), JP: M("日本", "Japan"), KR: M("韩国", "South Korea"), GB: M("英国", "United Kingdom"), US: M("美国", "United States"), CA: M("加拿大", "Canada"), FI: M("芬兰", "Finland"), TH: M("泰国", "Thailand"),
+    CN: M("中国", "China"), JP: M("日本", "Japan"), KR: M("韩国", "South Korea"), GB: M("英国", "United Kingdom"), IE: M("爱尔兰", "Ireland"), US: M("美国", "United States"), CA: M("加拿大", "Canada"), FI: M("芬兰", "Finland"), TH: M("泰国", "Thailand"),
     VN: M("越南", "Vietnam"), IN: M("印度", "India"), NP: M("尼泊尔", "Nepal"), LK: M("斯里兰卡", "Sri Lanka"),
     MY: M("马来西亚", "Malaysia"), SG: M("新加坡", "Singapore"), TW: M("台湾", "Taiwan"), ID: M("印度尼西亚", "Indonesia"),
   },
