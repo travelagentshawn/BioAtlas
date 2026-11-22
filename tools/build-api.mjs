@@ -128,7 +128,7 @@ export function buildApi(outRoot) {
       names: s.names, summary: s.summary, kingdom: s.kingdom, taxon: s.taxon,
       identification: s.identification, evolution: s.evolution, travel: s.travel, sounds: s.sounds ?? [],
       conservation: s.conservation ?? null, media: s.media ?? [], external_ids: s.external_ids ?? {},
-      review_status: s.review_status,
+      review_status: s.review_status, review: s.review ?? null,
       lineage: lineageIds(s.taxon).map((i) => taxonLite(taxa.get(i))),
       regions: regionsOfSpecies(s.id),
       relatives,
@@ -147,7 +147,7 @@ export function buildApi(outRoot) {
     put(`regions/${r.id}.json`, {
       id: r.id, kind: r.kind, names: r.names, description: r.description, countries: r.countries,
       center: r.center ?? null, radius_km: r.radius_km ?? null, habitats: r.habitats ?? [],
-      review_status: r.review_status,
+      review_status: r.review_status, review: r.review ?? null,
       species: r.species.map((e) => ({
         species: speciesLite(speciesById.get(e.species)), months: e.months, likelihood: e.likelihood, note: e.note ?? null,
       })),
