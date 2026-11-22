@@ -176,8 +176,8 @@ test("API publishes authority registry and taxonomic assertions", () => {
 test("coral taxonomy and legal protections remain source-backed and distinct from IUCN", () => {
   const { data } = loadAll();
   const taxa = new Map(data.taxa.map(t => [t.id, t]));
-  const staghorn = data.species.find(s => s.id === "staghorn-coral");
-  const elkhorn = data.species.find(s => s.id === "elkhorn-coral");
+  const staghorn = data.species.find(s => s.id === "acropora-cervicornis");
+  const elkhorn = data.species.find(s => s.id === "acropora-palmata");
   assert.equal(taxa.get("cnidaria")?.parent, "animalia");
   assert.equal(taxa.get("anthozoa")?.parent, "cnidaria");
   assert.equal(taxa.get("scleractinia")?.parent, "hexacorallia");
@@ -191,6 +191,9 @@ test("coral taxonomy and legal protections remain source-backed and distinct fro
   }
   assert.equal(staghorn.external_ids.itis, "52862");
   assert.equal(elkhorn.external_ids.itis, "52861");
+  const coralScene = data.regions.find(r => r.id === "caribbean-coral-reefs");
+  assert.ok(coralScene?.species.some(entry => entry.species === staghorn.id && entry.evidence?.length));
+  assert.ok(coralScene?.species.some(entry => entry.species === elkhorn.id && entry.evidence?.length));
   const bad = structuredClone(staghorn);
   bad.conservation.protections[0].source = "missing-protection-source";
   const errors = [];
