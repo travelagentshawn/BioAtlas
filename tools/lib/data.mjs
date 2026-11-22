@@ -119,7 +119,8 @@ export function checkIntegrity(data, errors, warnings) {
     else if (t.kingdom !== s.kingdom) errors.push(`${w}: kingdom "${s.kingdom}" differs from taxon "${t.kingdom}"`);
     checkSources(w, s.sources);
     for (const ev of s.evolution?.evidence || []) checkSources(w + " evidence", [ev.source]);
-    if (s.conservation) checkSources(w + " conservation", [s.conservation.source]);
+    if (s.conservation?.source) checkSources(w + " conservation assessment", [s.conservation.source]);
+    for (const protection of s.conservation?.protections || []) checkSources(w + " legal protection", [protection.source]);
     const expectedId = s.scientific_name.toLowerCase().replace(/ × /g, " x ").replace(/[^a-z0-9]+/g, "-");
     if (s.id !== expectedId) warnings.push(`${w}: id differs from scientific name slug "${expectedId}"`);
     if (!s.sources?.length) warnings.push(`${w}: no sources`);
