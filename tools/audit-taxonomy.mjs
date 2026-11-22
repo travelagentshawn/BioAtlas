@@ -20,7 +20,7 @@ export function auditTaxonomy(data) {
 
   // Strip authorship for a cautious binomial comparison only. This is a
   // candidate-conflict signal, not synonymy resolution or taxon-concept matching.
-  const comparableName = (name) => String(name || "").trim().split(/\\s+/).slice(0, 2).join(" ").toLowerCase();
+  const comparableName = (name) => String(name || "").trim().split(/\s+/).slice(0, 2).join(" ").toLowerCase();
   const potentialConflicts = [];
   for (const [recordKey, items] of byRecord) {
     const accepted = items.filter((item) => item.name_status === "accepted");
@@ -66,7 +66,7 @@ export function auditTaxonomy(data) {
 if (process.argv[1] && process.argv[1].endsWith("audit-taxonomy.mjs")) {
   const { data, errors } = loadAll();
   if (errors.length) {
-    console.error(errors.join("\\n"));
+    console.error(errors.join("\n"));
     process.exit(1);
   }
   const report = auditTaxonomy(data);
