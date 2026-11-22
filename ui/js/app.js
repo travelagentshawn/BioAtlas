@@ -20,6 +20,8 @@ const routes = [
   ["conservation", () => import("./views/conservation.js").then((m) => m.conservationView)],
   ["sounds", () => import("./views/sounds.js").then((m) => m.soundsView)],
   ["evolution", () => import("./views/evolution.js").then((m) => m.evolutionView)],
+  ["sources", () => import("./views/sources.js").then((m) => m.sourcesView)],
+  ["quality", () => import("./views/quality.js").then((m) => m.qualityView)],
   ["docs", () => import("./views/docs.js").then((m) => m.docsView)],
   ["docs/:slug", () => import("./views/docs.js").then((m) => m.docsView)],
 ];
@@ -44,7 +46,7 @@ const navLinks = [
   ["explore", tr("探索", "Explore")], ["tree", tr("生命之树", "Tree of life")], ["regions", tr("旅行场景", "Scenes")],
   ["planner", tr("行程工作台", "Workbench")], ["seasonality", tr("季节日历", "Seasonality")],
   ["identify", tr("野外辨认", "Field ID")], ["learn", tr("学习", "Learn")], ["map", tr("自然地图", "Nature map")],
-  ["conservation", tr("保护与礼仪", "Conservation")], ["sounds", tr("自然声音", "Sounds")], ["evolution", tr("演化学习", "Evolution")], ["docs", "Documentation"],
+  ["conservation", tr("保护与礼仪", "Conservation")], ["sounds", tr("自然声音", "Sounds")], ["evolution", tr("演化学习", "Evolution")],\n  ["sources", tr("科学来源", "Sources")], ["quality", tr("数据质量", "Data quality")], ["docs", "Documentation"],
 ];
 
 function header() {
