@@ -4,7 +4,7 @@ A public to-do list. Open an issue or say so in a PR before claiming an item.
 
 ## Data (top priority: verification)
 
-- [ ] Verify every `seed` record: that citations exist, DOIs, age ranges, IUCN categories.
+- [ ] Verify every `seed` record: that citations exist, DOIs, age ranges, IUCN categories.\n- [x] Add record-level review audit metadata and specialist sign-off constraints; actual scientific review remains outstanding.
 - [ ] Add `external_ids` (GBIF, NCBI Taxonomy, Open Tree, Wikidata) per group — verified values only.
 - [ ] Broaden coverage: rainforest, reefs and coasts, alpine meadows, African savanna, European gardens.
 - [ ] Add fungi and bryophytes — just as common on trips.
