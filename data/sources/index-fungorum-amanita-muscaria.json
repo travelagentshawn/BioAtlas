@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/index-fungorum-amanita-muscaria.json",
   "id": "index-fungorum-amanita-muscaria",
   "kind": "database",
   "title": "Index Fungorum name record 161267: Amanita muscaria (L.) Lam.",
