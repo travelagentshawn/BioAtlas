@@ -4,7 +4,7 @@ An open **field atlas of the plants, animals and fungi travellers actually see**
 
 - 🌳 **Tree of life** built on molecular phylogeny — divergence times as ranges with sources, paraphyletic groups flagged
 - 🧭 **Travel scenes & trip workbench** — what you may meet, where and in which month; export a checklist and a phylogeny of your trip
-- 📖 **Documentation built into the site** (中文 / English)
+- 📖 **Documentation built into the site** (中文 / English / 日本語)
 - 🤖 **Model-neutral AI collaboration** — see [`AGENTS.md`](AGENTS.md) and [`llms.txt`](llms.txt)
 - 🔌 **UI and data fully decoupled** — they meet only at the [API contract](contract/)
 
