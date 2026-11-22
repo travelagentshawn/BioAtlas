@@ -76,16 +76,16 @@ export function buildApi(outRoot) {
   // ---------- taxa ----------
   put("taxa.json", data.taxa.map(taxonLite));
   for (const t of data.taxa) {
-    const srcIds = [...(t.sources || []), ...(t.phylo?.age_mya ? [t.phylo.age_mya.source] : [])];
+    const srcIds = [...(t.sources || []), ...(t.phylo?.age_mya ? [t.phylo.age_mya.source] : []), ...(t.taxonomic_assertions || []).flatMap((a) => [a.authority, a.source])];
     put(`taxa/${t.id}.json`, {
       id: t.id, rank: t.rank, scientific_name: t.scientific_name, authority: t.authority ?? null,
       names: t.names, summary: t.summary ?? t.names, kingdom: t.kingdom, parent: t.parent,
-      pruned: !!t.pruned, phylo: t.phylo ?? {},
+      pruned: !!t.pruned, phylo: t.phylo ?? {}, taxonomic_assertions: t.taxonomic_assertions ?? [],
       lineage: lineageIds(t.id).map((i) => taxonLite(taxa.get(i))),
       children: (children.get(t.id) || []).map((i) => taxonLite(taxa.get(i))),
       species: (speciesByTaxon.get(t.id) || []).map((i) => speciesLite(speciesById.get(i))),
       sources_resolved: resolveSources(srcIds),
-      review_status: t.review_status, review: t.review ?? null,
+      review_status: t.review_status, review: t.review ?? null, taxonomic_assertions: t.taxonomic_assertions ?? [],
     });
   }
 
@@ -122,13 +122,14 @@ export function buildApi(outRoot) {
       ...(s.sources || []),
       ...s.evolution.evidence.map((e) => e.source),
       ...(s.conservation ? [s.conservation.source] : []),
+      ...(s.taxonomic_assertions || []).flatMap((a) => [a.authority, a.source]),
     ];
     put(`species/${s.id}.json`, {
       id: s.id, scientific_name: s.scientific_name, authority: s.authority ?? null, synonyms: s.synonyms ?? [],
       names: s.names, summary: s.summary, kingdom: s.kingdom, taxon: s.taxon,
       identification: s.identification, evolution: s.evolution, travel: s.travel, sounds: s.sounds ?? [],
       conservation: s.conservation ?? null, media: s.media ?? [], external_ids: s.external_ids ?? {},
-      review_status: s.review_status, review: s.review ?? null,
+      review_status: s.review_status, review: s.review ?? null, taxonomic_assertions: s.taxonomic_assertions ?? [],
       lineage: lineageIds(s.taxon).map((i) => taxonLite(taxa.get(i))),
       regions: regionsOfSpecies(s.id),
       relatives,
@@ -160,9 +161,9 @@ export function buildApi(outRoot) {
   const calendar = {};
   for (let m = 1; m <= 12; m++) calendar[m] = data.species.filter((s) => s.travel.best_months.includes(m)).map((s) => s.id);
   put("calendar.json", calendar);
-  put("sources.json", data.sources.map((s) => ({
+  put("taxonomic-authorities.json", data.sources.filter((s) => s.authority_role).map((s) => ({\n    id: s.id, title: s.title, authority_role: s.authority_role, taxonomic_scope: s.taxonomic_scope ?? [],\n    identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,\n  })));\n  put("sources.json", data.sources.map((s) => ({
     id: s.id, kind: s.kind, title: s.title, year: s.year, citation: s.citation,
-    authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),
+    authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),\n    authority_role: s.authority_role ?? null, taxonomic_scope: s.taxonomic_scope ?? [], identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
   })));
   const hay = (...p) => p.filter(Boolean).join(" ").toLowerCase();
   put("search.json", [
