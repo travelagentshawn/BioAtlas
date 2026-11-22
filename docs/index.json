@@ -71,6 +71,12 @@
       "title": "自然地图、保护、声音与离线功能",
       "group": "模块",
       "file": "zh/platform-modules.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "分类权威与名称治理",
+      "group": "数据与科学",
+      "file": "zh/taxonomy-authorities.md"
     }
   ],
   "en": [
@@ -145,6 +151,12 @@
       "title": "Nature map, conservation, sounds & offline",
       "group": "Modules",
       "file": "en/platform-modules.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "Taxonomic authority and name governance",
+      "group": "Data & science",
+      "file": "en/taxonomy-authorities.md"
     }
   ],
   "ja": [
@@ -189,6 +201,12 @@
       "title": "ロードマップ",
       "group": "計画",
       "file": "ja/roadmap.md"
+    },
+    {
+      "slug": "taxonomy-authorities",
+      "title": "分類権威と学名ガバナンス",
+      "group": "データと科学",
+      "file": "ja/taxonomy-authorities.md"
     }
   ]
 }
