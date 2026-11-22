@@ -65,6 +65,12 @@
       "title": "季节日历、野外辨认与学习",
       "group": "模块",
       "file": "zh/field-modules.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "自然地图、保护、声音与离线功能",
+      "group": "模块",
+      "file": "zh/platform-modules.md"
     }
   ],
   "en": [
@@ -133,6 +139,12 @@
       "title": "Seasonality, Field ID & Learning",
       "group": "Modules",
       "file": "en/field-modules.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "Nature map, conservation, sounds & offline",
+      "group": "Modules",
+      "file": "en/platform-modules.md"
     }
   ]
 }
