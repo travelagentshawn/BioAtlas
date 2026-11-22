@@ -3,7 +3,6 @@
   "id": "authority-amphibian-species-of-world",
   "kind": "database",
   "title": "Amphibian Species of the World",
-  "year": 2026,
   "url": "https://amphibiansoftheworld.amnh.org/",
   "citation": "American Museum of Natural History. Amphibian Species of the World. Accessed 2026-11-22. https://amphibiansoftheworld.amnh.org/",
   "authority_role": "specialist-checklist",
@@ -11,5 +10,6 @@
     "amphibians"
   ],
   "identifier_scheme": "ASW species record URL",
-  "update_policy": "Continuously updated; retain access date"
+  "update_policy": "Continuously updated; retain access date",
+  "accessed_at": "2026-11-22"
 }
