@@ -5,53 +5,118 @@
   "description": "A place or typical travel scene and which species a traveller can expect there, by month. Species do not repeat this information; the build derives the reverse index.",
   "type": "object",
   "properties": {
-    "$schema": { "type": "string" },
-    "type": { "const": "region" },
-    "id": { "$ref": "common.schema.json#/$defs/slug" },
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "const": "region"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
     "kind": {
       "type": "string",
-      "enum": ["destination", "scene"],
+      "enum": [
+        "destination",
+        "scene"
+      ],
       "description": "destination = tied to coordinates; scene = a recurring kind of place (e.g. temple gardens) not tied to one location."
     },
-    "names": { "$ref": "common.schema.json#/$defs/i18n" },
-    "description": { "$ref": "common.schema.json#/$defs/i18n" },
+    "names": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "description": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
     "countries": {
       "type": "array",
-      "items": { "$ref": "common.schema.json#/$defs/country" },
+      "items": {
+        "$ref": "common.schema.json#/$defs/country"
+      },
       "minItems": 1
     },
     "center": {
       "type": "object",
       "properties": {
-        "lat": { "type": "number", "minimum": -90, "maximum": 90 },
-        "lng": { "type": "number", "minimum": -180, "maximum": 180 }
+        "lat": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "lng": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        }
       },
-      "required": ["lat", "lng"],
+      "required": [
+        "lat",
+        "lng"
+      ],
       "additionalProperties": false
     },
-    "radius_km": { "type": "number", "minimum": 1 },
+    "radius_km": {
+      "type": "number",
+      "minimum": 1
+    },
     "habitats": {
       "type": "array",
-      "items": { "$ref": "common.schema.json#/$defs/habitat" }
+      "items": {
+        "$ref": "common.schema.json#/$defs/habitat"
+      }
     },
     "species": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "species": { "$ref": "common.schema.json#/$defs/slug" },
-          "months": { "$ref": "common.schema.json#/$defs/months" },
-          "likelihood": { "type": "string", "enum": ["common", "regular", "uncommon", "rare"] },
-          "note": { "$ref": "common.schema.json#/$defs/i18n" }
+          "species": {
+            "$ref": "common.schema.json#/$defs/slug"
+          },
+          "months": {
+            "$ref": "common.schema.json#/$defs/months"
+          },
+          "likelihood": {
+            "type": "string",
+            "enum": [
+              "common",
+              "regular",
+              "uncommon",
+              "rare"
+            ]
+          },
+          "note": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          }
         },
-        "required": ["species", "months", "likelihood"],
+        "required": [
+          "species",
+          "months",
+          "likelihood"
+        ],
         "additionalProperties": false
       },
       "minItems": 1
     },
-    "sources": { "$ref": "common.schema.json#/$defs/source_refs" },
-    "review_status": { "$ref": "common.schema.json#/$defs/review_status" }
+    "sources": {
+      "$ref": "common.schema.json#/$defs/source_refs"
+    },
+    "review_status": {
+      "$ref": "common.schema.json#/$defs/review_status"
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
   },
-  "required": ["type", "id", "kind", "names", "description", "countries", "species", "review_status"],
+  "required": [
+    "type",
+    "id",
+    "kind",
+    "names",
+    "description",
+    "countries",
+    "species",
+    "review_status"
+  ],
   "additionalProperties": false
 }
