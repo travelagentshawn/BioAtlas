@@ -9,7 +9,7 @@ The main interface has two peer entry points rather than combining different kin
 - **Field atlas (usable workspace):** the default home for species search, seasonal discoveries, travel scenes, nature maps, seasonality, field identification, conservation notes, sounds, learning, and trip checklists.
 - **Evolution tree (phylogeny view):** a dedicated view of BioAtlas's own curated tree, with expand/collapse, taxonomic outline, divergence-age annotations, and links to taxon and species records.
 
-Both views use the same API and stable taxon/species IDs. The tree is the focused scientific-relationship view; the field atlas is the practical observation and discovery workspace. External taxonomic authorities remain source-level comparisons and never silently rewrite BioAtlas's own tree.
+Tree branches can be expanded or collapsed by pointer, or by tabbing to a node and pressing Enter or Space; outline mode provides an alternative readable structure.\n\nBoth views use the same API and stable taxon/species IDs. The tree is the focused scientific-relationship view; the field atlas is the practical observation and discovery workspace. External taxonomic authorities remain source-level comparisons and never silently rewrite BioAtlas's own tree.
 
 ## What it is
 
