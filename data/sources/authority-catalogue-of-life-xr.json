@@ -10,6 +10,7 @@
     "all major kingdoms"
   ],
   "identifier_scheme": "Catalogue of Life taxon identifier",
-  "update_policy": "Regular release; pin release for each import",
-  "accessed_at": "2026-11-22"
+  "update_policy": "Monthly releases; record the exact release used for every import.",
+  "accessed_at": "2026-11-22",
+  "current_version": "2026-10-16 XR"
 }
