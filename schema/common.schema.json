@@ -184,6 +184,59 @@
         "sources"
       ],
       "additionalProperties": false
+    },
+    "taxonomic_assertion": {
+      "type": "object",
+      "description": "A sourced taxonomic/name usage assertion from a named authority. An assertion is not automatically the BioAtlas accepted classification.",
+      "properties": {
+        "authority": {
+          "$ref": "common.schema.json#/$defs/slug",
+          "description": "Authority registry record ID in data/sources/."
+        },
+        "record_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scientific_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name_status": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "synonym",
+            "unresolved",
+            "unassessed"
+          ]
+        },
+        "classification_system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "accessed_at": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "source": {
+          "$ref": "common.schema.json#/$defs/slug",
+          "description": "Specific source record that supports this assertion."
+        },
+        "notes": {
+          "$ref": "common.schema.json#/$defs/i18n"
+        }
+      },
+      "required": [
+        "authority",
+        "record_id",
+        "scientific_name",
+        "name_status",
+        "accessed_at",
+        "source"
+      ],
+      "additionalProperties": false
     }
   }
 }
