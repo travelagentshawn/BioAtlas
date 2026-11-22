@@ -161,9 +161,15 @@ export function buildApi(outRoot) {
   const calendar = {};
   for (let m = 1; m <= 12; m++) calendar[m] = data.species.filter((s) => s.travel.best_months.includes(m)).map((s) => s.id);
   put("calendar.json", calendar);
-  put("taxonomic-authorities.json", data.sources.filter((s) => s.authority_role).map((s) => ({\n    id: s.id, title: s.title, authority_role: s.authority_role, taxonomic_scope: s.taxonomic_scope ?? [],\n    identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,\n  })));\n  put("sources.json", data.sources.map((s) => ({
+  put("taxonomic-authorities.json", data.sources.filter((s) => s.authority_role).map((s) => ({
+    id: s.id, title: s.title, authority_role: s.authority_role, taxonomic_scope: s.taxonomic_scope ?? [],
+    identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,
+  })));
+  put("sources.json", data.sources.map((s) => ({
     id: s.id, kind: s.kind, title: s.title, year: s.year, citation: s.citation,
-    authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),\n    authority_role: s.authority_role ?? null, taxonomic_scope: s.taxonomic_scope ?? [], identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
+    authors: s.authors ?? null, doi: s.doi ?? null, url: s.url ?? (s.doi ? `https://doi.org/${s.doi}` : null),
+    authority_role: s.authority_role ?? null, taxonomic_scope: s.taxonomic_scope ?? [], identifier_scheme: s.identifier_scheme ?? null,
+    update_policy: s.update_policy ?? null, legacy: s.legacy ?? false,
   })));
   const hay = (...p) => p.filter(Boolean).join(" ").toLowerCase();
   put("search.json", [
