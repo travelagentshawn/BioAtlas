@@ -146,5 +146,49 @@
       "group": "Modules",
       "file": "en/platform-modules.md"
     }
+  ],
+  "ja": [
+    {
+      "slug": "overview",
+      "title": "概要",
+      "group": "はじめに",
+      "file": "ja/overview.md"
+    },
+    {
+      "slug": "quickstart",
+      "title": "クイックスタート",
+      "group": "はじめに",
+      "file": "ja/quickstart.md"
+    },
+    {
+      "slug": "architecture",
+      "title": "アーキテクチャ",
+      "group": "設計",
+      "file": "ja/architecture.md"
+    },
+    {
+      "slug": "data-model",
+      "title": "データモデル",
+      "group": "設計",
+      "file": "ja/data-model.md"
+    },
+    {
+      "slug": "contributing-data",
+      "title": "データ提供と科学的ルール",
+      "group": "開発",
+      "file": "ja/contributing-data.md"
+    },
+    {
+      "slug": "platform-modules",
+      "title": "プラットフォーム機能",
+      "group": "機能",
+      "file": "ja/platform-modules.md"
+    },
+    {
+      "slug": "roadmap",
+      "title": "ロードマップ",
+      "group": "計画",
+      "file": "ja/roadmap.md"
+    }
   ]
 }
