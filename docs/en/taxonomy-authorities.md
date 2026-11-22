@@ -18,7 +18,7 @@ The structured registry is published at `/api/v1/taxonomic-authorities.json`. Th
 
 | Group / purpose | Preferred authority | Governance note |
 | --- | --- | --- |
-| Global discovery and crosswalk | Catalogue of Life eXtended Release (COL XR) | Current GBIF primary taxonomy uses COL XR. Pin the release used for each import. |
+| Global discovery and crosswalk | Catalogue of Life Base + eXtended Release (COL XR) | Base prioritises scrutinised global sources; XR maximises completeness through additional integrations. GBIF currently uses XR as its primary taxonomy. Pin the release and distinguish Base from XR in every import. |
 | Plants: published names | International Plant Names Index (IPNI) | Nomenclatural index, not by itself an accepted-species checklist. |
 | Plants: accepted names and distribution | Plants of the World Online (POWO) | Record access date and taxon page; check specialist literature when disputed. |
 | Angiosperm higher classification | APG IV (and later published APG updates when available) | Explicitly versioned framework for orders and families of flowering plants. |
