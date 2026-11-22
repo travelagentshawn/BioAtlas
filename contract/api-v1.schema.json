@@ -592,6 +592,27 @@
                   "object",
                   "null"
                 ]
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "source": {
+                      "type": "string"
+                    },
+                    "note": {
+                      "$ref": "#/$defs/i18n"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "source"
+                  ]
+                }
               }
             },
             "required": [
