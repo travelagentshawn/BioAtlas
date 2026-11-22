@@ -130,6 +130,12 @@
               "type": "null"
             }
           ]
+        },
+        "taxonomic_assertions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaxonomicAssertion"
+          }
         }
       },
       "required": [
@@ -309,6 +315,33 @@
         },
         "citation": {
           "type": "string"
+        },
+        "authority_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "taxonomic_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "identifier_scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "update_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "legacy": {
+          "type": "boolean"
         }
       },
       "required": [
@@ -316,7 +349,12 @@
         "kind",
         "title",
         "year",
-        "citation"
+        "citation",
+        "authority_role",
+        "taxonomic_scope",
+        "identifier_scheme",
+        "update_policy",
+        "legacy"
       ]
     },
     "Species": {
@@ -457,6 +495,12 @@
               "type": "null"
             }
           ]
+        },
+        "taxonomic_assertions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/TaxonomicAssertion"
+          }
         }
       },
       "required": [
@@ -822,6 +866,103 @@
         "method",
         "scope",
         "sources"
+      ]
+    },
+    "TaxonomicAssertion": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "string"
+        },
+        "record_id": {
+          "type": "string"
+        },
+        "scientific_name": {
+          "type": "string"
+        },
+        "name_status": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "synonym",
+            "unresolved",
+            "unassessed"
+          ]
+        },
+        "classification_system": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "accessed_at": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "notes": {
+          "$ref": "#/$defs/i18n"
+        }
+      },
+      "required": [
+        "authority",
+        "record_id",
+        "scientific_name",
+        "name_status",
+        "accessed_at",
+        "source"
+      ]
+    },
+    "TaxonomicAuthority": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "authority_role": {
+          "type": "string"
+        },
+        "taxonomic_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "identifier_scheme": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "update_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "legacy": {
+          "type": "boolean"
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "authority_role",
+        "taxonomic_scope",
+        "identifier_scheme",
+        "update_policy",
+        "legacy",
+        "url"
       ]
     }
   }
