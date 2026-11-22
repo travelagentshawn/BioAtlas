@@ -25,7 +25,7 @@ const clip = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 export function render(root, { collapsed = new Set(), onToggle, showAge = true, dark = false, focusId = null, leafWidth = 320 } = {}) {
   const L = layout(root, collapsed);
   const W = L.width + leafWidth, H = L.height + 8;
-  const el = svg("svg", { class: "cladogram", width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "tree" });
+  const el = svg("svg", { class: "cladogram", width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "group", "aria-label": tr("生命之树示意图。分类名称可打开详情，节点圆点可展开或折叠。需要层级列表阅读时，请切换到大纲视图。", "Phylogeny diagram. Taxon labels open details and node dots expand or collapse branches. Switch to Outline view for a hierarchical list.") });
   const edges = svg("g", { class: "edges" }), nodes = svg("g", { class: "nodes" });
   el.append(edges, nodes);
 
