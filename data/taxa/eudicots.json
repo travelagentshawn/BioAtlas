@@ -1,0 +1,46 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "eudicots",
+  "rank": "clade",
+  "scientific_name": "Eudicotyledoneae",
+  "parent": "angiospermae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "真双子叶植物",
+    "en": "Eudicots"
+  },
+  "summary": {
+    "zh": "以三沟花粉为共同衍征，约占被子植物的四分之三。",
+    "en": "United by tricolpate pollen; roughly three quarters of all angiosperm species."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 140,
+      "min": 125,
+      "max": 170,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "三沟花粉",
+        "en": "Tricolpate pollen"
+      }
+    ],
+    "debate": {
+      "zh": "传统的‘双子叶植物’是并系类群；分子证据把它拆成木兰类、基部被子植物与真双子叶。",
+      "en": "The traditional 'dicots' are paraphyletic; molecular data split them into magnoliids, basal angiosperms and eudicots."
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "arikawa-2017",
+  "kind": "paper",
+  "title": "The eyes and vision of butterflies",
+  "year": 2017,
+  "authors": "Arikawa K",
+  "venue": "The Journal of Physiology",
+  "citation": "Arikawa K (2017) The eyes and vision of butterflies. The Journal of Physiology 595(16): 5457–5464."
+}

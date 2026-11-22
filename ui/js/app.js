@@ -1,0 +1,95 @@
+// Shell: header, hash router, theme and language toggles, footer.
+import { h, clear } from "./dom.js";
+import { api, REPO, API_BASE } from "./api.js";
+import { tr, getLang, setLang } from "./i18n.js";
+import { loading, failure } from "./components.js";
+
+const routes = [
+  ["", () => import("./views/home.js").then((m) => m.home)],
+  ["explore", () => import("./views/explore.js").then((m) => m.explore)],
+  ["species/:id", () => import("./views/species.js").then((m) => m.speciesView)],
+  ["taxon/:id", () => import("./views/taxon.js").then((m) => m.taxonView)],
+  ["tree", () => import("./views/tree.js").then((m) => m.treeView)],
+  ["regions", () => import("./views/regions.js").then((m) => m.regionsView)],
+  ["region/:id", () => import("./views/regions.js").then((m) => m.regionView)],
+  ["planner", () => import("./views/planner.js").then((m) => m.plannerView)],
+  ["docs", () => import("./views/docs.js").then((m) => m.docsView)],
+  ["docs/:slug", () => import("./views/docs.js").then((m) => m.docsView)],
+];
+
+function parse() {
+  const raw = location.hash.replace(/^#\/?/, "");
+  const [path, qs = ""] = raw.split("?");
+  const segs = path.split("/").filter(Boolean).map(decodeURIComponent);
+  for (const [pattern, loader] of routes) {
+    const p = pattern.split("/").filter(Boolean);
+    if (p.length !== segs.length) continue;
+    const params = {};
+    if (p.every((s, i) => (s.startsWith(":") ? ((params[s.slice(1)] = segs[i]), true) : s === segs[i]))) {
+      return { loader, params, query: new URLSearchParams(qs), name: segs[0] || "home" };
+    }
+  }
+  return { loader: () => Promise.resolve((r) => r.append(h("div", { class: "state" }, tr("页面不存在。", "Page not found.")))), params: {}, query: new URLSearchParams(), name: "404" };
+}
+
+const main = h("main", { id: "view", tabindex: "-1" });
+const navLinks = [
+  ["explore", tr("探索", "Explore")], ["tree", tr("生命之树", "Tree of life")], ["regions", tr("旅行场景", "Scenes")],
+  ["planner", tr("行程工作台", "Workbench")], ["docs", "Documentation"],
+];
+
+function header() {
+  const theme = document.documentElement.dataset.theme;
+  return h("header", { class: "site-header" }, h("div", { class: "wrap bar" },
+    h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
+    h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l]) => h("a", { href: `#/${k}`, "data-k": k }, l))),
+    h("div", { class: "tools" },
+      h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(getLang() === "zh" ? "en" : "zh"); boot(); } }, getLang() === "zh" ? "EN" : "中"),
+      h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
+        const next = (document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next; try { localStorage.setItem("bioatlas.theme", next); } catch { /* ignore */ } route();
+      } }, theme === "dark" ? "☀" : "☾"),
+      h("a", { class: "icon-btn gh", href: REPO.url, target: "_blank", rel: "noopener noreferrer", title: "GitHub" }, "GitHub"))));
+}
+
+async function footer() {
+  let m = null; try { m = await api.manifest(); } catch { /* shown by views */ }
+  return h("footer", { class: "site-footer" }, h("div", { class: "wrap" },
+    h("div", null, h("b", null, "BioAtlas"), " · ", tr("开源的旅途动植物图鉴：代码 MIT，数据 CC BY 4.0。", "Open travel field atlas — code MIT, data CC BY 4.0.")),
+    h("div", { class: "muted" },
+      m ? `API v${m.api_version} · data ${m.data_hash} · ${m.counts.species} ${tr("物种", "species")}` : "",
+      " · ", h("a", { href: `${API_BASE}/manifest.json`, target: "_blank", rel: "noopener" }, "manifest.json"),
+      " · ", h("a", { href: "./llms.txt", target: "_blank", rel: "noopener" }, "llms.txt"),
+      " · ", h("a", { href: `${REPO.url}/issues`, target: "_blank", rel: "noopener noreferrer" }, tr("反馈与贡献", "Issues & contributions")))));
+}
+
+let token = 0;
+async function route() {
+  const my = ++token;
+  const r = parse();
+  document.querySelectorAll(".nav a").forEach((a) => a.classList.toggle("on", a.dataset.k === r.name));
+  clear(main).append(loading());
+  try {
+    const view = await r.loader();
+    if (my !== token) return;
+    const holder = h("div", { class: "wrap view" });
+    await view(holder, r);
+    if (my !== token) return;
+    clear(main).append(holder);
+    window.scrollTo(0, r.query.get("a") ? window.scrollY : 0);
+    document.title = (holder.querySelector("h1")?.textContent || "BioAtlas") + " · BioAtlas";
+  } catch (e) {
+    if (my === token) { console.error(e); clear(main).append(h("div", { class: "wrap view" }, failure(e))); }
+  }
+}
+
+async function boot() {
+  const app = document.getElementById("app");
+  clear(app).append(header(), main, h("div", { id: "foot" }));
+  footer().then((f) => document.getElementById("foot")?.replaceWith(f));
+  route();
+}
+
+try { const t = localStorage.getItem("bioatlas.theme"); if (t) document.documentElement.dataset.theme = t; } catch { /* ignore */ }
+addEventListener("hashchange", route);
+boot();

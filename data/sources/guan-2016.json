@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "guan-2016",
+  "kind": "paper",
+  "title": "Draft genome of the living fossil Ginkgo biloba",
+  "year": 2016,
+  "authors": "Guan R, et al.",
+  "venue": "GigaScience",
+  "doi": "10.1186/s13742-016-0154-1",
+  "citation": "Guan R, et al. (2016) Draft genome of the living fossil Ginkgo biloba. GigaScience 5: 49."
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "temple-garden-east-asia",
+  "kind": "scene",
+  "names": {
+    "zh": "东亚寺庙庭园",
+    "en": "East Asian temple gardens"
+  },
+  "description": {
+    "zh": "寺庙庭园保留了古树与池塘，是在城市里集中看植物与鸟的好去处。",
+    "en": "Temple gardens preserve old trees and ponds, making them compact places to see plants and birds in a city."
+  },
+  "countries": [
+    "JP",
+    "CN",
+    "KR"
+  ],
+  "habitats": [
+    "temple-garden",
+    "pond"
+  ],
+  "species": [
+    {
+      "species": "ginkgo-biloba",
+      "months": [
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common",
+      "note": {
+        "zh": "银杏古树常是寺庙的地标。",
+        "en": "Old ginkgoes are often a temple landmark."
+      }
+    },
+    {
+      "species": "cinnamomum-camphora",
+      "months": [
+        3,
+        4,
+        5
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "acer-palmatum",
+      "months": [
+        10,
+        11
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "nelumbo-nucifera",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "cyprinus-carpio",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "pycnonotus-sinensis",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "passer-montanus",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    }
+  ],
+  "review_status": "seed"
+}

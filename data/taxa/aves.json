@@ -1,0 +1,37 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "aves",
+  "rank": "class",
+  "scientific_name": "Aves",
+  "parent": "tetrapoda",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鸟纲",
+    "en": "Birds"
+  },
+  "summary": {
+    "zh": "兽脚类恐龙的现存后裔，现存约 1 万余种。",
+    "en": "Living descendants of theropod dinosaurs, ~10,000+ species."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 110,
+      "min": 100,
+      "max": 125,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "debate": {
+      "zh": "新鸟类早期快速辐射，基因组与靶向测序对若干深层分支的结论不一致。",
+      "en": "Neoaves radiated rapidly; genome-scale and targeted-sequencing studies disagree on some deep branches."
+    }
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

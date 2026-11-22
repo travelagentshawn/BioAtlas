@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "rosaceae",
+  "rank": "family",
+  "scientific_name": "Rosaceae",
+  "parent": "rosids",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "蔷薇科",
+    "en": "Rose family"
+  },
+  "summary": {
+    "zh": "樱、梅、苹果、梨、玫瑰所在的科，花多辐射对称，5 瓣。",
+    "en": "Cherries, plums, apples, pears and roses; flowers usually radial with five petals."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

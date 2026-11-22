@@ -1,0 +1,93 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "nara-park-japan",
+  "kind": "destination",
+  "names": {
+    "zh": "奈良公园（日本）",
+    "en": "Nara Park, Japan"
+  },
+  "description": {
+    "zh": "古都公园与神社，鹿与古树同框。",
+    "en": "An ancient-capital park and shrines where deer and old trees share the scene."
+  },
+  "countries": [
+    "JP"
+  ],
+  "center": {
+    "lat": 34.685,
+    "lng": 135.843
+  },
+  "radius_km": 3,
+  "habitats": [
+    "temple-garden",
+    "urban-park",
+    "forest"
+  ],
+  "species": [
+    {
+      "species": "cervus-nippon",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common",
+      "note": {
+        "zh": "鹿在公园内自由活动。",
+        "en": "Deer roam freely in the park."
+      }
+    },
+    {
+      "species": "acer-palmatum",
+      "months": [
+        11
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "ginkgo-biloba",
+      "months": [
+        11,
+        12
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "prunus-x-yedoensis",
+      "months": [
+        3,
+        4
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "pycnonotus-sinensis",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular"
+    }
+  ],
+  "review_status": "seed"
+}

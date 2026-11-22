@@ -1,0 +1,77 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "nelumbo-nucifera",
+  "scientific_name": "Nelumbo nucifera",
+  "taxon": "nelumbonaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "莲",
+    "en": "Sacred lotus"
+  },
+  "summary": {
+    "zh": "水生植物，叶片疏水（荷叶效应）。看似睡莲，在进化树上却相隔甚远。",
+    "en": "An aquatic plant with water-repellent leaves. It looks like a water lily but sits far from it on the tree."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "盾状叶挺出水面，叶柄有刺；花大，单生；莲蓬中有多个孔穴。",
+      "en": "Peltate leaves held above water on prickly stalks; large solitary flowers; a perforated seed head."
+    },
+    "similar": {
+      "zh": "睡莲叶漂浮在水面，叶有深裂缝；莲叶挺水，无裂缝。",
+      "en": "Water-lily leaves float and have a cleft; lotus leaves stand above water and have none."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "莲基因组研究发现其缺少核心真双子叶植物共有的古三倍化事件，并有自己谱系特有的全基因组复制，替换速率较慢。",
+      "en": "The lotus genome lacks the ancient triplication shared by core eudicots, shows a lineage-specific whole-genome duplication, and evolves slowly."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "ming-2013"
+      },
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "盛花期约 6–8 月，清晨开放最佳；秋季为枯荷与莲蓬。",
+      "en": "Peak bloom June–August, best at dawn; autumn brings dried leaves and seed heads."
+    },
+    "best_months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "habitats": [
+      "pond",
+      "temple-garden",
+      "urban-park",
+      "wetland"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "IN",
+      "VN",
+      "TH"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "ming-2013",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

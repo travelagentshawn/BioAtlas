@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "innan-1995",
+  "kind": "paper",
+  "title": "DNA fingerprinting study on the intraspecific variation and the origin of Prunus yedoensis (Someiyoshino)",
+  "year": 1995,
+  "authors": "Innan H, Terauchi R, Miyashita NT, Tsunewaki K",
+  "venue": "Japanese Journal of Genetics",
+  "citation": "Innan H, Terauchi R, Miyashita NT, Tsunewaki K (1995) DNA fingerprinting study on the intraspecific variation and the origin of Prunus yedoensis (Someiyoshino). Japanese Journal of Genetics 70: 185–196."
+}

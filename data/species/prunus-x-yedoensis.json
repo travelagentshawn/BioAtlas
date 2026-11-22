@@ -1,0 +1,72 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "prunus-x-yedoensis",
+  "scientific_name": "Prunus × yedoensis",
+  "taxon": "rosaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "染井吉野樱",
+    "en": "Yoshino cherry (Somei-yoshino)"
+  },
+  "summary": {
+    "zh": "东亚赏樱的主角。绝大多数树是同一个克隆，因此全城同时开花。",
+    "en": "The star of East Asian cherry viewing. Most trees are a single clone, which is why a whole city blooms at once."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "先花后叶，花近白色略带粉，5 瓣；萼筒与花梗有毛；树形舒展。",
+      "en": "Blooms before leaves; near-white, faintly pink, five petals; hairy calyx tube and flower stalks; spreading crown."
+    },
+    "similar": {
+      "zh": "与山樱的区别：山樱花叶同放，且各株花期不一。",
+      "en": "Wild mountain cherries bloom with leaves emerging and vary in timing between trees."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "染井吉野樱是杂交起源的栽培品种，分子指纹研究支持其亲本为江户彼岸樱与大岛樱，并以嫁接繁殖，所以遗传上几乎同一。同一基因型对气温响应一致，开花齐整。",
+      "en": "A hybrid-origin cultivar; molecular fingerprinting supports Edo-higan and Oshima cherry as parents. It is propagated by grafting, so trees are essentially genetically identical and respond to temperature in unison."
+    },
+    "evidence": [
+      {
+        "type": "molecular-clock",
+        "source": "innan-1995",
+        "note": {
+          "zh": "DNA 指纹研究杂交起源。",
+          "en": "DNA fingerprinting of hybrid origin."
+        }
+      },
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "花期随纬度由南向北推进：日本南部 3 月下旬，东京约 3 月底至 4 月初。花期短，满开约一周。",
+      "en": "The bloom front moves north: late March in southern Japan, around late March–early April in Tokyo. Full bloom lasts about a week."
+    },
+    "best_months": [
+      3,
+      4
+    ],
+    "habitats": [
+      "urban-park",
+      "temple-garden",
+      "river-lake",
+      "street"
+    ],
+    "countries": [
+      "JP",
+      "KR",
+      "CN"
+    ]
+  },
+  "sources": [
+    "innan-1995",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

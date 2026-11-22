@@ -1,0 +1,103 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "rice-paddy-wetland-asia",
+  "kind": "scene",
+  "names": {
+    "zh": "亚洲稻田与湿地",
+    "en": "Asian paddies and wetlands"
+  },
+  "description": {
+    "zh": "灌水的稻田既是粮仓也是鹭、蜻蜓的觅食地。",
+    "en": "Flooded paddies are both granaries and feeding grounds for egrets and dragonflies."
+  },
+  "countries": [
+    "CN",
+    "JP",
+    "KR",
+    "TH",
+    "VN",
+    "IN"
+  ],
+  "habitats": [
+    "paddy",
+    "wetland",
+    "farmland"
+  ],
+  "species": [
+    {
+      "species": "oryza-sativa",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "egretta-garzetta",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "pantala-flavescens",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "equisetum-arvense",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "passer-montanus",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    }
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "odonata",
+  "rank": "order",
+  "scientific_name": "Odonata",
+  "parent": "insecta",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "蜻蜓目",
+    "en": "Dragonflies and damselflies"
+  },
+  "summary": {
+    "zh": "不完全变态，稚虫水生；是最古老的有翅昆虫类群之一。",
+    "en": "Hemimetabolous with aquatic nymphs; among the oldest winged insect lineages."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 300,
+      "min": 250,
+      "max": 330,
+      "confidence": "approximate",
+      "source": "misof-2014"
+    }
+  },
+  "sources": [
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

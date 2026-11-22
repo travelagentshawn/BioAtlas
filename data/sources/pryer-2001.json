@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "pryer-2001",
+  "kind": "paper",
+  "title": "Horsetails and ferns are a monophyletic group and the closest living relatives to seed plants",
+  "year": 2001,
+  "authors": "Pryer KM, et al.",
+  "venue": "Nature",
+  "doi": "10.1038/35054555",
+  "citation": "Pryer KM, et al. (2001) Horsetails and ferns are a monophyletic group and the closest living relatives to seed plants. Nature 409: 618–622."
+}

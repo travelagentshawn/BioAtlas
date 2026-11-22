@@ -1,0 +1,80 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "passer-montanus",
+  "scientific_name": "Passer montanus",
+  "taxon": "passeridae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "麻雀（树麻雀）",
+    "en": "Eurasian tree sparrow"
+  },
+  "summary": {
+    "zh": "与人类聚居地最密切的小鸟，男女同色。",
+    "en": "The small bird that lives closest to humans; the sexes look alike."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "头顶栗褐，脸颊白色，中间有黑色斑块；喉部黑。",
+      "en": "Chestnut crown, white cheek with a black spot, black throat."
+    },
+    "similar": {
+      "zh": "家麻雀雄鸟脸颊无黑斑，雌雄颜色不同。",
+      "en": "House sparrow males lack the cheek spot, and the sexes differ."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "雀科是雀形目中的一个科，该目约占现存鸟类的一半以上。",
+      "en": "Sparrows belong to Passeriformes, which hold more than half of all living bird species."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "prum-2015"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "市集、车站与小吃摊旁最容易观察。",
+      "en": "Easy to watch near markets, stations and food stalls."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "street",
+      "building",
+      "farmland",
+      "urban-park"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR",
+      "TH",
+      "VN"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

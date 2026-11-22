@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "li-2010-panda",
+  "kind": "paper",
+  "title": "The sequence and de novo assembly of the giant panda genome",
+  "year": 2010,
+  "authors": "Li R, et al.",
+  "venue": "Nature",
+  "doi": "10.1038/nature08696",
+  "citation": "Li R, et al. (2010) The sequence and de novo assembly of the giant panda genome. Nature 463: 311–317."
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "artiodactyla",
+  "rank": "order",
+  "scientific_name": "Artiodactyla",
+  "parent": "mammalia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "偶蹄目",
+    "en": "Even-toed ungulates"
+  },
+  "summary": {
+    "zh": "分子证据显示鲸类嵌套其中，所以现代分类常称‘鲸偶蹄目’。",
+    "en": "Molecular data nest whales inside it, so modern usage often says Cetartiodactyla."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 55,
+      "min": 50,
+      "max": 65,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "debate": {
+      "zh": "传统偶蹄目（不含鲸）是并系类群。",
+      "en": "The traditional Artiodactyla excluding whales is paraphyletic."
+    }
+  },
+  "sources": [
+    "upham-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

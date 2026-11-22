@@ -1,0 +1,43 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "tracheophyta",
+  "rank": "clade",
+  "scientific_name": "Tracheophyta",
+  "parent": "viridiplantae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "维管植物",
+    "en": "Vascular plants"
+  },
+  "summary": {
+    "zh": "具有木质部与韧皮部的陆生植物，涵盖石松、蕨类、裸子植物与被子植物。",
+    "en": "Land plants with xylem and phloem: lycophytes, ferns, gymnosperms and angiosperms."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 430,
+      "min": 410,
+      "max": 450,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "木质部输水组织（管胞）",
+        "en": "Water-conducting xylem (tracheids)"
+      },
+      {
+        "zh": "孢子体占优势的生活史",
+        "en": "Sporophyte-dominant life cycle"
+      }
+    ]
+  },
+  "sources": [
+    "one-thousand-plant-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "ginkgoaceae",
+  "rank": "family",
+  "scientific_name": "Ginkgoaceae",
+  "parent": "gymnospermae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "银杏科",
+    "en": "Ginkgo family"
+  },
+  "summary": {
+    "zh": "仅存银杏一种，是活化石，扇形叶具二叉脉。",
+    "en": "One living species, a 'living fossil' with fan-shaped leaves and dichotomous venation."
+  },
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "guan-2016",
+    "christenhusz-2011"
+  ],
+  "review_status": "seed"
+}

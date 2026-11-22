@@ -1,0 +1,77 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "phyllostachys-edulis",
+  "scientific_name": "Phyllostachys edulis",
+  "synonyms": [
+    "Phyllostachys heterocycla",
+    "Phyllostachys pubescens"
+  ],
+  "taxon": "poaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "毛竹（楠竹）",
+    "en": "Moso bamboo"
+  },
+  "summary": {
+    "zh": "中国分布最广的大型竹，竹海与竹笋的主角。",
+    "en": "The most widespread large bamboo in China; the star of bamboo seas and spring shoots."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "秆高可达 20 m，秆环平，节间有粉；笋壳有褐色斑点和毛。",
+      "en": "Culms up to 20 m with waxy internodes; shoot sheaths are brown-spotted and hairy."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "竹类属于禾本科的一个分支，却长成树的形态。毛竹基因组显示竹类经历过古多倍化。竹子开花周期极长（以数十年计）且常同步，是进化生态学上的有趣现象。",
+      "en": "Bamboos are a branch of the grass family that evolved a tree-like habit. The moso genome records an ancient polyploidy. Flowering cycles are very long (decades) and often synchronised."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "peng-2013",
+        "note": {
+          "zh": "毛竹（异名 P. heterocycla）基因组草图。",
+          "en": "Draft genome (as P. heterocycla)."
+        }
+      },
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "春笋期约 3–5 月；全年常绿，雨后与晨雾中尤其出片。竹海区域步道多湿滑。",
+      "en": "Shoot season runs roughly March–May; evergreen year-round and especially photogenic in mist. Trails through bamboo are often slippery."
+    },
+    "best_months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "habitats": [
+      "mountain",
+      "forest",
+      "temple-garden"
+    ],
+    "countries": [
+      "CN",
+      "JP"
+    ]
+  },
+  "sources": [
+    "peng-2013",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

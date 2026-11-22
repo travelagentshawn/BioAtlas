@@ -1,0 +1,118 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "urban-park-ponds-east-asia",
+  "kind": "scene",
+  "names": {
+    "zh": "东亚城市公园与池塘",
+    "en": "East Asian urban parks and ponds"
+  },
+  "description": {
+    "zh": "城市公园的池塘与树林聚集了冬季水鸟与春季樱花。",
+    "en": "City park ponds and woods gather winter waterfowl and spring blossoms."
+  },
+  "countries": [
+    "JP",
+    "CN",
+    "KR"
+  ],
+  "habitats": [
+    "urban-park",
+    "pond",
+    "river-lake"
+  ],
+  "species": [
+    {
+      "species": "aix-galericulata",
+      "months": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "egretta-garzetta",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "papilio-xuthus",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "pycnonotus-sinensis",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "prunus-x-yedoensis",
+      "months": [
+        3,
+        4
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "cyprinus-carpio",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "metasequoia-glyptostroboides",
+      "months": [
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular"
+    }
+  ],
+  "review_status": "seed"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "one-thousand-plant-2019",
+  "kind": "paper",
+  "title": "One thousand plant transcriptomes and the phylogenomics of green plants",
+  "year": 2019,
+  "authors": "One Thousand Plant Transcriptomes Initiative",
+  "venue": "Nature",
+  "doi": "10.1038/s41586-019-1693-2",
+  "citation": "One Thousand Plant Transcriptomes Initiative (2019) One thousand plant transcriptomes and the phylogenomics of green plants. Nature 574: 679–685."
+}

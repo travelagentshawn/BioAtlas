@@ -1,0 +1,4 @@
+dist/
+.tmp-check/
+node_modules/
+.DS_Store

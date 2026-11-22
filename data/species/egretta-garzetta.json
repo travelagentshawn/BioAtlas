@@ -1,0 +1,85 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "egretta-garzetta",
+  "scientific_name": "Egretta garzetta",
+  "taxon": "ardeidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "白鹭",
+    "en": "Little egret"
+  },
+  "summary": {
+    "zh": "稻田与湿地常见的白色中型鹭。",
+    "en": "A medium white heron common in paddies and wetlands."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "全身白，黑嘴、黑腿、黄脚趾；繁殖期头后有两根长饰羽。",
+      "en": "All white with a black bill, black legs and yellow toes; two long head plumes in the breeding season."
+    },
+    "similar": {
+      "zh": "大白鹭体型更大、嘴黄色；牛背鹭较矮胖。",
+      "en": "Great egret is larger with a yellow bill; cattle egret is stockier."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "鹭科在鸟类系统树上属于鹈形目。鸟类深层关系在不同基因组研究间有分歧，但科内关系较稳定。",
+      "en": "Herons sit in Pelecaniformes. Deep bird relationships differ across genome studies, but family-level groupings are more stable."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "jarvis-2014"
+      },
+      {
+        "type": "phylogenomics",
+        "source": "prum-2015"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "全年可见，春季繁殖期饰羽最漂亮；稻田灌水期是观察高峰。",
+      "en": "Visible all year; plumes are best in spring; flooded paddies are a good place to look."
+    },
+    "best_months": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "paddy",
+      "wetland",
+      "pond",
+      "river-lake"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR",
+      "TH",
+      "VN"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

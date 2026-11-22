@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "cyprinus-carpio",
+  "scientific_name": "Cyprinus carpio",
+  "taxon": "cyprinidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鲤（含锦鲤）",
+    "en": "Common carp (incl. koi)"
+  },
+  "summary": {
+    "zh": "寺庙与公园池塘里的锦鲤是观赏型鲤鱼，经日本人工选育。",
+    "en": "Koi in temple and park ponds are ornamental carp selected in Japan."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "口角有两对须，背鳍长且前部有锯齿状硬刺。锦鲤颜色多样，由选育得到。",
+      "en": "Two pairs of barbels at the mouth; a long dorsal fin with a serrated spine. Koi colours are the result of selection."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "鲤的基因组显示额外发生过一次全基因组复制，约在数百万年前，使其基因组呈四倍体特征。锦鲤的分类地位有争议，有观点将其归于 C. rubrofuscus。",
+      "en": "The carp genome records an additional whole-genome duplication several million years ago, giving a tetraploid-like genome. The taxonomic status of koi is debated, with some authors using C. rubrofuscus."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "xu-2014-carp"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "全年可见，水温适宜的 4–10 月最活跃。请勿投喂寺庙规定之外的食物。",
+      "en": "Visible all year, most active April–October. Feed only what the site permits."
+    },
+    "best_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "habitats": [
+      "pond",
+      "temple-garden",
+      "urban-park",
+      "river-lake"
+    ],
+    "countries": [
+      "JP",
+      "CN",
+      "KR"
+    ]
+  },
+  "conservation": {
+    "iucn": "VU",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "xu-2014-carp"
+  ],
+  "review_status": "seed"
+}

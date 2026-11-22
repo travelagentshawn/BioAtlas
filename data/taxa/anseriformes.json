@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "anseriformes",
+  "rank": "order",
+  "scientific_name": "Anseriformes",
+  "parent": "aves",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "雁形目",
+    "en": "Waterfowl"
+  },
+  "summary": {
+    "zh": "鸭、鹅、天鹅，趾间有蹼，喙扁平。",
+    "en": "Ducks, geese and swans: webbed feet and flattened bills."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

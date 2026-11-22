@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "primates",
+  "rank": "order",
+  "scientific_name": "Primates",
+  "parent": "mammalia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "灵长目",
+    "en": "Primates"
+  },
+  "summary": {
+    "zh": "具对生拇指与前视双眼，包括原猴、猴与猿。",
+    "en": "Opposable thumbs and forward-facing eyes: prosimians, monkeys and apes."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 70,
+      "min": 60,
+      "max": 85,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "upham-2019",
+    "timetree-5-2022"
+  ],
+  "review_status": "seed"
+}

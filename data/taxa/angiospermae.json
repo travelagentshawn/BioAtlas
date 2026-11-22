@@ -1,0 +1,49 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "angiospermae",
+  "rank": "clade",
+  "scientific_name": "Angiospermae",
+  "parent": "spermatophyta",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "被子植物",
+    "en": "Flowering plants"
+  },
+  "summary": {
+    "zh": "有花、有果实、有双受精的种子植物，约 30 万种，是现代陆地植被的主体。",
+    "en": "Seed plants with flowers, fruit and double fertilisation; ~300,000 species dominating modern vegetation."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 200,
+      "min": 140,
+      "max": 250,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "synapomorphies": [
+      {
+        "zh": "胚珠包藏于心皮内",
+        "en": "Ovules enclosed in carpels"
+      },
+      {
+        "zh": "双受精与胚乳",
+        "en": "Double fertilisation and endosperm"
+      }
+    ],
+    "debate": {
+      "zh": "冠群年龄估计差异很大（约 1.4 亿至 2.5 亿年前），化石最早可靠记录约 1.25 亿年前。",
+      "en": "Crown-group age estimates vary widely (~140–250 Mya); the oldest secure fossils are ~125 Mya."
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "one-thousand-plant-2019"
+  ],
+  "review_status": "seed"
+}

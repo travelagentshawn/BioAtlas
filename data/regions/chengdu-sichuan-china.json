@@ -1,0 +1,109 @@
+{
+  "$schema": "../../schema/region.schema.json",
+  "type": "region",
+  "id": "chengdu-sichuan-china",
+  "kind": "destination",
+  "names": {
+    "zh": "成都与川西（中国）",
+    "en": "Chengdu and western Sichuan, China"
+  },
+  "description": {
+    "zh": "熊猫繁育研究基地、竹林与茶园同在一个区域。",
+    "en": "Panda breeding centres, bamboo groves and tea gardens all lie within one region."
+  },
+  "countries": [
+    "CN"
+  ],
+  "center": {
+    "lat": 30.66,
+    "lng": 104.07
+  },
+  "radius_km": 80,
+  "habitats": [
+    "urban-park",
+    "mountain",
+    "forest",
+    "farmland"
+  ],
+  "species": [
+    {
+      "species": "ailuropoda-melanoleuca",
+      "months": [
+        3,
+        4,
+        5,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular",
+      "note": {
+        "zh": "基地内观察最稳妥。",
+        "en": "Observation is most reliable inside breeding centres."
+      }
+    },
+    {
+      "species": "phyllostachys-edulis",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "cinnamomum-camphora",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "common"
+    },
+    {
+      "species": "camellia-sinensis",
+      "months": [
+        3,
+        4,
+        5,
+        10,
+        11
+      ],
+      "likelihood": "regular"
+    },
+    {
+      "species": "egretta-garzetta",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "likelihood": "regular"
+    }
+  ],
+  "review_status": "seed"
+}

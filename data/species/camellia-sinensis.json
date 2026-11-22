@@ -1,0 +1,66 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "camellia-sinensis",
+  "scientific_name": "Camellia sinensis",
+  "taxon": "theaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "茶",
+    "en": "Tea plant"
+  },
+  "summary": {
+    "zh": "所有茶（绿、红、乌龙、普洱）都来自这一种植物。",
+    "en": "All true teas — green, black, oolong, pu-erh — come from this one species."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "常绿灌木，叶革质、边缘有细齿；秋季开白色小花，花黄蕊多。",
+      "en": "Evergreen shrub, leathery serrate leaves; small white autumn flowers with many yellow stamens."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "基因组研究显示茶与咖啡各自独立演化出咖啡因合成能力，这是趋同演化的有力例子。",
+      "en": "Genome work shows tea and coffee evolved caffeine biosynthesis independently — a clear case of convergent evolution."
+    },
+    "evidence": [
+      {
+        "type": "genome",
+        "source": "xia-2017-tea"
+      },
+      {
+        "type": "classification",
+        "source": "apg-iv-2016"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "春茶采摘约 3–5 月；10–12 月为花期。茶园内请沿步道行走，勿采摘。",
+      "en": "Spring harvest runs March–May; flowers appear October–December. Stay on paths in plantations and do not pick leaves."
+    },
+    "best_months": [
+      3,
+      4,
+      5,
+      10,
+      11
+    ],
+    "habitats": [
+      "mountain",
+      "farmland"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "IN",
+      "LK"
+    ]
+  },
+  "sources": [
+    "xia-2017-tea",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

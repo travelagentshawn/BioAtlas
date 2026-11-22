@@ -1,0 +1,84 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "metasequoia-glyptostroboides",
+  "scientific_name": "Metasequoia glyptostroboides",
+  "taxon": "cupressaceae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "水杉",
+    "en": "Dawn redwood"
+  },
+  "summary": {
+    "zh": "落叶针叶树。先以化石被描述，后在湖北被发现仍有活树，是‘活化石’的经典案例。",
+    "en": "A deciduous conifer described first from fossils, then found alive in Hubei — a textbook 'living fossil'."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "羽状小枝与叶都对生，秋季整枝脱落，树冠呈塔形，树干基部膨大有纵沟。",
+      "en": "Feathery shoots with opposite leaves; whole twigs drop in autumn. Pyramidal crown, fluted buttressed trunk base."
+    },
+    "similar": {
+      "zh": "与落羽杉相似，但落羽杉叶互生。",
+      "en": "Resembles bald cypress, whose leaves are alternate rather than opposite."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "水杉属在白垩纪至新近纪广布北半球，化石常见；20 世纪 40 年代在湖北、四川交界处发现现存个体，1948 年由胡先骕与郑万钧正式命名。现行分类把原杉科并入柏科。",
+      "en": "Metasequoia was widespread across the Northern Hemisphere from the Cretaceous to the Neogene. Living trees were found in the 1940s on the Hubei–Sichuan border and named formally in 1948. Current systems place the former Taxodiaceae in Cupressaceae."
+    },
+    "evidence": [
+      {
+        "type": "fossil",
+        "source": "hu-cheng-1948",
+        "note": {
+          "zh": "1948 年定名并建立水杉科。",
+          "en": "Described in 1948 and placed in its own family."
+        }
+      },
+      {
+        "type": "classification",
+        "source": "christenhusz-2011",
+        "note": {
+          "zh": "现行并入柏科。",
+          "en": "Now placed in Cupressaceae."
+        }
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "秋末叶色转铜红（约 11–12 月），之后落叶；春夏为嫩绿。全球公园广泛栽培，在中国湖北利川有野生母树。",
+      "en": "Foliage turns coppery red in late autumn (Nov–Dec) then falls; fresh green in spring and summer. Widely planted in parks worldwide; wild mother trees stand near Lichuan, Hubei."
+    },
+    "best_months": [
+      4,
+      5,
+      6,
+      10,
+      11,
+      12
+    ],
+    "habitats": [
+      "urban-park",
+      "forest",
+      "street"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "conservation": {
+    "iucn": "EN",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "hu-cheng-1948",
+    "christenhusz-2011"
+  ],
+  "review_status": "seed"
+}

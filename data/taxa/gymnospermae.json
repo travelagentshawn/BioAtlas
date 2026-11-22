@@ -1,0 +1,39 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "gymnospermae",
+  "rank": "clade",
+  "scientific_name": "Gymnospermae",
+  "parent": "spermatophyta",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "裸子植物",
+    "en": "Gymnosperms"
+  },
+  "summary": {
+    "zh": "胚珠裸露、不形成果实的种子植物，现存约 1000 余种：银杏、苏铁、松柏类与买麻藤类。",
+    "en": "Seed plants with naked ovules and no fruit; roughly a thousand living species: ginkgo, cycads, conifers and gnetophytes."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 320,
+      "min": 290,
+      "max": 360,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "debate": {
+      "zh": "现存裸子植物是单系群，但买麻藤类在其中的位置（与松科近缘还是与全部针叶树互为姐妹）仍有争议。",
+      "en": "Living gymnosperms are monophyletic, but the position of gnetophytes (near Pinaceae or sister to all conifers) is still debated."
+    },
+    "classification_systems": [
+      "Christenhusz et al. 2011"
+    ]
+  },
+  "sources": [
+    "christenhusz-2011",
+    "one-thousand-plant-2019"
+  ],
+  "review_status": "seed"
+}

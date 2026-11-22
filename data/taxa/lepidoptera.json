@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "lepidoptera",
+  "rank": "order",
+  "scientific_name": "Lepidoptera",
+  "parent": "insecta",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鳞翅目",
+    "en": "Butterflies and moths"
+  },
+  "summary": {
+    "zh": "翅被鳞片、成虫虹吸式口器；蝴蝶只是蛾类中的一个分支。",
+    "en": "Scale-covered wings and siphoning mouthparts; butterflies are one branch nested within moths."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 300,
+      "min": 270,
+      "max": 330,
+      "confidence": "approximate",
+      "source": "misof-2014"
+    },
+    "debate": {
+      "zh": "‘蛾’是并系类群，蝴蝶嵌套其中。",
+      "en": "'Moths' are paraphyletic; butterflies nest inside them."
+    }
+  },
+  "sources": [
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

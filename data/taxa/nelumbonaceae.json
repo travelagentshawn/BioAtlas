@@ -1,0 +1,29 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "nelumbonaceae",
+  "rank": "family",
+  "scientific_name": "Nelumbonaceae",
+  "parent": "eudicots",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "莲科",
+    "en": "Lotus family"
+  },
+  "summary": {
+    "zh": "仅莲属，水生。虽叶形似睡莲，但分子证据显示它是真双子叶植物，与睡莲（基部被子植物）相距甚远。",
+    "en": "A single aquatic genus. Despite water-lily-like leaves, molecular data place lotus among eudicots, far from true water lilies."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "ming-2013",
+    "apg-iv-2016"
+  ],
+  "review_status": "seed"
+}

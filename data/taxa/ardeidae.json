@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "ardeidae",
+  "rank": "family",
+  "scientific_name": "Ardeidae",
+  "parent": "pelecaniformes",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鹭科",
+    "en": "Herons and egrets"
+  },
+  "summary": {
+    "zh": "颈长而呈 S 形，涉水捕食，稻田、湿地常见。",
+    "en": "Long S-shaped necks, wade to hunt; common in paddies and wetlands."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

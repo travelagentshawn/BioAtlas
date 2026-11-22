@@ -1,0 +1,73 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "aix-galericulata",
+  "scientific_name": "Aix galericulata",
+  "taxon": "anatidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鸳鸯",
+    "en": "Mandarin duck"
+  },
+  "summary": {
+    "zh": "雄鸭有橙色‘帆羽’，在公园池塘与溪流越冬。",
+    "en": "The male's orange 'sail' feathers make it a showpiece of winter park ponds and streams."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "雄鸟头有冠羽、脸颊橙色，背后有橙色帆状羽；雌鸟灰褐，眼后有白纹。",
+      "en": "Male has a crest, orange cheeks and orange sail feathers; female is grey-brown with a white eye stripe."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "鸳鸯所在的雁形目与鸡形目在新鸟类大辐射之前就已分开，是鸟类系统树中较早的一支。",
+      "en": "Anseriformes diverged before the main Neoaves radiation and sit on an early branch of the bird tree."
+    },
+    "evidence": [
+      {
+        "type": "phylogenomics",
+        "source": "jarvis-2014"
+      },
+      {
+        "type": "phylogenomics",
+        "source": "prum-2015"
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "越冬期约 10 月至次年 3 月，公园池塘、河岸最容易看到。树洞筑巢。",
+      "en": "Wintering October–March, easiest at park ponds and riverbanks. Nests in tree cavities."
+    },
+    "best_months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+    ],
+    "habitats": [
+      "urban-park",
+      "river-lake",
+      "pond",
+      "forest"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "conservation": {
+    "iucn": "LC",
+    "as_of": "2024",
+    "source": "iucn-red-list"
+  },
+  "sources": [
+    "jarvis-2014",
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

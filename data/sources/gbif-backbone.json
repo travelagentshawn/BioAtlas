@@ -1,0 +1,11 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "gbif-backbone",
+  "kind": "database",
+  "title": "GBIF Backbone Taxonomy",
+  "year": 2023,
+  "authors": "GBIF Secretariat",
+  "url": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+  "citation": "GBIF Secretariat. GBIF Backbone Taxonomy. https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c"
+}

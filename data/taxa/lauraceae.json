@@ -1,0 +1,28 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "lauraceae",
+  "rank": "family",
+  "scientific_name": "Lauraceae",
+  "parent": "magnoliidae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "樟科",
+    "en": "Laurel family"
+  },
+  "summary": {
+    "zh": "多为常绿乔木，揉碎的叶有强烈香气，含樟脑、肉桂等芳香物质。",
+    "en": "Mostly evergreen trees whose crushed leaves are strongly aromatic (camphor, cinnamon)."
+  },
+  "phylo": {
+    "monophyly": "strong",
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "chaw-2019-camphor"
+  ],
+  "review_status": "seed"
+}

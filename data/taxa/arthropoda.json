@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "arthropoda",
+  "rank": "phylum",
+  "scientific_name": "Arthropoda",
+  "parent": "animalia",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "节肢动物",
+    "en": "Arthropods"
+  },
+  "summary": {
+    "zh": "外骨骼、分节的躯体与附肢。昆虫、蜘蛛、甲壳类皆属其中，占已知动物物种的大多数。",
+    "en": "Exoskeleton, segmented body and jointed limbs. Insects, spiders and crustaceans make up most known animal species."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 550,
+      "min": 510,
+      "max": 600,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    }
+  },
+  "sources": [
+    "timetree-5-2022",
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

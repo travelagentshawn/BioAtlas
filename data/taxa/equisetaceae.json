@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "equisetaceae",
+  "rank": "family",
+  "scientific_name": "Equisetaceae",
+  "parent": "polypodiopsida",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "木贼科",
+    "en": "Horsetail family"
+  },
+  "summary": {
+    "zh": "仅存木贼属一属，茎有明显节与空心的节间，富含硅质。",
+    "en": "A single living genus, Equisetum, with jointed hollow stems rich in silica."
+  },
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "ppg-i-2016"
+  ],
+  "review_status": "seed"
+}

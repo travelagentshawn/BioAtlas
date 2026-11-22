@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "anatidae",
+  "rank": "family",
+  "scientific_name": "Anatidae",
+  "parent": "anseriformes",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "鸭科",
+    "en": "Ducks, geese and swans"
+  },
+  "summary": {
+    "zh": "雁形目中几乎所有常见种类所在的科。",
+    "en": "Contains nearly all familiar waterfowl."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong"
+  },
+  "sources": [
+    "prum-2015"
+  ],
+  "review_status": "seed"
+}

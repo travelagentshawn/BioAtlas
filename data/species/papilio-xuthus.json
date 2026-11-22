@@ -1,0 +1,76 @@
+{
+  "$schema": "../../schema/species.schema.json",
+  "type": "species",
+  "id": "papilio-xuthus",
+  "scientific_name": "Papilio xuthus",
+  "taxon": "papilionidae",
+  "kingdom": "animalia",
+  "names": {
+    "zh": "柑橘凤蝶",
+    "en": "Asian swallowtail"
+  },
+  "summary": {
+    "zh": "东亚花园与公园最常见的凤蝶，视觉系统以复杂著称。",
+    "en": "The most common swallowtail in East Asian gardens and parks, famous for its sophisticated colour vision."
+  },
+  "identification": {
+    "field_marks": {
+      "zh": "翅黄色有黑色脉纹与斑带，后翅有蓝斑与橙红眼斑，尾突短。",
+      "en": "Yellow wings with black veins and bands; blue and orange spots on the hindwing, short tails."
+    },
+    "similar": {
+      "zh": "与金凤蝶（P. machaon）相似，但本种前翅基部有黑色细纹。",
+      "en": "P. machaon is similar but lacks the fine black striping at the forewing base."
+    }
+  },
+  "evolution": {
+    "story": {
+      "zh": "凤蝶科是蝴蝶中较早分化的一支。该种的复眼含至少六类光谱感受器，是研究蝴蝶色觉的模式种之一。",
+      "en": "Swallowtails are an early-diverging butterfly lineage. Its compound eye has at least six spectral receptor classes, making it a model for butterfly colour vision."
+    },
+    "evidence": [
+      {
+        "type": "morphology",
+        "source": "arikawa-2017"
+      },
+      {
+        "type": "phylogenomics",
+        "source": "misof-2014",
+        "note": {
+          "zh": "鳞翅目的分化年代。",
+          "en": "Timing of Lepidoptera origin."
+        }
+      }
+    ]
+  },
+  "travel": {
+    "notes": {
+      "zh": "幼虫以柑橘类为食，所以果园与庭院多见。春至秋季多代发生。",
+      "en": "Larvae feed on citrus, so orchards and gardens are good places. Multiple generations from spring to autumn."
+    },
+    "best_months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "habitats": [
+      "urban-park",
+      "farmland",
+      "temple-garden"
+    ],
+    "countries": [
+      "CN",
+      "JP",
+      "KR"
+    ]
+  },
+  "sources": [
+    "arikawa-2017",
+    "misof-2014"
+  ],
+  "review_status": "seed"
+}

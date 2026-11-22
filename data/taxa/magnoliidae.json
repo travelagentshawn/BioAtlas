@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/taxon.schema.json",
+  "type": "taxon",
+  "id": "magnoliidae",
+  "rank": "clade",
+  "scientific_name": "Magnoliidae",
+  "parent": "angiospermae",
+  "kingdom": "plantae",
+  "names": {
+    "zh": "木兰类",
+    "en": "Magnoliids"
+  },
+  "summary": {
+    "zh": "含樟科、木兰科、胡椒科等，常含芳香油，叶和花多有油细胞。",
+    "en": "Includes laurels, magnolias and peppers; aromatic oil cells are common."
+  },
+  "pruned": true,
+  "phylo": {
+    "monophyly": "strong",
+    "age_mya": {
+      "estimate": 135,
+      "min": 115,
+      "max": 180,
+      "confidence": "approximate",
+      "source": "timetree-5-2022"
+    },
+    "classification_systems": [
+      "APG IV"
+    ]
+  },
+  "sources": [
+    "apg-iv-2016",
+    "chaw-2019-camphor"
+  ],
+  "review_status": "seed"
+}

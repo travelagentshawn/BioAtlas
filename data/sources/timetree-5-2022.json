@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "id": "timetree-5-2022",
+  "kind": "database",
+  "title": "TimeTree 5: An expanded resource for species divergence times",
+  "year": 2022,
+  "authors": "Kumar S, Suleski M, Craig JM, et al.",
+  "venue": "Molecular Biology and Evolution",
+  "doi": "10.1093/molbev/msac174",
+  "url": "https://timetree.org",
+  "citation": "Kumar S, et al. (2022) TimeTree 5: An expanded resource for species divergence times. Molecular Biology and Evolution 39(8): msac174. https://timetree.org"
+}
