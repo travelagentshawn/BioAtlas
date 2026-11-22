@@ -5,23 +5,52 @@
   "description": "One file per node in data/taxa/. Species are NOT taxa here; they live in data/species/ and attach to a taxon via `taxon`.",
   "type": "object",
   "properties": {
-    "$schema": { "type": "string" },
-    "type": { "const": "taxon" },
-    "id": { "$ref": "common.schema.json#/$defs/slug" },
+    "$schema": {
+      "type": "string"
+    },
+    "type": {
+      "const": "taxon"
+    },
+    "id": {
+      "$ref": "common.schema.json#/$defs/slug"
+    },
     "rank": {
       "type": "string",
-      "enum": ["domain", "kingdom", "clade", "phylum", "class", "order", "family", "genus"],
+      "enum": [
+        "domain",
+        "kingdom",
+        "clade",
+        "phylum",
+        "class",
+        "order",
+        "family",
+        "genus"
+      ],
       "description": "'clade' = unranked monophyletic group (the norm in molecular phylogenetics)."
     },
-    "scientific_name": { "type": "string", "minLength": 1 },
-    "authority": { "type": "string" },
+    "scientific_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authority": {
+      "type": "string"
+    },
     "parent": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Id of the parent taxon. null only for the single root."
     },
-    "kingdom": { "$ref": "common.schema.json#/$defs/kingdom" },
-    "names": { "$ref": "common.schema.json#/$defs/i18n" },
-    "summary": { "$ref": "common.schema.json#/$defs/i18n" },
+    "kingdom": {
+      "$ref": "common.schema.json#/$defs/kingdom"
+    },
+    "names": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
+    "summary": {
+      "$ref": "common.schema.json#/$defs/i18n"
+    },
     "pruned": {
       "type": "boolean",
       "description": "true when intermediate clades between this node and its children were deliberately omitted from the tree."
@@ -32,25 +61,57 @@
       "properties": {
         "monophyly": {
           "type": "string",
-          "enum": ["strong", "moderate", "contested", "paraphyletic", "unknown"],
+          "enum": [
+            "strong",
+            "moderate",
+            "contested",
+            "paraphyletic",
+            "unknown"
+          ],
           "description": "How well molecular data support this group as a single clade. 'paraphyletic' = traditional group kept for convenience."
         },
         "age_mya": {
           "type": "object",
           "description": "Crown-group age in millions of years ago. Always a range: molecular clock estimates differ between studies.",
           "properties": {
-            "estimate": { "type": "number", "minimum": 0 },
-            "min": { "type": "number", "minimum": 0 },
-            "max": { "type": "number", "minimum": 0 },
-            "confidence": { "type": "string", "enum": ["high", "moderate", "approximate"] },
-            "source": { "$ref": "common.schema.json#/$defs/slug" }
+            "estimate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "min": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "confidence": {
+              "type": "string",
+              "enum": [
+                "high",
+                "moderate",
+                "approximate"
+              ]
+            },
+            "source": {
+              "$ref": "common.schema.json#/$defs/slug"
+            }
           },
-          "required": ["estimate", "min", "max", "confidence", "source"],
+          "required": [
+            "estimate",
+            "min",
+            "max",
+            "confidence",
+            "source"
+          ],
           "additionalProperties": false
         },
         "synapomorphies": {
           "type": "array",
-          "items": { "$ref": "common.schema.json#/$defs/i18n" },
+          "items": {
+            "$ref": "common.schema.json#/$defs/i18n"
+          },
           "description": "Shared derived traits that help recognise the group."
         },
         "debate": {
@@ -58,16 +119,36 @@
         },
         "classification_systems": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Systems that recognise this group, e.g. 'APG IV', 'PPG I'."
         }
       },
       "additionalProperties": false
     },
-    "external_ids": { "$ref": "common.schema.json#/$defs/external_ids" },
-    "sources": { "$ref": "common.schema.json#/$defs/source_refs" },
-    "review_status": { "$ref": "common.schema.json#/$defs/review_status" }
+    "external_ids": {
+      "$ref": "common.schema.json#/$defs/external_ids"
+    },
+    "sources": {
+      "$ref": "common.schema.json#/$defs/source_refs"
+    },
+    "review_status": {
+      "$ref": "common.schema.json#/$defs/review_status"
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
   },
-  "required": ["type", "id", "rank", "scientific_name", "parent", "kingdom", "names", "review_status"],
+  "required": [
+    "type",
+    "id",
+    "rank",
+    "scientific_name",
+    "parent",
+    "kingdom",
+    "names",
+    "review_status"
+  ],
   "additionalProperties": false
 }
