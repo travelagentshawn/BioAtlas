@@ -75,7 +75,37 @@
   },
   "sources": [
     "guan-2016",
-    "christenhusz-2011"
+    "christenhusz-2011",
+    "powo-ginkgo-biloba",
+    "ipni-ginkgo-biloba"
   ],
-  "review_status": "seed"
+  "review_status": "seed",
+  "taxonomic_assertions": [
+    {
+      "authority": "authority-powo",
+      "record_id": "262125-1",
+      "scientific_name": "Ginkgo biloba L.",
+      "name_status": "accepted",
+      "classification_system": "World Checklist of Vascular Plants (POWO)",
+      "version": "WCVP 2026",
+      "accessed_at": "2026-11-22",
+      "source": "powo-ginkgo-biloba",
+      "notes": {
+        "zh": "POWO 当前物种页明确标注 accepted；本断言只表示 POWO 的接受名判断，不代表所有名录均无争议。",
+        "en": "The current POWO species page explicitly marks this name as accepted. This records POWO's treatment, not universal agreement across all checklists."
+      }
+    },
+    {
+      "authority": "authority-ipni",
+      "record_id": "urn:lsid:ipni.org:names:262125-1",
+      "scientific_name": "Ginkgo biloba L.",
+      "name_status": "unassessed",
+      "accessed_at": "2026-11-22",
+      "source": "ipni-ginkgo-biloba",
+      "notes": {
+        "zh": "IPNI 记录名称作者、发表出处与日期；IPNI 本身是命名索引，不负责决定接受分类，因此此处不把它写成 accepted。",
+        "en": "IPNI records the name, authorship and place/date of publication. It is a nomenclatural index, not an accepted-taxonomy checklist, so no accepted status is inferred here."
+      }
+    }
+  ]
 }
