@@ -14,7 +14,7 @@
     "zh": "珊瑚纲中的一个主要演化支，包含石珊瑚等类群。",
     "en": "A major anthozoan clade that includes the stony corals."
   },
-  "pruned": true,
+  "pruned": false,
   "sources": [
     "itis-acropora-cervicornis",
     "itis-acropora-palmata"
