@@ -248,3 +248,19 @@ test("platform documentation uses real Markdown line breaks", () => {
     assert.match(content, /## Marine taxa and coral protections|## 海洋类群与珊瑚保护/);
   }
 });
+
+
+test("quiz modules are removed and the complete module directory lists every remaining route", () => {
+  const app = readFileSync(join(ROOT, "ui/js/app.js"), "utf8");
+  const home = readFileSync(join(ROOT, "ui/js/views/home.js"), "utf8");
+  const directory = readFileSync(join(ROOT, "ui/js/views/modules.js"), "utf8");
+  assert.doesNotMatch(app, /views\\/(learn|evolution)\\.js|\\["(learn|evolution)",/);
+  assert.doesNotMatch(home, /#\\/(learn|evolution)|小测|答题|quiz/i);
+  for (const route of ["/explore", "/tree", "/regions", "/map", "/seasonality", "/identify", "/conservation", "/sounds", "/planner", "/sources", "/quality", "/docs"]) {
+    assert.ok(directory.includes(`#${route}`), `module directory is missing ${route}`);
+  }
+  assert.match(app, /\\["modules",/);
+  assert.match(home, /moduleDirectory\\(root, true\\)/);
+  assert.doesNotMatch(directory, /draggable|dragstart|touchmove/);
+  assert.ok(!readFileSync(join(ROOT, "ui/js/views/learn.js"), "utf8"));
+});
