@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/bibs-polytrichum-commune.json",
   "id": "bibs-polytrichum-commune",
   "kind": "website",
   "title": "Polytrichum commune — Species Finder",
