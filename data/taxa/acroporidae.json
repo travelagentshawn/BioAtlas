@@ -14,7 +14,7 @@
     "zh": "石珊瑚目中的重要珊瑚科，包含鹿角珊瑚属等造礁类群。",
     "en": "An important stony-coral family that includes the reef-building genus Acropora."
   },
-  "pruned": true,
+  "pruned": false,
   "sources": [
     "itis-acropora-cervicornis",
     "itis-acropora-palmata"
