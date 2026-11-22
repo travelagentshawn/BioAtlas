@@ -180,6 +180,7 @@ test("coral taxonomy and legal protections remain source-backed and distinct fro
   const elkhorn = data.species.find(s => s.id === "acropora-palmata");
   assert.equal(taxa.get("cnidaria")?.parent, "animalia");
   assert.equal(taxa.get("anthozoa")?.parent, "cnidaria");
+  assert.equal(taxa.get("hexacorallia")?.rank, "subclass");
   assert.equal(taxa.get("scleractinia")?.parent, "hexacorallia");
   assert.equal(taxa.get("acropora")?.parent, "acroporidae");
   for (const record of [staghorn, elkhorn]) {
