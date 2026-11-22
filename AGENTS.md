@@ -14,7 +14,7 @@ data/ + schema/  --(tools/build-api.mjs)-->  dist/api/v1/*.json  <--(fetch)--  u
 ## Commands (Node >= 20, zero dependencies, no install)
 
 ```
-npm run validate      # schema + cross-reference check of data/   (must pass)
+npm run validate      # schema + cross-reference check of data/   (must pass)\nnpm run audit:taxonomy # read-only provider assertion / conflict report
 npm run build:api     # data side only -> dist/api/v1             (never reads ui/)
 npm run build:ui      # UI side only   -> dist/                   (never reads data/)
 npm run build:docs    # docs -> dist/docs
