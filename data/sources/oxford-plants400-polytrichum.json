@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/source.schema.json",
+  "type": "source",
+  "path": "data/sources/oxford-plants400-polytrichum.json",
+  "id": "oxford-plants400-polytrichum",
+  "kind": "website",
+  "title": "Polytrichum commune — Plants 400",
+  "authors": "University of Oxford, Department of Biology",
+  "year": 2026,
+  "url": "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/OP/Polytrichum",
+  "citation": "University of Oxford, Department of Biology. Polytrichum commune — Plants 400. Accessed 2026-11-22. https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/OP/Polytrichum"
+}
