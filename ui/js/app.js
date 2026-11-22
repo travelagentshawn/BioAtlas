@@ -41,20 +41,31 @@ function parse() {
   return { loader: () => Promise.resolve((r) => r.append(h("div", { class: "state" }, tr("页面不存在。", "Page not found.")))), params: {}, query: new URLSearchParams(), name: "404" };
 }
 
-const main = h("main", { id: "view", tabindex: "-1" });
+// The two primary experiences are deliberately peers: the curated usable atlas
+// and the phylogeny tree. All other tools remain available as secondary modules.
 const navLinks = [
-  ["explore", tr("探索", "Explore")], ["tree", tr("生命之树", "Tree of life")], ["regions", tr("旅行场景", "Scenes")],
-  ["planner", tr("行程工作台", "Workbench")], ["seasonality", tr("季节日历", "Seasonality")],
-  ["identify", tr("野外辨认", "Field ID")], ["learn", tr("学习", "Learn")], ["map", tr("自然地图", "Nature map")],
-  ["conservation", tr("保护与礼仪", "Conservation")], ["sounds", tr("自然声音", "Sounds")], ["evolution", tr("演化学习", "Evolution")],
-  ["sources", tr("科学来源", "Sources")], ["quality", tr("数据质量", "Data quality")], ["docs", tr("开发说明书", "Developer docs")],
+  ["home", tr("自然图鉴", "Field atlas"), "primary-mode"],
+  ["tree", tr("进化树", "Evolution tree"), "primary-mode"],
+  ["explore", tr("物种探索", "Explore")],
+  ["regions", tr("旅行场景", "Scenes")],
+  ["planner", tr("行程工作台", "Workbench")],
+  ["seasonality", tr("季节日历", "Seasonality")],
+  ["identify", tr("野外辨认", "Field ID")],
+  ["learn", tr("学习", "Learn")],
+  ["map", tr("自然地图", "Nature map")],
+  ["conservation", tr("保护与礼仪", "Conservation")],
+  ["sounds", tr("自然声音", "Sounds")],
+  ["evolution", tr("演化学习", "Evolution")],
+  ["sources", tr("科学来源", "Sources")],
+  ["quality", tr("数据质量", "Data quality")],
+  ["docs", tr("开发说明书", "Developer docs")],
 ];
 
 function header() {
   const theme = document.documentElement.dataset.theme;
   return h("header", { class: "site-header" }, h("div", { class: "wrap bar" },
     h("a", { class: "brand", href: "#/" }, h("span", { class: "mark", "aria-hidden": "true" }), h("span", null, "BioAtlas", h("small", null, tr("旅途生物图鉴", "Field atlas")))),
-    h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l]) => h("a", { href: `#/${k}`, "data-k": k }, l))),
+    h("nav", { class: "nav", "aria-label": "Main" }, navLinks.map(([k, l, cls = ""]) => h("a", { href: k === "home" ? "#/" : `#/${k}`, "data-k": k, class: cls }, l))),
     h("div", { class: "tools" },
       h("button", { class: "icon-btn", title: tr("切换语言", "Switch language"), onclick: () => { setLang(({zh:"en",en:"ja",ja:"zh"})[getLang()] || "zh"); boot(); } }, ({zh:"EN",en:"日本語",ja:"中"})[getLang()] || "EN"),
       h("button", { class: "icon-btn", title: tr("切换明暗", "Toggle theme"), "aria-label": "theme", onclick: () => {
@@ -75,6 +86,7 @@ async function footer() {
       " · ", h("a", { href: `${REPO.url}/issues`, target: "_blank", rel: "noopener noreferrer" }, tr("反馈与贡献", "Issues & contributions")))));
 }
 
+const main = h("main", { id: "view", tabindex: "-1" });
 let token = 0;
 async function route() {
   const my = ++token;
