@@ -68,3 +68,7 @@ Authority data is imported in explicit, reviewable batches. Each batch records t
 - [GBIF taxonomic identifier processing](https://techdocs.gbif.org/en/data-publishing/LSID-lookup)
 - [NCBI taxonomy resources](https://ncbi.nlm.nih.gov/datasets/docs/v2/data-processing/taxonomy-processing/taxonomy-resources/)
 - [ITIS](https://www.itis.gov/)
+
+## Read-only audit command
+
+Run `npm run audit:taxonomy` to emit a JSON report of registered authorities, record-level assertions, status counts and candidate disagreements. `npm run audit:taxonomy -- --strict` exits with code 2 if multiple providers mark different binomial strings as accepted for the same BioAtlas record. The comparison strips authorship only for candidate detection; it does not resolve synonymy or taxon concepts and never changes source data.
