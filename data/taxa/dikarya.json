@@ -8,11 +8,13 @@
   "kingdom": "fungi",
   "names": {
     "zh": "双核菌类群",
-    "en": "Dikarya"
+    "en": "Dikarya",
+    "ja": "二核菌類"
   },
   "summary": {
     "zh": "包含担子菌门与子囊菌门的主要真菌演化支；此处为简化展示。",
-    "en": "A major fungal clade comprising Basidiomycota and Ascomycota; shown here as a simplified branch."
+    "en": "A major fungal clade comprising Basidiomycota and Ascomycota; shown here as a simplified branch.",
+    "ja": "二核菌類"
   },
   "pruned": false,
   "phylo": {
