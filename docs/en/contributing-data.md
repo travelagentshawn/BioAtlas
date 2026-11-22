@@ -56,7 +56,7 @@ When promoting a record from `seed` to `reviewed` or `expert-reviewed`, add a `r
 - Use the actual review date; never backdate or guess it.
 - Identify a real reviewer. Do not present an AI model as a human reviewer.
 - `expert-reviewed` requires both `reviewer_role: specialist` and `method: expert-assessment`.
-- `sources` may only reference source IDs that exist in this repository. Field observation is a valid review method, but must not be misrepresented as published literature.
+- `sources` must include at least one source ID that exists in this repository. A field observation should also have a traceable observation record; it must not be misrepresented as published literature.
 - Review metadata documents a process; it is not automatic certification and does not guarantee a claim is correct.
 - Existing records remain unchanged. This change does not promote any `seed` record.
 
