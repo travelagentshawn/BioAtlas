@@ -5,7 +5,8 @@ import { monthName, label } from "../labels.js";
 import { speciesCard, sectionTitle, empty } from "../components.js";
 
 export async function seasonalityView(root, { query }) {
-  const [species, regions, calendar] = await Promise.all([api.speciesList(), api.regionList(), api.calendar()]);
+  const [species, regionList] = await Promise.all([api.speciesList(), api.regionList()]);
+  const regions = await Promise.all(regionList.map((r) => api.region(r.id)));
   let month = Math.min(12, Math.max(1, Number(query.get("month")) || new Date().getMonth() + 1));
   let kingdom = query.get("kingdom") || "";
   const taxa = await api.taxa();
