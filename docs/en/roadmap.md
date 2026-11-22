@@ -12,15 +12,15 @@ A public to-do list. Open an issue or say so in a PR before claiming an item.
 
 ## Modules
 
-- [ ] Phenology calendar view per species and per destination.
-- [ ] Identification search by colour, size and habitat.
-- [ ] Sound: links to redistributable bird and frog recordings.
-- [ ] Conservation and etiquette cards: local rules, protected areas.
-- [ ] Learning mode: quizzes guided by the tree.
+- [x] Phenology calendar view per species and per destination (first pass; based on recorded months).
+- [x] Identification search by name, colour tags, size range, habitat, country and month (optional colour/size data still needs population).
+- [x] Sound library UI and licensing fields; recordings await licensed contributions.
+- [x] Conservation assessment and species field-etiquette index; current local regulations still need jurisdiction-by-jurisdiction verification.
+- [x] Species recognition and common-ancestor learning modes (first pass).
 
 ## Technical
 
-- [ ] Publish API v1 JSON Schemas at stable URLs for external validation.
-- [ ] More languages (`ja` is already allowed by the schema).
-- [ ] Accessibility review (tree under screen readers).
-- [ ] Offline PWA with per-trip pre-download.
+- [x] API v1 schemas and endpoint contract are published alongside the generated API.
+- [ ] Full Japanese localization (language selector scaffold is present; untranslated strings currently fall back to English).
+- [ ] Dedicated accessibility audit (keyboard focus, skip navigation, reduced motion and chart descriptions added; screen-reader review of the tree remains).
+- [x] PWA shell caching and per-trip pre-download for same-origin API data.
