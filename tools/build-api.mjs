@@ -163,7 +163,7 @@ export function buildApi(outRoot) {
   put("calendar.json", calendar);
   put("taxonomic-authorities.json", data.sources.filter((s) => s.authority_role).map((s) => ({
     id: s.id, title: s.title, authority_role: s.authority_role, taxonomic_scope: s.taxonomic_scope ?? [],
-    identifier_scheme: s.identifier_scheme ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,
+    identifier_scheme: s.identifier_scheme ?? null, current_version: s.current_version ?? null, update_policy: s.update_policy ?? null, legacy: s.legacy ?? false, url: s.url ?? null,
   })));
   put("sources.json", data.sources.map((s) => ({
     id: s.id, kind: s.kind, title: s.title, year: s.year ?? null, accessed_at: s.accessed_at ?? null, citation: s.citation,
