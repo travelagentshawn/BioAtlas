@@ -254,6 +254,7 @@ test("quiz modules are removed and the complete module directory lists every rem
   const app = readFileSync(join(ROOT, "ui/js/app.js"), "utf8");
   const home = readFileSync(join(ROOT, "ui/js/views/home.js"), "utf8");
   const directory = readFileSync(join(ROOT, "ui/js/views/modules.js"), "utf8");
+  const serviceWorker = readFileSync(join(ROOT, "ui/sw.js"), "utf8");
   assert.equal(app.includes('import("./views/learn.js")'), false);
   assert.equal(app.includes('import("./views/evolution.js")'), false);
   assert.equal(home.includes("#/learn"), false);
@@ -261,7 +262,11 @@ test("quiz modules are removed and the complete module directory lists every rem
   for (const route of ["/explore", "/tree", "/regions", "/map", "/seasonality", "/identify", "/conservation", "/sounds", "/planner", "/sources", "/quality", "/docs"]) {
     assert.ok(directory.includes(`#${route}`), `module directory is missing ${route}`);
   }
+  assert.equal((directory.match(/"#\\/[a-z]+"/g) || []).length, 12);
   assert.ok(app.includes('["modules",'));
+  assert.ok(serviceWorker.includes("./js/views/modules.js"));
+  assert.equal(serviceWorker.includes("./js/views/learn.js"), false);
+  assert.equal(serviceWorker.includes("./js/views/evolution.js"), false);
   assert.ok(home.includes("moduleDirectory(root, true)"));
   assert.equal(/draggable|dragstart|touchmove/.test(directory), false);
   assert.equal(existsSync(join(ROOT, "ui/js/views/learn.js")), false);
