@@ -1,7 +1,6 @@
 {
   "$schema": "../../schema/source.schema.json",
   "type": "source",
-  "path": "data/sources/ostry-2012-macrofungi.json",
   "id": "ostry-2012-macrofungi",
   "kind": "book",
   "title": "Field Guide to Common Macrofungi in Eastern Forests and Their Ecosystem Functions",
