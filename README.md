@@ -33,7 +33,7 @@ schema/    JSON Schemas for every record kind and the trip interchange format
 contract/  API v1: response shapes + endpoint list (the only link between data and UI)
 tools/     validate, build-api, build, serve, tests (zero dependencies)
 ui/        web interface (native ES modules, no build step)                — MIT
-docs/      documentation, zh + en, rendered inside the site
+docs/      documentation, zh + en + ja, rendered inside the site
 ```
 
 ## Read or extend the data
