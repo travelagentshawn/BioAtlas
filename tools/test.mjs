@@ -227,3 +227,25 @@ test("read-only taxonomy audit summarizes authority assertions without rewriting
   assert.equal(auditTaxonomy(synthetic).summary.potential_conflicts, 1);
   assert.equal(data.species.find(record => record.id === "ginkgo-biloba").taxonomic_assertions.length, 2);
 });
+
+
+test("interactive diagrams expose accurate accessibility semantics and keyboard controls", () => {
+  const mapView = readFileSync(join(ROOT, "ui/js/views/map.js"), "utf8");
+  const treeLayout = readFileSync(join(ROOT, "ui/js/tree-layout.js"), "utf8");
+  const treeView = readFileSync(join(ROOT, "ui/js/views/tree.js"), "utf8");
+  assert.match(mapView, /event\.key==="Enter"\|\|event\.key===" "/);
+  assert.match(mapView, /role:"button"/);
+  assert.match(treeLayout, /role: "group"/);
+  assert.match(treeLayout, /aria-expanded/);
+  assert.doesNotMatch(treeLayout, /role: "treeitem"/);
+  assert.match(treeView, /mode === "outline"/);
+  assert.match(treeView, /h\("ul", \{ class: "outline" \}/);
+});
+
+test("platform documentation uses real Markdown line breaks", () => {
+  for (const lang of ["zh", "en"]) {
+    const content = readFileSync(join(ROOT, `docs/${lang}/platform-modules.md`), "utf8");
+    assert.doesNotMatch(content, /\\\\n/);
+    assert.match(content, /## Marine taxa and coral protections|## 海洋类群与珊瑚保护/);
+  }
+});
