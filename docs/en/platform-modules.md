@@ -28,3 +28,5 @@ All modules preserve each record's `review_status`. Conservation, phenology, dis
 
 ## Scientific sources and data quality
 `#/sources` indexes citations and supports search by type, author, title and DOI. `#/quality` summarizes species, taxa, scenes, references, conservation assessments, external IDs, licensed media and review status. These metrics describe repository coverage, not complete biodiversity coverage.
+
+- **Taxonomy authority governance** — the quality dashboard reports authority coverage, record-level assertions and unassessed identifiers. Species and taxon pages show each provider's claim and its supporting citation; an accepted status is explicitly scoped to that provider.
