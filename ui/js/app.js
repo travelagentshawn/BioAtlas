@@ -88,11 +88,12 @@ async function route() {
   try {
     const view = await r.loader();
     if (my !== token) return;
-    const holder = h("div", { class: "wrap view" });
+    const holder = h("div", { class: r.name === "home" ? "home-view" : "wrap view" });
     await view(holder, r);
     if (my !== token) return;
     clear(main).append(holder);
     window.scrollTo(0, r.query.get("a") ? window.scrollY : 0);
+    document.body.classList.toggle("is-home", r.name === "home");
     document.title = (holder.querySelector("h1")?.textContent || "BioAtlas") + " · BioAtlas";
   } catch (e) {
     if (my === token) { console.error(e); clear(main).append(h("div", { class: "wrap view" }, failure(e))); }
