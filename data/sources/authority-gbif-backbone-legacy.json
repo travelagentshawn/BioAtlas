@@ -11,5 +11,6 @@
     "crosswalk and legacy GBIF taxon keys"
   ],
   "identifier_scheme": "GBIF taxonKey",
-  "update_policy": "Discontinued; preserve for backwards compatibility only"
+  "update_policy": "Discontinued; preserve for backwards compatibility only",
+  "legacy": true
 }
