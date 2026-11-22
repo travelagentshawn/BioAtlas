@@ -8,11 +8,13 @@
   "kingdom": "fungi",
   "names": {
     "zh": "鹅膏菌科",
-    "en": "Amanitaceae"
+    "en": "Amanitaceae",
+    "ja": "テングタケ科"
   },
   "summary": {
     "zh": "包含鹅膏菌属等担子菌；科内物种的形态和毒性差异很大。",
-    "en": "A basidiomycete family including Amanita; morphology and toxicity vary substantially among species."
+    "en": "A basidiomycete family including Amanita; morphology and toxicity vary substantially among species.",
+    "ja": "テングタケ科"
   },
   "pruned": false,
   "phylo": {
