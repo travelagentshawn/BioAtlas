@@ -64,7 +64,10 @@ export async function treeView(root, { query }) {
   root.append(
     h("header", { class: "page-head" },
       h("h1", null, tr("生命之树", "Tree of life")),
-      h("p", { class: "lead" }, tr("这里的骨架是分子系统发育，而不是外形相似度。蝴蝶是‘蛾’的一支，鲸属于偶蹄动物，木贼嵌在蕨类之中。", "The backbone here is molecular phylogeny, not outward similarity. Butterflies nest within moths, whales within even-toed ungulates, horsetails within ferns."))),
+      h("p", { class: "lead" }, tr("这里展示的是 BioAtlas 自有主树：以分子系统发育为骨架，而不是按外形相似度排列。蝴蝶是‘蛾’的一支，鲸属于偶蹄动物，木贼嵌在蕨类之中。外部分类权威仅作为独立对照，不会自动改写这棵树。", "This is BioAtlas's own curated tree, organised around molecular phylogeny rather than superficial resemblance. Butterflies nest within moths, whales within even-toed ungulates, and horsetails within ferns. External taxonomic authorities are independent comparisons and never silently rewrite this tree.")),
+      h("div", { class: "cta" },
+        h("a", { class: "btn", href: "#/" }, tr("返回自然图鉴", "Back to field atlas")),
+        h("a", { class: "btn ghost", href: "#/explore" }, tr("查找物种", "Find a species")))),
     h("div", { class: "toolbar" },
       h("div", { class: "seg" }, modeBtns),
       btn(tr("全部展开", "Expand all"), () => { collapsed.clear(); mode = "tree"; sync(); }),
