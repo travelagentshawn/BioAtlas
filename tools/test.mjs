@@ -114,3 +114,14 @@ test("fungi and moss branches have source-backed starter records", () => {
   assert.equal(newScenes.length, 2);
   assert.ok(newScenes.every(r => r.species.every(e => (e.evidence || []).length > 0)));
 });
+
+
+test("Japanese documentation navigation resolves every page", () => {
+  const index = JSON.parse(readFileSync(join(ROOT, "docs/index.json"), "utf8"));
+  assert.ok(index.ja?.length >= 5);
+  for (const lang of ["zh", "en", "ja"]) {
+    for (const page of index[lang]) {
+      assert.ok(readFileSync(join(ROOT, "docs", page.file), "utf8").length > 0, `${lang}/${page.file} is empty`);
+    }
+  }
+});
