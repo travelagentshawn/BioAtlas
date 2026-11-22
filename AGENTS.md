@@ -14,7 +14,8 @@ data/ + schema/  --(tools/build-api.mjs)-->  dist/api/v1/*.json  <--(fetch)--  u
 ## Commands (Node >= 20, zero dependencies, no install)
 
 ```
-npm run validate      # schema + cross-reference check of data/   (must pass)\nnpm run audit:taxonomy # read-only provider assertion / conflict report
+npm run validate      # schema + cross-reference check of data/   (must pass)
+npm run audit:taxonomy # read-only provider assertion / conflict report
 npm run build:api     # data side only -> dist/api/v1             (never reads ui/)
 npm run build:ui      # UI side only   -> dist/                   (never reads data/)
 npm run build:docs    # docs -> dist/docs
@@ -40,7 +41,11 @@ npm run dev           # build + serve on http://localhost:8080
 5. **The UI fetches data only through `ui/js/api.js`** and never reads `data/`, `schema/`, `tools/`.
 6. **Output must satisfy `contract/`.** v1 changes are additive only.
 7. **Media needs a clear licence, attribution and source URL.**
-8. Taxonomic authorities are layered by taxon and assertion type; do not treat a global backbone as the sole arbiter.\n9. Record provider IDs in `taxonomic_assertions[]` with authority, exact record ID, source, access date and status. Use `unassessed` until the provider record is checked.\n10. Preserve conflicting assertions and old identifiers; never silently overwrite accepted names or parent relationships during bulk imports.\n11. Keep nomenclatural indexes, classification frameworks, specialist checklists and conservation assessments distinct.\n12. Run `npm run check` before you finish.
+8. Taxonomic authorities are layered by taxon and assertion type; do not treat a global backbone as the sole arbiter.
+9. Record provider IDs in `taxonomic_assertions[]` with authority, exact record ID, source, access date and status. Use `unassessed` until the provider record is checked.
+10. Preserve conflicting assertions and old identifiers; never silently overwrite accepted names or parent relationships during bulk imports.
+11. Keep nomenclatural indexes, classification frameworks, specialist checklists and conservation assessments distinct.
+12. Run `npm run check` before you finish.
 
 ## Reading the data without building
 
