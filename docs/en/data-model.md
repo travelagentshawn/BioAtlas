@@ -11,7 +11,7 @@ Four record kinds. Each has a directory, a JSON Schema and **one file per record
 
 Shared definitions: [`schema/common.schema.json`](repo:schema/common.schema.json). Also [`schema/trip.schema.json`](repo:schema/trip.schema.json), the trip workbench's interchange format.
 
-## Taxon
+## Kingdom scope\n\nThe current `kingdom` values are `plantae`, `animalia` and `fungi`; `root` is reserved for the shared eukaryote root. Bryophytes belong within Plantae; they are not a separate kingdom in this model.\n\n## Taxon
 
 - `parent` forms a **single-rooted tree**; the root is `eukaryota` with `parent: null`.
 - `rank` may be `clade` (unranked) — the norm in molecular phylogenetics; do not force traditional ranks.
