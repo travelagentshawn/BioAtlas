@@ -3,7 +3,7 @@ import { api, API_BASE } from "../api.js";
 import { tr, loc } from "../i18n.js";
 import { label, monthRanges } from "../labels.js";
 import { sigil, monthWheel } from "../viz.js";
-import { crumbs, nameBlock, reviewBadge, iucnBadge, badge, editOnGitHub, speciesCard, sectionTitle, link } from "../components.js";
+import { crumbs, nameBlock, reviewBadge, iucnBadge, badge, editOnGitHub, speciesCard, sectionTitle, link, taxonomicAssertions } from "../components.js";
 
 export async function speciesView(root, { params }) {
   const s = await api.species(params.id);
@@ -40,6 +40,8 @@ export async function speciesView(root, { params }) {
           h("ul", { class: "evidence" }, s.evolution.evidence.map((e) =>
             h("li", null, badge(label("evidence", e.type), "ev"), " ", e.note ? loc(e.note) + " " : "", cite(e.source))))),
 
+        taxonomicAssertions(s.taxonomic_assertions || [], s.sources_resolved),
+        
         h("section", { class: "panel" },
           sectionTitle(tr("在旅途中", "On the road")),
           h("p", null, loc(s.travel.notes)),
