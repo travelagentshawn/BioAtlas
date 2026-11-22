@@ -1,10 +1,10 @@
 # AGENTS.md — instructions for any AI coding agent
 
-BioAtlas is model-neutral. This file is the single entry point for every agent (any vendor, any model) and for humans. Full documentation: `docs/en/` and `docs/zh/` (also served in the site under **Documentation**).
+BioAtlas is model-neutral. This file is the single entry point for every agent (any vendor, any model) and for humans. Full documentation: `docs/en/`, `docs/zh/` and `docs/ja/` (also served in the site under **Documentation**).
 
 ## What this repo is
 
-An open field atlas joining molecular phylogeny and taxonomy for plants and animals seen while travelling. Three decoupled layers meet only at a contract:
+An open field atlas joining molecular phylogeny and taxonomy for plants, animals and fungi seen while travelling. Three decoupled layers meet only at a contract:
 
 ```
 data/ + schema/  --(tools/build-api.mjs)-->  dist/api/v1/*.json  <--(fetch)--  ui/
@@ -40,13 +40,13 @@ npm run dev           # build + serve on http://localhost:8080
 5. **The UI fetches data only through `ui/js/api.js`** and never reads `data/`, `schema/`, `tools/`.
 6. **Output must satisfy `contract/`.** v1 changes are additive only.
 7. **Media needs a clear licence, attribution and source URL.**
-8. Run `npm run check` before you finish.
+8. Taxonomic authorities are layered by taxon and assertion type; do not treat a global backbone as the sole arbiter.\n9. Record provider IDs in `taxonomic_assertions[]` with authority, exact record ID, source, access date and status. Use `unassessed` until the provider record is checked.\n10. Preserve conflicting assertions and old identifiers; never silently overwrite accepted names or parent relationships during bulk imports.\n11. Keep nomenclatural indexes, classification frameworks, specialist checklists and conservation assessments distinct.\n12. Run `npm run check` before you finish.
 
 ## Reading the data without building
 
-- Records: `data/taxa/*.json`, `data/species/*.json`, `data/regions/*.json`, `data/sources/*.json`
+- Records: `data/taxa/*.json`, `data/species/*.json`, `data/regions/*.json`, `data/sources/*.json (including authority registry entries)`
 - Schemas: `schema/*.schema.json`
-- After a build: `dist/api/v1/manifest.json` lists every endpoint. A one-page map is in `llms.txt`.
+- After a build: `dist/api/v1/manifest.json` lists every endpoint, including `taxonomic-authorities.json`. A one-page map is in `llms.txt`.
 
 ## Commits and PRs
 
