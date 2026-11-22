@@ -131,6 +131,7 @@ test("authority registry and taxonomic assertions preserve independent sources",
   const { data } = loadAll();
   const authorities = data.sources.filter(s => s.authority_role);
   assert.ok(authorities.length >= 15);
+  assert.ok(authorities.every(s => s.taxonomic_scope?.length && s.identifier_scheme && s.update_policy && s.accessed_at));
   assert.ok(authorities.some(s => s.id === "authority-catalogue-of-life-xr" && s.authority_role === "global-backbone"));
   assert.ok(authorities.some(s => s.id === "authority-ipni" && s.authority_role === "nomenclatural-index"));
   assert.ok(authorities.some(s => s.id === "authority-apg" && s.authority_role === "classification-framework"));
