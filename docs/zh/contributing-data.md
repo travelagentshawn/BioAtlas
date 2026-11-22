@@ -33,3 +33,29 @@
 - 分类单元的 `sources` 至少一条，否则 `validate` 会警告。
 - 想补充没有对应分类单元的物种：先建科（必要时建演化支），再建物种。
 - 外部标识（`external_ids`：GBIF、NCBI、Wikidata…）只写你**验证过**的值。
+
+
+## 可追溯审核记录（新增字段 `review`）
+
+当记录从 `seed` 提升为 `reviewed` 或 `expert-reviewed` 时，必须在同一条记录中填写 `review`，而不只是在 PR 描述中写一句“已核对”。
+
+```json
+{
+  "review": {
+    "reviewed_at": "YYYY-MM-DD",
+    "reviewed_by": "GitHub 用户名或可核验的审阅者标识",
+    "reviewer_role": "contributor",
+    "method": "literature-check",
+    "sources": ["对应的-source-id"],
+    "scope": ["taxonomy", "identification", "distribution", "phenology"],
+    "notes": { "zh": "核对范围与仍存疑点", "en": "What was checked and what remains uncertain" }
+  }
+}
+```
+
+- `reviewed_at` 使用实际审阅日期，不得回填或猜测。
+- `reviewed_by` 应能在贡献记录中对应到真实审阅者；不要写 AI 模型名冒充人类审阅者。
+- `reviewer_role: specialist` 且 `method: expert-assessment` 才能支持 `expert-reviewed`。
+- `sources` 只能引用仓库中已存在的来源 ID。现场观察可作为核对方法，但不能伪装成已发表文献。
+- `review` 是审核过程记录，不是自动认证；有审核元数据不等于结论必然正确。
+- 旧记录保持原样；本次不会批量把任何 `seed` 改成已审核。
