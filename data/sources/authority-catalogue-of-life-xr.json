@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-catalogue-of-life-xr",
+  "kind": "database",
+  "title": "Catalogue of Life eXtended Release",
+  "year": 2026,
+  "url": "https://www.catalogueoflife.org/",
+  "citation": "Catalogue of Life. Catalogue of Life eXtended Release (COL XR). Accessed 2026-11-22. https://www.catalogueoflife.org/",
+  "authority_role": "global-backbone",
+  "taxonomic_scope": [
+    "all major kingdoms"
+  ],
+  "identifier_scheme": "Catalogue of Life taxon identifier",
+  "update_policy": "Regular release; pin release for each import"
+}
