@@ -59,3 +59,21 @@ When promoting a record from `seed` to `reviewed` or `expert-reviewed`, add a `r
 - `sources` may only reference source IDs that exist in this repository. Field observation is a valid review method, but must not be misrepresented as published literature.
 - Review metadata documents a process; it is not automatic certification and does not guarantee a claim is correct.
 - Existing records remain unchanged. This change does not promote any `seed` record.
+
+
+## Evidence requirements for regional occurrence records
+
+When adding or editing a species/month association in `data/regions/*.json`, add link-level `evidence` whenever possible. For example:
+
+```json
+{
+  "species": "acer-palmatum",
+  "months": [10, 11],
+  "likelihood": "common",
+  "evidence": [
+    { "type": "regional-checklist", "source": "existing-regional-flora-source" }
+  ]
+}
+```
+
+The cited source must actually support occurrence in that region and the stated months. A source showing presence somewhere in a country does not establish presence at a particular site or in a particular month. If no source is available, retain the existing association with its unverified label; never invent evidence.
