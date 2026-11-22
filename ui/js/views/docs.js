@@ -23,7 +23,7 @@ export async function docsView(root, { params, query }) {
   const body = h("article", { class: "doc-body" });
   const tocBox = h("aside", { class: "doc-toc" });
   root.append(
-    h("header", { class: "page-head" }, h("h1", null, "Documentation"),
+    h("header", { class: "page-head" }, h("h1", null, tr("开发说明书", "Developer documentation")),
       h("p", { class: "lead" }, tr("给开发者与 AI 协作者的说明书：数据模型、API 契约、如何各自开发与编译。", "For developers and AI collaborators: the data model, the API contract, and how to develop and build each side independently."))),
     h("div", { class: "docs" }, side, body, tocBox));
 
