@@ -269,3 +269,31 @@ audio { width:100%; margin:10px 0; }
   .nav a.primary-mode { background: var(--plant-soft); color: var(--plant); }
   .nav a.primary-mode.on { background: var(--plant); color: var(--accent-ink); }
 }
+
+
+/* The two peer home views: a practical field atlas and the curated phylogeny. */
+.mode-entry-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:8px 0 28px; }
+.mode-card { position:relative; display:flex; min-height:250px; overflow:hidden; align-items:stretch; justify-content:space-between; gap:12px; padding:26px; border:1px solid var(--line); border-radius:20px; background:var(--surface); color:var(--ink); text-decoration:none; box-shadow:var(--shadow); isolation:isolate; transition:transform .18s,border-color .18s; }
+.mode-card:hover { transform:translateY(-3px); border-color:var(--plant); }
+.mode-card-copy { position:relative; z-index:2; max-width:70%; }
+.mode-eyebrow { margin:0 0 12px; color:var(--animal); font-size:.76rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.mode-card h2 { margin:0 0 10px; font-size:clamp(1.35rem,2.2vw,1.9rem); }
+.mode-description { max-width:42ch; color:var(--ink-2); font-size:.94rem; line-height:1.65; }
+.mode-tags { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0; }
+.mode-tags span { padding:3px 9px; border:1px solid var(--line); border-radius:999px; color:var(--muted); font-size:.74rem; }
+.mode-open { display:inline-block; margin-top:2px; color:var(--plant); font-weight:700; font-size:.88rem; }
+.mode-visual { position:absolute; z-index:1; right:-18px; bottom:-44px; display:grid; place-items:center; width:220px; height:220px; border-radius:50%; opacity:.95; }
+.mode-visual.atlas { background:radial-gradient(circle at 45% 42%,var(--plant-soft) 0 35%,transparent 36%),radial-gradient(circle at 55% 52%,var(--animal-soft) 0 58%,transparent 59%); }
+.atlas-orbit { display:grid; place-items:center; width:120px; height:120px; border:1px solid color-mix(in srgb,var(--plant) 45%,transparent); border-radius:50%; color:var(--plant); font-size:5.5rem; }
+.mode-visual.tree { background:radial-gradient(circle at 50% 50%,var(--surface-2),transparent 70%); }
+.tree-glyph { color:var(--plant); font:400 11rem/1 var(--serif); transform:rotate(90deg); }
+@media(max-width:760px) {
+  .mode-entry-grid { grid-template-columns:1fr; gap:12px; }
+  .mode-card { min-height:220px; padding:22px; }
+  .mode-card-copy { max-width:76%; }
+  .mode-visual { right:-60px; bottom:-60px; width:190px; height:190px; }
+}
+@media(max-width:430px) {
+  .mode-card-copy { max-width:100%; }
+  .mode-visual { opacity:.22; }
+}
