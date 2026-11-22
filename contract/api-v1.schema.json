@@ -802,7 +802,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "minItems": 1
         },
         "scope": {
           "type": "array",
@@ -819,7 +820,8 @@
         "reviewed_by",
         "reviewer_role",
         "method",
-        "scope"
+        "scope",
+        "sources"
       ]
     }
   }
