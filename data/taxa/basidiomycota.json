@@ -8,11 +8,13 @@
   "kingdom": "fungi",
   "names": {
     "zh": "担子菌门",
-    "en": "Basidiomycota"
+    "en": "Basidiomycota",
+    "ja": "担子菌門"
   },
   "summary": {
     "zh": "以担子结构产生担孢子的真菌类群，许多常见大型蘑菇属于此门。",
-    "en": "Fungi that produce basidiospores on basidia; many familiar mushroom-forming fungi belong here."
+    "en": "Fungi that produce basidiospores on basidia; many familiar mushroom-forming fungi belong here.",
+    "ja": "担子菌門"
   },
   "pruned": true,
   "phylo": {
