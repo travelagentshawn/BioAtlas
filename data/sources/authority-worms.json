@@ -1,0 +1,15 @@
+{
+  "type": "source",
+  "id": "authority-worms",
+  "kind": "database",
+  "title": "World Register of Marine Species (WoRMS)",
+  "year": 2026,
+  "url": "https://www.marinespecies.org/",
+  "citation": "World Register of Marine Species. WoRMS taxonomic records. Accessed 2026-11-22. https://www.marinespecies.org/",
+  "authority_role": "specialist-checklist",
+  "taxonomic_scope": [
+    "marine organisms"
+  ],
+  "identifier_scheme": "WoRMS AphiaID",
+  "update_policy": "Continuously updated; retain AphiaID and access date"
+}
